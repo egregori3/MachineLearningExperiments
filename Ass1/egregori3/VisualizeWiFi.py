@@ -11,6 +11,6 @@ dataF = pandas.DataFrame(data, columns=['x1', 'x2', 'x3','x4','x5','x6','x7','y1
 print(dataF)
 
 #now plot using pandas 
-scatter_matrix(dataF, alpha=0.2, figsize=(6, 6), diagonal='hist')
+scatter_matrix(dataF, alpha=0.2, figsize=(6, 6), diagonal='kde')
 plt.show()
 
