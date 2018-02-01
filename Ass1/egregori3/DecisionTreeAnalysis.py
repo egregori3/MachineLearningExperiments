@@ -37,15 +37,43 @@ import matplotlib.pyplot as plt
 
 
 # -----------------------------------------------------------------------------
-# Load dataset 
+# Set mydata to 'robot' or 'wifi'
 # -----------------------------------------------------------------------------
-dataset = np.loadtxt("wifi_localization.txt", delimiter="\t")
+mydata = 'robot' 
 
 # -----------------------------------------------------------------------------
-# Preprocess dataset into (X)input and (Y)output
+# Load dataset 
 # -----------------------------------------------------------------------------
-X = dataset[:,0:7]
-y = dataset[:,7]
+if not (mydata=='wifi' or mydata=='robot'):
+    print("!ERROR! - Set dataset") 
+    quite()
+
+if mydata == 'wifi':
+    print("Loading WIFI dataset")
+    dataset = np.loadtxt("wifi_localization.txt", delimiter="\t")
+    # -----------------------------------------------------------------------------
+    # Preprocess dataset into (X)input and (y)output
+    # -----------------------------------------------------------------------------
+    X = dataset[:,0:7]
+    y = dataset[:,7]
+
+
+if mydata == 'robot':
+    print("Loading ROBOT dataset")
+    columns = []
+    for i in range(1,25):
+        columns.append('x'+str(i))
+    columns.append('y1')
+    df=pd.read_csv("sensor_readings_24.data", sep=',',header=None, names=columns)
+    # -----------------------------------------------------------------------------
+    # Preprocess dataset into (X)input and (y)output
+    # convert category stings into numeric values
+    # -----------------------------------------------------------------------------
+    categories = {'Move-Forward':1, 'Sharp-Right-Turn':2, 'Slight-Right-Turn':3, 'Slight-Left-Turn':4}
+    df['y1'] = df['y1'].apply(lambda y: categories[y])
+    dataset = df.values
+    X = dataset[:,0:24]
+    y = dataset[:,24]
 
 # -----------------------------------------------------------------------------
 # Split dataset into training and test sets
