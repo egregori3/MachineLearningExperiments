@@ -40,7 +40,7 @@ max_leaf_nodes: It defines the maximum number of possible leaf nodes. If None th
 import numpy as np
 import pandas as pd
 from sklearn.cross_validation import train_test_split
-from sklearn.tree import DecisionTreeClassifier
+from sklearn.ensemble import AdaBoostClassifier
 from sklearn.metrics import accuracy_score
 from sklearn import tree
 from plot_learning_curve import plot_learning_curve
@@ -53,7 +53,7 @@ import matplotlib.pyplot as plt
 # -----------------------------------------------------------------------------
 # Set mydata to 'robot' or 'wifi'
 # -----------------------------------------------------------------------------
-mydata = 'robot' 
+mydata = 'wifi' 
 
 # -----------------------------------------------------------------------------
 # Load dataset 
@@ -115,37 +115,9 @@ kfolds = 3
 
 tuned_parameters =  [
                          {
-                            'criterion':['entropy'],
-                            'splitter':['best'],
-                            'max_features':['auto','sqrt','log2',None],
-                            'max_depth':[3,4,5,6,None],
-                            'min_samples_split':[2,3,4],
-                            'min_samples_leaf':[1,2,3,4]
+                            'n_estimators':[i for i in range(10,100,10)],
                         },
-                        {
-                            'criterion':['entropy'],
-                            'splitter':['random'],
-                            'max_features':['auto','sqrt','log2',None],
-                            'max_depth':[3,4,5,6,None],
-                            'min_samples_split':[2,3,4],
-                            'min_samples_leaf':[1,2,3,4]
-                        },
-                        {
-                            'criterion':['gini'],
-                            'splitter':['best'],
-                            'max_features':['auto','sqrt','log2',None],
-                            'max_depth':[3,4,5,6,None],
-                            'min_samples_split':[2,3,4],
-                            'min_samples_leaf':[1,2,3,4]
-                        },
-                        {
-                            'criterion':['gini'],
-                            'splitter':['random'],
-                            'max_features':['auto','sqrt','log2',None],
-                            'max_depth':[3,4,5,6,None],
-                            'min_samples_split':[2,3,4],
-                            'min_samples_leaf':[1,2,3,4]
-                        }
+
                     ]
 
 scores = ['accuracy']
@@ -154,7 +126,7 @@ for score in scores:
     print("# Tuning hyper-parameters for %s" % score)
     print()
 
-    bclf = GridSearchCV(DecisionTreeClassifier(), tuned_parameters, cv=kfolds,
+    bclf = GridSearchCV(AdaBoostClassifier(), tuned_parameters, cv=kfolds,
                        scoring=score)
     bclf.fit(X_train, y_train)
 
@@ -183,15 +155,9 @@ for score in scores:
 # -----------------------------------------------------------------------------
 # Validation Curve
 # -----------------------------------------------------------------------------
-param = 'max_depth'
-param_range = range(2,10)
-clf = DecisionTreeClassifier(   criterion=bclf.best_params_['criterion'],
-                                splitter=bclf.best_params_['splitter'],
-                                max_features=bclf.best_params_['max_features'],
-                                max_depth=bclf.best_params_['max_depth'],
-                                min_samples_split=bclf.best_params_['min_samples_split'],
-                                min_samples_leaf=bclf.best_params_['min_samples_leaf']
-                            )
+param = 'n_estimators'
+param_range = range(10,100,10)
+clf = AdaBoostClassifier( n_estimators=bclf.best_params_['n_estimators'] )
 train_scores, test_scores = validation_curve(
     clf, X, y, param_name=param, param_range=param_range,
     cv=kfolds, scoring="accuracy", n_jobs=1)
@@ -223,18 +189,6 @@ plt.legend(loc="best")
 plt = plot_learning_curve(clf, "Learning Curve", X,y, cv=kfolds)
 plt.show()
 
-if 0:
-    clf_gini = DecisionTreeClassifier(criterion = "gini", random_state = 100, max_depth=3, min_samples_leaf=5)
-    clf_gini.fit(X_train, y_train)
-
-    clf_entropy = DecisionTreeClassifier(criterion = "entropy", random_state = 100, max_depth=3, min_samples_leaf=5)
-    clf_entropy.fit(X_train, y_train)
-
-    y_pred = clf_gini.predict(X_test)
-    y_pred_en = clf_entropy.predict(X_test)
-
-    print("Accuracy is ", accuracy_score(y_test,y_pred)*100)
-    print("Accuracy is ", accuracy_score(y_test,y_pred_en)*100)
 
 
 
