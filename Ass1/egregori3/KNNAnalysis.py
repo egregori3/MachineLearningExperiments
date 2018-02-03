@@ -27,47 +27,12 @@ from sklearn.grid_search import GridSearchCV
 from sklearn.metrics import classification_report
 from sklearn.preprocessing import MinMaxScaler
 import matplotlib.pyplot as plt
+import sys
+from LoadPreprocessDataset import LoadPreprocessDataset
 
 
-# -----------------------------------------------------------------------------
-# Set mydata to 'robot' or 'wifi'
-# -----------------------------------------------------------------------------
-mydata = 'robot' 
+X,y,name = LoadPreprocessDataset(sys.argv)
 
-# -----------------------------------------------------------------------------
-# Load dataset 
-# -----------------------------------------------------------------------------
-if not (mydata=='wifi' or mydata=='robot'):
-    print("!ERROR! - Set dataset") 
-    quite()
-
-if mydata == 'wifi':
-    print("Loading WIFI dataset")
-    dataset = np.loadtxt("wifi_localization.txt", delimiter="\t")
-    # -----------------------------------------------------------------------------
-    # Preprocess dataset into (X)input and (y)output
-    # -----------------------------------------------------------------------------
-    scaler = MinMaxScaler(copy=True, feature_range=(-1.0, 1.0))
-    dataset = scaler.fit_transform(dataset)
-    X = dataset[:,0:7]
-    y = dataset[:,7]
-
-if mydata == 'robot':
-    print("Loading ROBOT dataset")
-    columns = []
-    for i in range(1,25):
-        columns.append('x'+str(i))
-    columns.append('y1')
-    df=pd.read_csv("sensor_readings_24.data", sep=',',header=None, names=columns)
-    # -----------------------------------------------------------------------------
-    # Preprocess dataset into (X)input and (y)output
-    # convert category stings into numeric values
-    # -----------------------------------------------------------------------------
-    categories = {'Move-Forward':1, 'Sharp-Right-Turn':2, 'Slight-Right-Turn':3, 'Slight-Left-Turn':4}
-    df['y1'] = df['y1'].apply(lambda y: categories[y])
-    dataset = df.values
-    X = dataset[:,0:24]
-    y = dataset[:,24]
 
 # -----------------------------------------------------------------------------
 # Split dataset into training and test sets
@@ -111,7 +76,7 @@ for score in scores:
                        scoring=score)
     bclf.fit(X_train, y_train)
 
-    print("Best parameters set found on development set:")
+    print("Best parameters set found on development set "+name)
     print()
     print(bclf.best_params_)
     print()
@@ -123,7 +88,7 @@ for score in scores:
                 % (mean_score, scores.std() * 2, params))
         print()
 
-    print("Detailed classification report:")
+    print("Detailed classification report "+name)
     print()
     print("The model is trained on the full development set.")
     print("The scores are computed on the full evaluation set.")
@@ -150,7 +115,7 @@ train_scores_std = np.std(train_scores, axis=1)
 test_scores_mean = np.mean(test_scores, axis=1)
 test_scores_std = np.std(test_scores, axis=1)
 
-plt.title("Validation Curve")
+plt.title("KNN Validation Curve"+name)
 plt.xlabel("$\gamma$")
 plt.ylabel("Score")
 # plt.ylim(0.0, 1.1)
@@ -170,5 +135,5 @@ plt.legend(loc="best")
 # -----------------------------------------------------------------------------
 # Learning Curve
 # -----------------------------------------------------------------------------
-plt = plot_learning_curve(clf, "Learning Curve", X,y, cv=kfolds)
+plt = plot_learning_curve(clf, "KNN Learning Curve"+name, X,y, cv=kfolds)
 plt.show()

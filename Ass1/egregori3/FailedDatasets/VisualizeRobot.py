@@ -14,7 +14,10 @@ for i in range(1,25):
 columns.append('y1')
 print(columns)
 df=pd.read_csv("sensor_readings_24.data", sep=',',header=None, names=columns)
-print(df)
+for x in columns[0:24]:
+    print(x+" max: "+str(df[x].max()), end="    ")
+    print("mean: "+str(df[x].mean()),  end="    ")
+    print("min: "+str(df[x].min()))
 
 if 1:
     # Parallel Coordinates

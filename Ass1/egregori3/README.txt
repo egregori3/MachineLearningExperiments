@@ -5,6 +5,7 @@ Code for this project was taken from the following sources
 
 scikit-learn tutorials
 ----------------------
+http://scikit-learn.org/stable/user_guide.html#user-guide
 https://machinelearningmastery.com/machine-learning-in-python-step-by-step/
 https://machinelearningmastery.com/tutorial-first-neural-network-python-keras/
 https://machinelearningmastery.com/machine-learning-in-python-step-by-step/
@@ -50,6 +51,8 @@ http://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassi
 Support Vector Machines
 -----------------------
 http://scikit-learn.org/0.16/modules/svm.html#
+http://scikit-learn.org/dev/modules/svm.html#kernel-functions
+
 
 KNN
 ---
@@ -67,7 +70,6 @@ Instructions for reproducing data
 
 Environment built using Anaconda: conda env create -f CondaEnv.yml
 To create figure 1: python VisualizeWiFi.py
-To create figures 2,3: python VisualizeRobot.py
+To create figures 2: python VisualizeLetter.py
 
-To test the decision tree classifier on wifi and robot use: DecisionTreeAnalysis.py
-Edit the variable 'mydata' to collect data on the 'robot' or 'wifi' datasets.
+To collect data from all classifiers: python RunMe.py
