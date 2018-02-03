@@ -108,7 +108,7 @@ def PlotClassifiers(list_of_dicts,plt):
 # -----------------------------------------------------------------------------
 # Load and preprocess dataset
 # -----------------------------------------------------------------------------
-nu,y,name,X,classes = LoadPreprocessDataset(sys.argv)
+using_scaled_value,y,name,X,classes = LoadPreprocessDataset(sys.argv)
 
 
 # -----------------------------------------------------------------------------

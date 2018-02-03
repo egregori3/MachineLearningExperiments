@@ -15,7 +15,7 @@ from PlotConfusionMatrix import PlotConfusionMatrix
 
 
 PlotThese = [
-                {'type':'CM LC SLC'}, # plot CM and LC best parameters curves
+                {'type':'CM LC'}, # plot CM and LC best parameters curves
 #                {'type':'VC', 'vc_name':'min_samples_split', 'vc_range':range(2,50), 'max_depth':3, 'min_samples_leaf':1},
  #               {'type':'VC', 'vc_name':'min_samples_split', 'vc_range':range(2,50), 'max_depth':3, 'min_samples_leaf':2},
   #              {'type':'VC', 'vc_name':'min_samples_split', 'vc_range':range(2,50), 'max_depth':3, 'min_samples_leaf':3},
@@ -97,13 +97,6 @@ def PlotClassifiers(list_of_dicts,plt):
             plt = PlotLearningCurve(clf, title, X, y, cv=kfolds)
 
         # -----------------------------------------------------------------------------
-        # Learning Curve
-        # -----------------------------------------------------------------------------
-        if 'SLC' in params['type']:
-            title = name+" "+prefix+" Learning Curve"+"\n"+pvalues
-            plt = PlotLearningCurve(clf, title, sX, y, cv=kfolds)
-
-        # -----------------------------------------------------------------------------
         # Validation Curve
         # -----------------------------------------------------------------------------
         if 'VC' in params['type']:
@@ -117,7 +110,7 @@ def PlotClassifiers(list_of_dicts,plt):
 # -----------------------------------------------------------------------------
 # Load and preprocess dataset
 # -----------------------------------------------------------------------------
-X,y,name,sX,classes = LoadPreprocessDataset(sys.argv)
+using_scalled_values,y,name,X,classes = LoadPreprocessDataset(sys.argv)
 
 
 # -----------------------------------------------------------------------------
