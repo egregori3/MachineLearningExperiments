@@ -1,9 +1,7 @@
 """
+Please see README.txt for list of code sources
 http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.learning_curve.html#sklearn.model_selection.learning_curve
-
 http://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html
-
-
 """
 
 from sklearn.tree import DecisionTreeClassifier
@@ -14,6 +12,45 @@ from LoadPreprocessDataset import LoadPreprocessDataset
 from FindBestParameters import FindBestParameters
 from DisplayValidationCurve import DisplayValidationCurve
 from PlotConfusionMatrix import PlotConfusionMatrix
+
+
+PlotThese = [
+                {'type':'CM LC'}, # plot CM and LC best parameters curves
+#                {'type':'VC', 'vc_name':'min_samples_split', 'vc_range':range(2,50), 'max_depth':3, 'min_samples_leaf':1},
+ #               {'type':'VC', 'vc_name':'min_samples_split', 'vc_range':range(2,50), 'max_depth':3, 'min_samples_leaf':2},
+  #              {'type':'VC', 'vc_name':'min_samples_split', 'vc_range':range(2,50), 'max_depth':3, 'min_samples_leaf':3},
+   #             {'type':'VC', 'vc_name':'min_samples_split', 'vc_range':range(2,50), 'max_depth':3, 'min_samples_leaf':4},
+    #            {'type':'VC', 'vc_name':'min_samples_leaf', 'vc_range':range(1,50), 'max_depth':3, 'min_samples_split':2},
+     #           {'type':'VC', 'vc_name':'min_samples_leaf', 'vc_range':range(1,50), 'max_depth':3, 'min_samples_split':3},
+      #          {'type':'VC', 'vc_name':'min_samples_leaf', 'vc_range':range(1,50), 'max_depth':3, 'min_samples_split':4},
+       #         {'type':'VC', 'vc_name':'min_samples_split', 'vc_range':range(2,50), 'max_depth':4, 'min_samples_leaf':1},
+        #        {'type':'VC', 'vc_name':'min_samples_split', 'vc_range':range(2,50), 'max_depth':4, 'min_samples_leaf':2},
+         #       {'type':'VC', 'vc_name':'min_samples_split', 'vc_range':range(2,50), 'max_depth':4, 'min_samples_leaf':3},
+          #      {'type':'VC', 'vc_name':'min_samples_split', 'vc_range':range(2,50), 'max_depth':4, 'min_samples_leaf':4},
+           #     {'type':'VC', 'vc_name':'min_samples_leaf', 'vc_range':range(1,50), 'max_depth':4, 'min_samples_split':2},
+            #    {'type':'VC', 'vc_name':'min_samples_leaf', 'vc_range':range(1,50), 'max_depth':4, 'min_samples_split':3},
+             #   {'type':'VC', 'vc_name':'min_samples_leaf', 'vc_range':range(1,50), 'max_depth':4, 'min_samples_split':4},
+            ]
+
+
+# -----------------------------------------------------------------------------
+# Parameters to Tune
+# -----------------------------------------------------------------------------
+kfolds = 3
+test_size = 0.3
+prefix = 'DT'
+scores = ['accuracy']
+lop = ['criterion', 'splitter', 'max_features', 'max_depth', 'min_samples_split', 'min_samples_leaf']
+tuned_parameters =  [
+                         {
+                            'criterion':['entropy','gini'],
+                            'splitter':['best','random'],
+                            'max_features':['auto','sqrt','log2',None],
+                            'max_depth':[3,4,5,6,None],
+                            'min_samples_split':[2,3,4],
+                            'min_samples_leaf':[1,2,3,4]
+                        }
+                    ]
 
 
 def CreateClassifier(dop):
@@ -76,24 +113,6 @@ def PlotClassifiers(list_of_dicts,plt):
 # -----------------------------------------------------------------------------
 X,y,name,sX,classes = LoadPreprocessDataset(sys.argv)
 
-# -----------------------------------------------------------------------------
-# Parameters to Tune
-# -----------------------------------------------------------------------------
-kfolds = 3
-test_size = 0.3
-prefix = 'DT'
-scores = ['accuracy']
-lop = ['criterion', 'splitter', 'max_features', 'max_depth', 'min_samples_split', 'min_samples_leaf']
-tuned_parameters =  [
-                         {
-                            'criterion':['entropy','gini'],
-                            'splitter':['best','random'],
-                            'max_features':['auto','sqrt','log2',None],
-                            'max_depth':[3,4,5,6,None],
-                            'min_samples_split':[2,3,4],
-                            'min_samples_leaf':[1,2,3,4]
-                        }
-                    ]
 
 # -----------------------------------------------------------------------------
 # find best parameters
@@ -105,28 +124,6 @@ best_params = FindBestParameters(   DecisionTreeClassifier(),
                                     name,
                                     X,y,test_size )
 
-
-
-PlotThese = [
-#                {'type':'CM LC'}, # plot CM and LC best parameters curves
-                {'type':'VC', 'vc_name':'min_samples_split', 'vc_range':range(2,50), 'max_depth':3, 'min_samples_leaf':1},
-                {'type':'VC', 'vc_name':'min_samples_split', 'vc_range':range(2,50), 'max_depth':3, 'min_samples_leaf':2},
-                {'type':'VC', 'vc_name':'min_samples_split', 'vc_range':range(2,50), 'max_depth':3, 'min_samples_leaf':3},
-                {'type':'VC', 'vc_name':'min_samples_split', 'vc_range':range(2,50), 'max_depth':3, 'min_samples_leaf':4},
-                {'type':'VC', 'vc_name':'min_samples_leaf', 'vc_range':range(1,50), 'max_depth':3, 'min_samples_split':2},
-                {'type':'VC', 'vc_name':'min_samples_leaf', 'vc_range':range(1,50), 'max_depth':3, 'min_samples_split':3},
-                {'type':'VC', 'vc_name':'min_samples_leaf', 'vc_range':range(1,50), 'max_depth':3, 'min_samples_split':4},
-                {'type':'VC', 'vc_name':'min_samples_split', 'vc_range':range(2,50), 'max_depth':4, 'min_samples_leaf':1},
-                {'type':'VC', 'vc_name':'min_samples_split', 'vc_range':range(2,50), 'max_depth':4, 'min_samples_leaf':2},
-                {'type':'VC', 'vc_name':'min_samples_split', 'vc_range':range(2,50), 'max_depth':4, 'min_samples_leaf':3},
-                {'type':'VC', 'vc_name':'min_samples_split', 'vc_range':range(2,50), 'max_depth':4, 'min_samples_leaf':4},
-                {'type':'VC', 'vc_name':'min_samples_leaf', 'vc_range':range(1,50), 'max_depth':4, 'min_samples_split':2},
-                {'type':'VC', 'vc_name':'min_samples_leaf', 'vc_range':range(1,50), 'max_depth':4, 'min_samples_split':3},
-                {'type':'VC', 'vc_name':'min_samples_leaf', 'vc_range':range(1,50), 'max_depth':4, 'min_samples_split':4},
-
-
-
-            ]
 
 PlotClassifiers(PlotThese,plt)
 

@@ -1,126 +1,128 @@
 """
-
+Please see README.txt for list of code sources
+https://stackoverflow.com/questions/32210569/using-gridsearchcv-with-adaboost-and-decisiontreeclassifier
+http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.AdaBoostClassifier.html
 """
 
-
-import numpy as np
-import pandas as pd
-from sklearn.cross_validation import train_test_split
+from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import AdaBoostClassifier
-from sklearn.metrics import accuracy_score
-from sklearn import tree
-from plot_learning_curve import plot_learning_curve
-from sklearn.model_selection import validation_curve
-from sklearn.grid_search import GridSearchCV
-from sklearn.metrics import classification_report
-import matplotlib.pyplot as plt
 import sys
+import matplotlib.pyplot as plt
+from PlotLearningCurve import PlotLearningCurve
 from LoadPreprocessDataset import LoadPreprocessDataset
+from FindBestParameters import FindBestParameters
+from DisplayValidationCurve import DisplayValidationCurve
+from PlotConfusionMatrix import PlotConfusionMatrix
 
 
-X,y,name = LoadPreprocessDataset(sys.argv)
+
+PlotThese = [
+                {'type':'CM LC'}, # plot CM and LC best parameters curves
+            ]
 
 
 # -----------------------------------------------------------------------------
-# Split dataset into training and test sets
+# Parameters to Tune
 # -----------------------------------------------------------------------------
-X_train, X_test, y_train, y_test = train_test_split( X, y, test_size = 0.3, random_state = 0)
-
-# -----------------------------------------------------------------------------
-# Tune hyperparameters - Set the parameters by cross-validation
-# -----------------------------------------------------------------------------
-# criterion: It defines the function to measure the quality of a split. Sklearn supports “gini” criteria for Gini Index & “entropy” for Information Gain. By default, it takes “gini” value.
-# splitter: It defines the strategy to choose the split at each node. Supports “best” value to choose the best split & “random” to choose the best random split. By default, it takes “best” value.
-# max_features: It defines the no. of features to consider when looking for the best split. We can input integer, float, string & None value.
-#     If an integer is inputted then it considers that value as max features at each split.
-#     If float value is taken then it shows the percentage of features at each split.
-#    If “auto” or “sqrt” is taken then max_features=sqrt(n_features).
-#     If “log2” is taken then max_features= log2(n_features).
-#     If None, then max_features=n_features. By default, it takes “None” value.
-# max_depth: The max_depth parameter denotes maximum depth of the tree. It can take any integer value or None. If None, then nodes are expanded until all leaves are pure or until all leaves contain less than min_samples_split samples. By default, it takes “None” value.
-# min_samples_split: This tells above the minimum no. of samples reqd. to split an internal node. If an integer value is taken then consider min_samples_split as the minimum no. If float, then it shows percentage. By default, it takes “2” value.
-# min_samples_leaf: The minimum number of samples required to be at a leaf node. If an integer value is taken then consider min_samples_leaf as the minimum no. If float, then it shows percentage. By default, it takes “1” value.
-# max_leaf_nodes: It defines the maximum number of possible leaf nodes. If None then it takes an unlimited number of leaf nodes. By default, it takes “None” value.
-# min_impurity_split: It defines the threshold for early stopping tree growth. A node will split if its impurity is above the threshold otherwise it is a leaf.
-
 kfolds = 3
-
+test_size = 0.3
+prefix = 'ADA'
+scores = ['accuracy']
+lop = ['n_estimators','criterion', 'splitter', 'max_features', 'max_depth', 'min_samples_split', 'min_samples_leaf']
 tuned_parameters =  [
                          {
-                            'n_estimators':[i for i in range(10,100,10)],
-                        },
-
+                            'n_estimators':[10, 50, 100],
+                            'base_estimator__criterion':['entropy','gini'],
+                            'base_estimator__splitter':['best','random'],
+                            'base_estimator__max_features':['auto','sqrt','log2',None],
+                            'base_estimator__max_depth':[3,4,5,6,None],
+                            'base_estimator__min_samples_split':[2,3,4],
+                            'base_estimator__min_samples_leaf':[1,2,3,4]
+                        }
                     ]
 
-scores = ['accuracy']
 
-for score in scores:
-    print("# Tuning hyper-parameters for %s" % score)
-    print()
+def CreateClassifier(dop):
+    DTC = DecisionTreeClassifier(   criterion=dop['criterion'],
+                                    splitter=dop['splitter'],
+                                    max_features=dop['max_features'],
+                                    max_depth=dop['max_depth'],
+                                    min_samples_split=dop['min_samples_split'],
+                                    min_samples_leaf=dop['min_samples_leaf']
+                                )
 
-    bclf = GridSearchCV(AdaBoostClassifier(), tuned_parameters, cv=kfolds,
-                       scoring=score)
-    bclf.fit(X_train, y_train)
+    return AdaBoostClassifier( base_estimator=DTC, n_estimators=dop['n_estimators'] )
 
-    print("Best parameters set found on development set "+name)
-    print()
-    print(bclf.best_params_)
-    print()
-    if 0:
-        print("Grid scores on development set:")
-        print()
-        for params, mean_score, scores in bclf.grid_scores_:
-            print("%0.3f (+/-%0.03f) for %r"
-                % (mean_score, scores.std() * 2, params))
-        print()
 
-    print("Detailed classification report "+name)
-    print()
-    print("The model is trained on the full development set.")
-    print("The scores are computed on the full evaluation set.")
-    print()
-    y_true, y_pred = y_test, bclf.predict(X_test)
-    print(classification_report(y_true, y_pred))
-    print()
+def PlotClassifiers(list_of_dicts,plt):
+    for params in list_of_dicts:
+        top =   {
+                    'n_estimators':best_params['n_estimators'],
+                    'criterion':best_params['base_estimator__criterion'],
+                    'splitter':best_params['base_estimator__splitter'],
+                    'max_features':best_params['base_estimator__max_features'],
+                    'max_depth':best_params['base_estimator__max_depth'],
+                    'min_samples_split':best_params['base_estimator__min_samples_split'],
+                    'min_samples_leaf':best_params['base_estimator__min_samples_leaf']
+                }
+        for parameter in lop:
+            if parameter in params.keys():
+                top[parameter] = params[parameter]
+        clf = CreateClassifier( top )
+
+        # -----------------------------------------------------------------------------
+        # Put parameters in title
+        # ----------------------------------------------------------------------------- 
+        pvalues = ""
+        add_lf = 50
+        for pname in lop:
+            pvalues += (pname+":"+str(top[pname])+",")
+            if len(pvalues) > add_lf:
+                pvalues += "\n"
+                add_lf += 50
+
+        # -----------------------------------------------------------------------------
+        # Confusion Matrix
+        # ----------------------------------------------------------------------------- 
+        if 'CM' in params['type']:
+            title = name+" "+prefix+" Confusion Matrix"+"\n"+pvalues
+            plt.figure()
+            PlotConfusionMatrix(clf,X,y,test_size,classes,title=title)
+
+        # -----------------------------------------------------------------------------
+        # Learning Curve
+        # -----------------------------------------------------------------------------
+        if 'LC' in params['type']:
+            title = name+" "+prefix+" Learning Curve"+"\n"+pvalues
+            plt = PlotLearningCurve(clf, title, X, y, cv=kfolds)
+
+        # -----------------------------------------------------------------------------
+        # Validation Curve
+        # -----------------------------------------------------------------------------
+        if 'VC' in params['type']:
+            title = name+" "+prefix+" Validation Curve"+"\n"+pvalues
+            plt.figure()
+            DisplayValidationCurve(clf, X, y, params['vc_name'], params['vc_range'], title, kfolds)
+
+    plt.show()
 
 
 # -----------------------------------------------------------------------------
-# Validation Curve
+# Load and preprocess dataset
 # -----------------------------------------------------------------------------
-param = 'n_estimators'
-param_range = range(10,100,10)
-clf = AdaBoostClassifier( n_estimators=bclf.best_params_['n_estimators'] )
-train_scores, test_scores = validation_curve(
-    clf, X, y, param_name=param, param_range=param_range,
-    cv=kfolds, scoring="accuracy", n_jobs=1)
-train_scores_mean = np.mean(train_scores, axis=1)
-train_scores_std = np.std(train_scores, axis=1)
-test_scores_mean = np.mean(test_scores, axis=1)
-test_scores_std = np.std(test_scores, axis=1)
-
-plt.title("ADA Validation Curve"+name)
-plt.xlabel("$\gamma$")
-plt.ylabel("Score")
-# plt.ylim(0.0, 1.1)
-lw = 2
-plt.semilogx(param_range, train_scores_mean, label="Training score",
-             color="darkorange", lw=lw)
-plt.fill_between(param_range, train_scores_mean - train_scores_std,
-                 train_scores_mean + train_scores_std, alpha=0.2,
-                 color="darkorange", lw=lw)
-plt.semilogx(param_range, test_scores_mean, label="Cross-validation score",
-             color="navy", lw=lw)
-plt.fill_between(param_range, test_scores_mean - test_scores_std,
-                 test_scores_mean + test_scores_std, alpha=0.2,
-                 color="navy", lw=lw)
-plt.legend(loc="best")
+X,y,name,sX,classes = LoadPreprocessDataset(sys.argv)
 
 # -----------------------------------------------------------------------------
-# Learning Curve
+# find best parameters
 # -----------------------------------------------------------------------------
-plt = plot_learning_curve(clf, "ADA Learning Curve"+name, X,y, cv=kfolds)
-plt.show()
+best_params = FindBestParameters(   AdaBoostClassifier(base_estimator=DecisionTreeClassifier()), 
+                                    tuned_parameters, 
+                                    kfolds, 
+                                    scores, 
+                                    name,
+                                    X,y,test_size )
 
+PlotClassifiers(PlotThese,plt)
 
 
 

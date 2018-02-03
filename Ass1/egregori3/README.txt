@@ -47,6 +47,7 @@ http://chrisstrelioff.ws/sandbox/2015/06/08/decision_trees_in_python_with_scikit
 http://dataaspirant.com/2017/02/01/decision-tree-algorithm-python-with-scikit-learn/
 http://scikit-learn.org/stable/modules/tree.html#tree
 http://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html
+https://stackoverflow.com/questions/32210569/using-gridsearchcv-with-adaboost-and-decisiontreeclassifier
 
 Support Vector Machines
 -----------------------

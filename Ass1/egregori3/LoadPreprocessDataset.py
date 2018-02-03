@@ -63,7 +63,7 @@ def LoadPreprocessDataset(argv):
         y = dataset[:,0]
         print(y)
         name = 'LETTER'
-        classes = [char(c) for c in range(65,(65+26))]
+        classes = [chr(c) for c in range(65,(65+26))]
 
     scaler = MinMaxScaler(feature_range=(-1.0, 1.0))
     sX = scaler.fit_transform(X)
