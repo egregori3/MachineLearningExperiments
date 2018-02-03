@@ -37,6 +37,7 @@ https://www.dataquest.io/blog/learning-curves-machine-learning/
 http://scikit-learn.org/stable/modules/learning_curve.html
 http://scikit-learn.org/stable/modules/generated/sklearn.learning_curve.learning_curve.html#sklearn.learning_curve
 http://www.ritchieng.com/machinelearning-learning-curve/
+http://scikit-learn.org/stable/modules/model_evaluation.html
 
 Decision Tree Classifier
 ----------------------
