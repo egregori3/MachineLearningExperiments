@@ -90,6 +90,7 @@ def LoadPreprocessDataset(argv):
         dataset = df.values
         X = dataset[:,1:18]
         y = dataset[:,0]
+        print(X)
         print(y)
         name = 'LETTER'
         classes = [chr(c) for c in range(65,(65+26))]

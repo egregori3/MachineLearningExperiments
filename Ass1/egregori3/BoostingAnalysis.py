@@ -6,18 +6,14 @@ http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.AdaBoostClassi
 
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import AdaBoostClassifier
-import sys
-import matplotlib.pyplot as plt
-from PlotLearningCurve import PlotLearningCurve
-from LoadPreprocessDataset import LoadPreprocessDataset
-from FindBestParameters import FindBestParameters
-from DisplayValidationCurve import DisplayValidationCurve
-from PlotConfusionMatrix import PlotConfusionMatrix
-
+from PlotClassifiers import PlotClassifiers
 
 
 PlotThese = [
-                {'type':'CM LC'}, # plot CM and LC best parameters curves
+                {'dataset':'wifi', 'default':'best','type':['CM','LC=accuracy','LC=neg_mean_squared_error']}, # plot wifi CM and LC best parameters curves
+                {'dataset':'wifi2', 'default':'best','type':['CM','LC=accuracy','LC=neg_mean_squared_error']}, # plot wifi CM and LC best parameters curves
+                {'dataset':'wifi3', 'default':'best','type':['CM','LC=accuracy','LC=neg_mean_squared_error']}, # plot wifi CM and LC best parameters curves
+                {'dataset':'letter', 'default':'manual','type':['CM','LC=accuracy','LC=neg_mean_squared_error']}, # plot wifi CM and LC best parameters curves
             ]
 
 
@@ -28,101 +24,46 @@ kfolds = 3
 test_size = 0.3
 prefix = 'ADA'
 scores = ['accuracy']
-lop = ['n_estimators','criterion', 'splitter', 'max_features', 'max_depth', 'min_samples_split', 'min_samples_leaf']
+lop = ['n_estimators','base_estimator__criterion', 'base_estimator__splitter', 'base_estimator__max_features', 'base_estimator__max_depth', 'base_estimator__min_samples_split', 'base_estimator__min_samples_leaf']
 tuned_parameters =  [
                          {
-                            'n_estimators':[10, 50, 100],
+                            'n_estimators':[10, 20, 30],
                             'base_estimator__criterion':['entropy','gini'],
-                            'base_estimator__splitter':['best','random'],
-                            'base_estimator__max_features':['auto','sqrt','log2',None],
-                            'base_estimator__max_depth':[3,4,5,6,None],
-                            'base_estimator__min_samples_split':[2,3,4],
-                            'base_estimator__min_samples_leaf':[1,2,3,4]
+                            'base_estimator__splitter':['best'],
+                            'base_estimator__max_features':['sqrt','log2'],
+                            'base_estimator__max_depth':[3],
+                            'base_estimator__min_samples_split':[2],
+                            'base_estimator__min_samples_leaf':[1]
                         }
                     ]
+manual_params =  {
+                            'n_estimators':100,
+                            'base_estimator__criterion':'entropy',
+                            'base_estimator__splitter':'best',
+                            'base_estimator__max_features':'sqrt',
+                            'base_estimator__max_depth':None,
+                            'base_estimator__min_samples_split':2,
+                            'base_estimator__min_samples_leaf':1,
+                }
+ 
 
 
 def CreateClassifier(dop):
-    DTC = DecisionTreeClassifier(   criterion=dop['criterion'],
-                                    splitter=dop['splitter'],
-                                    max_features=dop['max_features'],
-                                    max_depth=dop['max_depth'],
-                                    min_samples_split=dop['min_samples_split'],
-                                    min_samples_leaf=dop['min_samples_leaf']
+    DTC = DecisionTreeClassifier(   criterion=dop['base_estimator__criterion'],
+                                    splitter=dop['base_estimator__splitter'],
+                                    max_features=dop['base_estimator__max_features'],
+                                    max_depth=dop['base_estimator__max_depth'],
+                                    min_samples_split=dop['base_estimator__min_samples_split'],
+                                    min_samples_leaf=dop['base_estimator__min_samples_leaf']
                                 )
 
     return AdaBoostClassifier( base_estimator=DTC, n_estimators=dop['n_estimators'] )
 
 
-def PlotClassifiers(list_of_dicts,plt):
-    for params in list_of_dicts:
-        top =   {
-                    'n_estimators':best_params['n_estimators'],
-                    'criterion':best_params['base_estimator__criterion'],
-                    'splitter':best_params['base_estimator__splitter'],
-                    'max_features':best_params['base_estimator__max_features'],
-                    'max_depth':best_params['base_estimator__max_depth'],
-                    'min_samples_split':best_params['base_estimator__min_samples_split'],
-                    'min_samples_leaf':best_params['base_estimator__min_samples_leaf']
-                }
-        for parameter in lop:
-            if parameter in params.keys():
-                top[parameter] = params[parameter]
-        clf = CreateClassifier( top )
-
-        # -----------------------------------------------------------------------------
-        # Put parameters in title
-        # ----------------------------------------------------------------------------- 
-        pvalues = ""
-        add_lf = 50
-        for pname in lop:
-            pvalues += (pname+":"+str(top[pname])+",")
-            if len(pvalues) > add_lf:
-                pvalues += "\n"
-                add_lf += 50
-
-        # -----------------------------------------------------------------------------
-        # Confusion Matrix
-        # ----------------------------------------------------------------------------- 
-        if 'CM' in params['type']:
-            title = name+" "+prefix+" Confusion Matrix"+"\n"+pvalues
-            plt.figure()
-            PlotConfusionMatrix(clf,X,y,test_size,classes,title=title)
-
-        # -----------------------------------------------------------------------------
-        # Learning Curve
-        # -----------------------------------------------------------------------------
-        if 'LC' in params['type']:
-            title = name+" "+prefix+" Learning Curve"+"\n"+pvalues
-            plt = PlotLearningCurve(clf, title, X, y, cv=kfolds)
-
-        # -----------------------------------------------------------------------------
-        # Validation Curve
-        # -----------------------------------------------------------------------------
-        if 'VC' in params['type']:
-            title = name+" "+prefix+" Validation Curve"+"\n"+pvalues
-            plt.figure()
-            DisplayValidationCurve(clf, X, y, params['vc_name'], params['vc_range'], title, kfolds)
-
-    plt.show()
-
-
+#-----------------------------------------------------------------------------
+# Call engine
 # -----------------------------------------------------------------------------
-# Load and preprocess dataset
-# -----------------------------------------------------------------------------
-X,y,name,sX,classes = LoadPreprocessDataset(sys.argv)
-
-# -----------------------------------------------------------------------------
-# find best parameters
-# -----------------------------------------------------------------------------
-best_params = FindBestParameters(   AdaBoostClassifier(base_estimator=DecisionTreeClassifier()), 
-                                    tuned_parameters, 
-                                    kfolds, 
-                                    scores, 
-                                    name,
-                                    X,y,test_size )
-
-PlotClassifiers(PlotThese,plt)
-
-
-
+PlotClassifiers(    PlotThese,
+                    CreateClassifier,
+                    AdaBoostClassifier(base_estimator=DecisionTreeClassifier()),
+                    kfolds,test_size,prefix,scores,lop,tuned_parameters,manual_params)
