@@ -1,5 +1,6 @@
 """
 http://scikit-learn.org/stable/auto_examples/model_selection/plot_learning_curve.html
+http://scikit-learn.org/0.15/modules/generated/sklearn.learning_curve.learning_curve.html#sklearn.learning_curve
 
 """
 import numpy as np

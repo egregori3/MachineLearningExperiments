@@ -32,16 +32,13 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 from sklearn import svm, datasets
-from sklearn.model_selection import train_test_split
 from sklearn.metrics import confusion_matrix
 
 
-def PlotConfusionMatrix(  clf, X,y,test_size, classes,
+def PlotConfusionMatrix(  clf, X_train,y_train,X_test,y_test,classes,
                           normalize=False,
                           title='Confusion matrix',
                           cmap=plt.cm.Blues):
-
-    X_train, X_test, y_train, y_test = train_test_split( X, y, test_size = test_size, random_state = 0)
 
     clf.fit(X_train,y_train)
     y_pred = clf.predict(X_test)

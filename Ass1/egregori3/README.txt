@@ -20,6 +20,9 @@ https://s3.amazonaws.com/assets.datacamp.com/blog_assets/Scikit_Learn_Cheat_Shee
 http://scikit-learn.org/stable/modules/model_evaluation.html#scoring-parameter
 https://github.com/rasbt/python-machine-learning-book
 http://scikit-learn.org/dev/modules/preprocessing.html#preprocessing
+http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html
+http://scikit-learn.org/stable/auto_examples/model_selection/plot_grid_search_digits.html
+
 
 keras
 -----

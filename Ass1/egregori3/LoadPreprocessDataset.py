@@ -8,7 +8,7 @@ def LoadPreprocessDataset(argv):
     # -----------------------------------------------------------------------------
     # Load dataset 
     # -----------------------------------------------------------------------------
-    if not (mydata=='wifi' or mydata=='letter'):
+    if not (mydata=='wifi' or mydata=='letter' or mydata=='wifi2' or mydata=='wifi3'):
         print("!ERROR! - Set dataset") 
         quit()
 
@@ -22,6 +22,34 @@ def LoadPreprocessDataset(argv):
         y = dataset[:,7]
         print(y)
         name = 'WIFI'
+        classes = ['1','2','3','4']
+
+
+    if mydata == 'wifi2':
+        print("Loading WIFI dataset")
+        dataset = np.loadtxt("wifi_localization.txt", delimiter="\t")
+        # -----------------------------------------------------------------------------
+        # Preprocess dataset into (X)input and (y)output
+        # -----------------------------------------------------------------------------
+        X = dataset[:,0:7]
+        X = np.delete(X,1,1)
+        X = np.delete(X,1,1)
+        y = dataset[:,7]
+        print(y)
+        name = 'WIFI2'
+        classes = ['1','2','3','4']
+
+    if mydata == 'wifi3':
+        print("Loading WIFI dataset")
+        dataset = np.loadtxt("wifi_localization.txt", delimiter="\t")
+        # -----------------------------------------------------------------------------
+        # Preprocess dataset into (X)input and (y)output
+        # -----------------------------------------------------------------------------
+        X = dataset[:,0:7]
+        X = np.delete(X,6,1)
+        y = dataset[:,7]
+        print(y)
+        name = 'WIFI3'
         classes = ['1','2','3','4']
 
     if mydata == 'robot':
@@ -44,6 +72,7 @@ def LoadPreprocessDataset(argv):
         print(y)
         name = 'ROBOT'
         classes = categories.keys()
+
 
     if mydata == 'letter':
         print("Loading LETTER dataset")
