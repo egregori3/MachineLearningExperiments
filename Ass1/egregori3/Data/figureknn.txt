@@ -1,0 +1,410 @@
+Loading WIFI dataset
+[ 1.  1.  1. ...,  4.  4.  4.]
+Tuning hyper-parameters for accuracy
+
+Best parameters set found on development set WIFI
+
+{'algorithm': 'ball_tree', 'n_neighbors': 3, 'weights': 'uniform'}
+
+37, 0.978, 0.001, 0.005, {'algorithm': 'ball_tree', 'n_neighbors': 2, 'weights': 'uniform'}
+37, 0.978, 0.001, 0.005, {'algorithm': 'ball_tree', 'n_neighbors': 2, 'weights': 'distance'}
+1, 0.982, 0.000, 0.005, {'algorithm': 'ball_tree', 'n_neighbors': 3, 'weights': 'uniform'}
+4, 0.981, 0.000, 0.005, {'algorithm': 'ball_tree', 'n_neighbors': 3, 'weights': 'distance'}
+37, 0.978, 0.001, 0.004, {'algorithm': 'ball_tree', 'n_neighbors': 4, 'weights': 'uniform'}
+4, 0.981, 0.000, 0.005, {'algorithm': 'ball_tree', 'n_neighbors': 4, 'weights': 'distance'}
+49, 0.977, 0.001, 0.005, {'algorithm': 'ball_tree', 'n_neighbors': 5, 'weights': 'uniform'}
+22, 0.979, 0.000, 0.006, {'algorithm': 'ball_tree', 'n_neighbors': 5, 'weights': 'distance'}
+49, 0.977, 0.001, 0.006, {'algorithm': 'ball_tree', 'n_neighbors': 6, 'weights': 'uniform'}
+22, 0.979, 0.000, 0.006, {'algorithm': 'ball_tree', 'n_neighbors': 6, 'weights': 'distance'}
+22, 0.979, 0.001, 0.005, {'algorithm': 'ball_tree', 'n_neighbors': 7, 'weights': 'uniform'}
+10, 0.981, 0.000, 0.006, {'algorithm': 'ball_tree', 'n_neighbors': 7, 'weights': 'distance'}
+37, 0.978, 0.001, 0.006, {'algorithm': 'ball_tree', 'n_neighbors': 8, 'weights': 'uniform'}
+10, 0.981, 0.001, 0.006, {'algorithm': 'ball_tree', 'n_neighbors': 8, 'weights': 'distance'}
+19, 0.980, 0.001, 0.005, {'algorithm': 'ball_tree', 'n_neighbors': 9, 'weights': 'uniform'}
+10, 0.981, 0.000, 0.006, {'algorithm': 'ball_tree', 'n_neighbors': 9, 'weights': 'distance'}
+22, 0.979, 0.000, 0.006, {'algorithm': 'ball_tree', 'n_neighbors': 10, 'weights': 'uniform'}
+34, 0.979, 0.001, 0.006, {'algorithm': 'ball_tree', 'n_neighbors': 10, 'weights': 'distance'}
+37, 0.978, 0.001, 0.003, {'algorithm': 'kd_tree', 'n_neighbors': 2, 'weights': 'uniform'}
+37, 0.978, 0.001, 0.003, {'algorithm': 'kd_tree', 'n_neighbors': 2, 'weights': 'distance'}
+1, 0.982, 0.001, 0.004, {'algorithm': 'kd_tree', 'n_neighbors': 3, 'weights': 'uniform'}
+4, 0.981, 0.001, 0.003, {'algorithm': 'kd_tree', 'n_neighbors': 3, 'weights': 'distance'}
+37, 0.978, 0.001, 0.004, {'algorithm': 'kd_tree', 'n_neighbors': 4, 'weights': 'uniform'}
+4, 0.981, 0.001, 0.004, {'algorithm': 'kd_tree', 'n_neighbors': 4, 'weights': 'distance'}
+49, 0.977, 0.001, 0.004, {'algorithm': 'kd_tree', 'n_neighbors': 5, 'weights': 'uniform'}
+22, 0.979, 0.001, 0.004, {'algorithm': 'kd_tree', 'n_neighbors': 5, 'weights': 'distance'}
+49, 0.977, 0.001, 0.004, {'algorithm': 'kd_tree', 'n_neighbors': 6, 'weights': 'uniform'}
+22, 0.979, 0.001, 0.004, {'algorithm': 'kd_tree', 'n_neighbors': 6, 'weights': 'distance'}
+22, 0.979, 0.001, 0.004, {'algorithm': 'kd_tree', 'n_neighbors': 7, 'weights': 'uniform'}
+10, 0.981, 0.000, 0.005, {'algorithm': 'kd_tree', 'n_neighbors': 7, 'weights': 'distance'}
+37, 0.978, 0.001, 0.004, {'algorithm': 'kd_tree', 'n_neighbors': 8, 'weights': 'uniform'}
+10, 0.981, 0.001, 0.004, {'algorithm': 'kd_tree', 'n_neighbors': 8, 'weights': 'distance'}
+19, 0.980, 0.001, 0.004, {'algorithm': 'kd_tree', 'n_neighbors': 9, 'weights': 'uniform'}
+10, 0.981, 0.001, 0.004, {'algorithm': 'kd_tree', 'n_neighbors': 9, 'weights': 'distance'}
+22, 0.979, 0.001, 0.005, {'algorithm': 'kd_tree', 'n_neighbors': 10, 'weights': 'uniform'}
+34, 0.979, 0.001, 0.005, {'algorithm': 'kd_tree', 'n_neighbors': 10, 'weights': 'distance'}
+37, 0.978, 0.000, 0.008, {'algorithm': 'brute', 'n_neighbors': 2, 'weights': 'uniform'}
+37, 0.978, 0.001, 0.007, {'algorithm': 'brute', 'n_neighbors': 2, 'weights': 'distance'}
+1, 0.982, 0.001, 0.007, {'algorithm': 'brute', 'n_neighbors': 3, 'weights': 'uniform'}
+4, 0.981, 0.001, 0.006, {'algorithm': 'brute', 'n_neighbors': 3, 'weights': 'distance'}
+37, 0.978, 0.000, 0.009, {'algorithm': 'brute', 'n_neighbors': 4, 'weights': 'uniform'}
+4, 0.981, 0.000, 0.009, {'algorithm': 'brute', 'n_neighbors': 4, 'weights': 'distance'}
+49, 0.977, 0.000, 0.009, {'algorithm': 'brute', 'n_neighbors': 5, 'weights': 'uniform'}
+22, 0.979, 0.001, 0.009, {'algorithm': 'brute', 'n_neighbors': 5, 'weights': 'distance'}
+49, 0.977, 0.001, 0.010, {'algorithm': 'brute', 'n_neighbors': 6, 'weights': 'uniform'}
+22, 0.979, 0.001, 0.009, {'algorithm': 'brute', 'n_neighbors': 6, 'weights': 'distance'}
+22, 0.979, 0.000, 0.009, {'algorithm': 'brute', 'n_neighbors': 7, 'weights': 'uniform'}
+10, 0.981, 0.000, 0.009, {'algorithm': 'brute', 'n_neighbors': 7, 'weights': 'distance'}
+37, 0.978, 0.000, 0.009, {'algorithm': 'brute', 'n_neighbors': 8, 'weights': 'uniform'}
+10, 0.981, 0.000, 0.009, {'algorithm': 'brute', 'n_neighbors': 8, 'weights': 'distance'}
+19, 0.980, 0.001, 0.009, {'algorithm': 'brute', 'n_neighbors': 9, 'weights': 'uniform'}
+10, 0.981, 0.000, 0.010, {'algorithm': 'brute', 'n_neighbors': 9, 'weights': 'distance'}
+22, 0.979, 0.000, 0.009, {'algorithm': 'brute', 'n_neighbors': 10, 'weights': 'uniform'}
+34, 0.979, 0.000, 0.010, {'algorithm': 'brute', 'n_neighbors': 10, 'weights': 'distance'}
+
+Detailed classification report WIFI
+
+The model is trained on the full development set.
+The scores are computed on the full evaluation set.
+
+             precision    recall  f1-score   support
+
+        1.0       0.99      1.00      1.00       157
+        2.0       0.99      0.93      0.96       151
+        3.0       0.93      0.98      0.95       153
+        4.0       1.00      0.99      1.00       139
+
+avg / total       0.98      0.97      0.98       600
+
+
+Confusion matrix, without normalization
+[[157   0   0   0]
+ [  0 140  11   0]
+ [  1   2 150   0]
+ [  0   0   1 138]]
+Loading WIFI dataset
+[ 1.  1.  1. ...,  4.  4.  4.]
+Tuning hyper-parameters for accuracy
+
+Best parameters set found on development set WIFI2
+
+{'algorithm': 'ball_tree', 'n_neighbors': 2, 'weights': 'distance'}
+
+25, 0.974, 0.000, 0.003, {'algorithm': 'ball_tree', 'n_neighbors': 2, 'weights': 'uniform'}
+1, 0.976, 0.001, 0.003, {'algorithm': 'ball_tree', 'n_neighbors': 2, 'weights': 'distance'}
+52, 0.972, 0.001, 0.004, {'algorithm': 'ball_tree', 'n_neighbors': 3, 'weights': 'uniform'}
+34, 0.974, 0.000, 0.004, {'algorithm': 'ball_tree', 'n_neighbors': 3, 'weights': 'distance'}
+25, 0.974, 0.000, 0.004, {'algorithm': 'ball_tree', 'n_neighbors': 4, 'weights': 'uniform'}
+10, 0.976, 0.000, 0.004, {'algorithm': 'ball_tree', 'n_neighbors': 4, 'weights': 'distance'}
+19, 0.975, 0.001, 0.004, {'algorithm': 'ball_tree', 'n_neighbors': 5, 'weights': 'uniform'}
+19, 0.975, 0.001, 0.004, {'algorithm': 'ball_tree', 'n_neighbors': 5, 'weights': 'distance'}
+10, 0.976, 0.001, 0.004, {'algorithm': 'ball_tree', 'n_neighbors': 6, 'weights': 'uniform'}
+10, 0.976, 0.001, 0.004, {'algorithm': 'ball_tree', 'n_neighbors': 6, 'weights': 'distance'}
+25, 0.974, 0.000, 0.004, {'algorithm': 'ball_tree', 'n_neighbors': 7, 'weights': 'uniform'}
+34, 0.974, 0.001, 0.004, {'algorithm': 'ball_tree', 'n_neighbors': 7, 'weights': 'distance'}
+1, 0.976, 0.001, 0.004, {'algorithm': 'ball_tree', 'n_neighbors': 8, 'weights': 'uniform'}
+1, 0.976, 0.001, 0.004, {'algorithm': 'ball_tree', 'n_neighbors': 8, 'weights': 'distance'}
+34, 0.974, 0.001, 0.005, {'algorithm': 'ball_tree', 'n_neighbors': 9, 'weights': 'uniform'}
+49, 0.973, 0.000, 0.004, {'algorithm': 'ball_tree', 'n_neighbors': 9, 'weights': 'distance'}
+34, 0.974, 0.000, 0.005, {'algorithm': 'ball_tree', 'n_neighbors': 10, 'weights': 'uniform'}
+34, 0.974, 0.000, 0.005, {'algorithm': 'ball_tree', 'n_neighbors': 10, 'weights': 'distance'}
+25, 0.974, 0.001, 0.002, {'algorithm': 'kd_tree', 'n_neighbors': 2, 'weights': 'uniform'}
+1, 0.976, 0.001, 0.002, {'algorithm': 'kd_tree', 'n_neighbors': 2, 'weights': 'distance'}
+52, 0.972, 0.001, 0.002, {'algorithm': 'kd_tree', 'n_neighbors': 3, 'weights': 'uniform'}
+34, 0.974, 0.001, 0.002, {'algorithm': 'kd_tree', 'n_neighbors': 3, 'weights': 'distance'}
+25, 0.974, 0.001, 0.003, {'algorithm': 'kd_tree', 'n_neighbors': 4, 'weights': 'uniform'}
+10, 0.976, 0.001, 0.002, {'algorithm': 'kd_tree', 'n_neighbors': 4, 'weights': 'distance'}
+19, 0.975, 0.001, 0.002, {'algorithm': 'kd_tree', 'n_neighbors': 5, 'weights': 'uniform'}
+19, 0.975, 0.001, 0.003, {'algorithm': 'kd_tree', 'n_neighbors': 5, 'weights': 'distance'}
+10, 0.976, 0.001, 0.002, {'algorithm': 'kd_tree', 'n_neighbors': 6, 'weights': 'uniform'}
+10, 0.976, 0.001, 0.003, {'algorithm': 'kd_tree', 'n_neighbors': 6, 'weights': 'distance'}
+25, 0.974, 0.001, 0.003, {'algorithm': 'kd_tree', 'n_neighbors': 7, 'weights': 'uniform'}
+34, 0.974, 0.001, 0.003, {'algorithm': 'kd_tree', 'n_neighbors': 7, 'weights': 'distance'}
+1, 0.976, 0.001, 0.003, {'algorithm': 'kd_tree', 'n_neighbors': 8, 'weights': 'uniform'}
+1, 0.976, 0.000, 0.003, {'algorithm': 'kd_tree', 'n_neighbors': 8, 'weights': 'distance'}
+34, 0.974, 0.000, 0.003, {'algorithm': 'kd_tree', 'n_neighbors': 9, 'weights': 'uniform'}
+49, 0.973, 0.001, 0.003, {'algorithm': 'kd_tree', 'n_neighbors': 9, 'weights': 'distance'}
+34, 0.974, 0.001, 0.003, {'algorithm': 'kd_tree', 'n_neighbors': 10, 'weights': 'uniform'}
+34, 0.974, 0.001, 0.003, {'algorithm': 'kd_tree', 'n_neighbors': 10, 'weights': 'distance'}
+25, 0.974, 0.001, 0.006, {'algorithm': 'brute', 'n_neighbors': 2, 'weights': 'uniform'}
+1, 0.976, 0.000, 0.006, {'algorithm': 'brute', 'n_neighbors': 2, 'weights': 'distance'}
+52, 0.972, 0.000, 0.006, {'algorithm': 'brute', 'n_neighbors': 3, 'weights': 'uniform'}
+34, 0.974, 0.000, 0.006, {'algorithm': 'brute', 'n_neighbors': 3, 'weights': 'distance'}
+25, 0.974, 0.000, 0.009, {'algorithm': 'brute', 'n_neighbors': 4, 'weights': 'uniform'}
+10, 0.976, 0.001, 0.009, {'algorithm': 'brute', 'n_neighbors': 4, 'weights': 'distance'}
+19, 0.975, 0.000, 0.009, {'algorithm': 'brute', 'n_neighbors': 5, 'weights': 'uniform'}
+19, 0.975, 0.000, 0.009, {'algorithm': 'brute', 'n_neighbors': 5, 'weights': 'distance'}
+10, 0.976, 0.001, 0.010, {'algorithm': 'brute', 'n_neighbors': 6, 'weights': 'uniform'}
+10, 0.976, 0.000, 0.009, {'algorithm': 'brute', 'n_neighbors': 6, 'weights': 'distance'}
+25, 0.974, 0.000, 0.009, {'algorithm': 'brute', 'n_neighbors': 7, 'weights': 'uniform'}
+34, 0.974, 0.001, 0.009, {'algorithm': 'brute', 'n_neighbors': 7, 'weights': 'distance'}
+1, 0.976, 0.001, 0.009, {'algorithm': 'brute', 'n_neighbors': 8, 'weights': 'uniform'}
+1, 0.976, 0.000, 0.009, {'algorithm': 'brute', 'n_neighbors': 8, 'weights': 'distance'}
+34, 0.974, 0.000, 0.009, {'algorithm': 'brute', 'n_neighbors': 9, 'weights': 'uniform'}
+49, 0.973, 0.000, 0.010, {'algorithm': 'brute', 'n_neighbors': 9, 'weights': 'distance'}
+34, 0.974, 0.000, 0.011, {'algorithm': 'brute', 'n_neighbors': 10, 'weights': 'uniform'}
+34, 0.974, 0.000, 0.009, {'algorithm': 'brute', 'n_neighbors': 10, 'weights': 'distance'}
+
+Detailed classification report WIFI2
+
+The model is trained on the full development set.
+The scores are computed on the full evaluation set.
+
+             precision    recall  f1-score   support
+
+        1.0       0.97      0.99      0.98       157
+        2.0       0.95      0.92      0.94       151
+        3.0       0.92      0.93      0.93       153
+        4.0       0.99      0.99      0.99       139
+
+avg / total       0.96      0.96      0.96       600
+
+
+Confusion matrix, without normalization
+[[156   0   0   1]
+ [  0 139  12   0]
+ [  3   7 143   0]
+ [  1   0   0 138]]
+Loading WIFI dataset
+[ 1.  1.  1. ...,  4.  4.  4.]
+Tuning hyper-parameters for accuracy
+
+Best parameters set found on development set WIFI3
+
+{'algorithm': 'ball_tree', 'n_neighbors': 10, 'weights': 'distance'}
+
+52, 0.971, 0.001, 0.004, {'algorithm': 'ball_tree', 'n_neighbors': 2, 'weights': 'uniform'}
+49, 0.972, 0.000, 0.004, {'algorithm': 'ball_tree', 'n_neighbors': 2, 'weights': 'distance'}
+16, 0.979, 0.000, 0.004, {'algorithm': 'ball_tree', 'n_neighbors': 3, 'weights': 'uniform'}
+16, 0.979, 0.000, 0.006, {'algorithm': 'ball_tree', 'n_neighbors': 3, 'weights': 'distance'}
+46, 0.976, 0.001, 0.006, {'algorithm': 'ball_tree', 'n_neighbors': 4, 'weights': 'uniform'}
+16, 0.979, 0.000, 0.005, {'algorithm': 'ball_tree', 'n_neighbors': 4, 'weights': 'distance'}
+16, 0.979, 0.001, 0.004, {'algorithm': 'ball_tree', 'n_neighbors': 5, 'weights': 'uniform'}
+16, 0.979, 0.001, 0.006, {'algorithm': 'ball_tree', 'n_neighbors': 5, 'weights': 'distance'}
+4, 0.979, 0.001, 0.004, {'algorithm': 'ball_tree', 'n_neighbors': 6, 'weights': 'uniform'}
+16, 0.979, 0.001, 0.005, {'algorithm': 'ball_tree', 'n_neighbors': 6, 'weights': 'distance'}
+40, 0.977, 0.001, 0.005, {'algorithm': 'ball_tree', 'n_neighbors': 7, 'weights': 'uniform'}
+40, 0.977, 0.001, 0.005, {'algorithm': 'ball_tree', 'n_neighbors': 7, 'weights': 'distance'}
+4, 0.979, 0.001, 0.005, {'algorithm': 'ball_tree', 'n_neighbors': 8, 'weights': 'uniform'}
+4, 0.979, 0.001, 0.005, {'algorithm': 'ball_tree', 'n_neighbors': 8, 'weights': 'distance'}
+37, 0.978, 0.001, 0.006, {'algorithm': 'ball_tree', 'n_neighbors': 9, 'weights': 'uniform'}
+16, 0.979, 0.001, 0.005, {'algorithm': 'ball_tree', 'n_neighbors': 9, 'weights': 'distance'}
+4, 0.979, 0.001, 0.006, {'algorithm': 'ball_tree', 'n_neighbors': 10, 'weights': 'uniform'}
+1, 0.980, 0.001, 0.005, {'algorithm': 'ball_tree', 'n_neighbors': 10, 'weights': 'distance'}
+52, 0.971, 0.001, 0.003, {'algorithm': 'kd_tree', 'n_neighbors': 2, 'weights': 'uniform'}
+49, 0.972, 0.001, 0.003, {'algorithm': 'kd_tree', 'n_neighbors': 2, 'weights': 'distance'}
+16, 0.979, 0.001, 0.004, {'algorithm': 'kd_tree', 'n_neighbors': 3, 'weights': 'uniform'}
+16, 0.979, 0.001, 0.003, {'algorithm': 'kd_tree', 'n_neighbors': 3, 'weights': 'distance'}
+46, 0.976, 0.001, 0.005, {'algorithm': 'kd_tree', 'n_neighbors': 4, 'weights': 'uniform'}
+16, 0.979, 0.001, 0.004, {'algorithm': 'kd_tree', 'n_neighbors': 4, 'weights': 'distance'}
+16, 0.979, 0.001, 0.003, {'algorithm': 'kd_tree', 'n_neighbors': 5, 'weights': 'uniform'}
+16, 0.979, 0.000, 0.004, {'algorithm': 'kd_tree', 'n_neighbors': 5, 'weights': 'distance'}
+4, 0.979, 0.001, 0.004, {'algorithm': 'kd_tree', 'n_neighbors': 6, 'weights': 'uniform'}
+16, 0.979, 0.001, 0.003, {'algorithm': 'kd_tree', 'n_neighbors': 6, 'weights': 'distance'}
+40, 0.977, 0.001, 0.004, {'algorithm': 'kd_tree', 'n_neighbors': 7, 'weights': 'uniform'}
+40, 0.977, 0.001, 0.004, {'algorithm': 'kd_tree', 'n_neighbors': 7, 'weights': 'distance'}
+4, 0.979, 0.001, 0.003, {'algorithm': 'kd_tree', 'n_neighbors': 8, 'weights': 'uniform'}
+4, 0.979, 0.001, 0.004, {'algorithm': 'kd_tree', 'n_neighbors': 8, 'weights': 'distance'}
+37, 0.978, 0.001, 0.004, {'algorithm': 'kd_tree', 'n_neighbors': 9, 'weights': 'uniform'}
+16, 0.979, 0.001, 0.004, {'algorithm': 'kd_tree', 'n_neighbors': 9, 'weights': 'distance'}
+4, 0.979, 0.001, 0.004, {'algorithm': 'kd_tree', 'n_neighbors': 10, 'weights': 'uniform'}
+1, 0.980, 0.000, 0.004, {'algorithm': 'kd_tree', 'n_neighbors': 10, 'weights': 'distance'}
+52, 0.971, 0.000, 0.006, {'algorithm': 'brute', 'n_neighbors': 2, 'weights': 'uniform'}
+49, 0.972, 0.000, 0.006, {'algorithm': 'brute', 'n_neighbors': 2, 'weights': 'distance'}
+16, 0.979, 0.000, 0.007, {'algorithm': 'brute', 'n_neighbors': 3, 'weights': 'uniform'}
+16, 0.979, 0.000, 0.007, {'algorithm': 'brute', 'n_neighbors': 3, 'weights': 'distance'}
+46, 0.976, 0.000, 0.009, {'algorithm': 'brute', 'n_neighbors': 4, 'weights': 'uniform'}
+16, 0.979, 0.000, 0.009, {'algorithm': 'brute', 'n_neighbors': 4, 'weights': 'distance'}
+16, 0.979, 0.000, 0.009, {'algorithm': 'brute', 'n_neighbors': 5, 'weights': 'uniform'}
+16, 0.979, 0.001, 0.008, {'algorithm': 'brute', 'n_neighbors': 5, 'weights': 'distance'}
+4, 0.979, 0.000, 0.009, {'algorithm': 'brute', 'n_neighbors': 6, 'weights': 'uniform'}
+16, 0.979, 0.001, 0.010, {'algorithm': 'brute', 'n_neighbors': 6, 'weights': 'distance'}
+40, 0.977, 0.001, 0.010, {'algorithm': 'brute', 'n_neighbors': 7, 'weights': 'uniform'}
+40, 0.977, 0.000, 0.009, {'algorithm': 'brute', 'n_neighbors': 7, 'weights': 'distance'}
+4, 0.979, 0.000, 0.009, {'algorithm': 'brute', 'n_neighbors': 8, 'weights': 'uniform'}
+4, 0.979, 0.000, 0.010, {'algorithm': 'brute', 'n_neighbors': 8, 'weights': 'distance'}
+37, 0.978, 0.001, 0.009, {'algorithm': 'brute', 'n_neighbors': 9, 'weights': 'uniform'}
+16, 0.979, 0.000, 0.009, {'algorithm': 'brute', 'n_neighbors': 9, 'weights': 'distance'}
+4, 0.979, 0.000, 0.009, {'algorithm': 'brute', 'n_neighbors': 10, 'weights': 'uniform'}
+1, 0.980, 0.001, 0.009, {'algorithm': 'brute', 'n_neighbors': 10, 'weights': 'distance'}
+
+Detailed classification report WIFI3
+
+The model is trained on the full development set.
+The scores are computed on the full evaluation set.
+
+             precision    recall  f1-score   support
+
+        1.0       0.99      0.99      0.99       157
+        2.0       1.00      0.95      0.97       151
+        3.0       0.94      0.99      0.97       153
+        4.0       0.99      0.99      0.99       139
+
+avg / total       0.98      0.98      0.98       600
+
+
+Confusion matrix, without normalization
+[[156   0   1   0]
+ [  0 143   8   0]
+ [  0   0 152   1]
+ [  1   0   0 138]]
+Loading LETTER dataset
+Integer Encoding dataset
+[[ 2  8  3 ...,  8  0  8]
+ [ 5 12  3 ...,  8  4 10]
+ [ 4 11  6 ...,  7  3  9]
+ ..., 
+ [ 6  9  6 ..., 12  2  4]
+ [ 2  3  4 ...,  9  5  8]
+ [ 4  9  6 ...,  7  2  8]]
+[19  8  3 ..., 19 18  0]
+Tuning hyper-parameters for accuracy
+
+Best parameters set found on development set LETTER
+
+{'algorithm': 'brute', 'n_neighbors': 4, 'weights': 'distance'}
+
+49, 0.917, 0.013, 0.849, {'algorithm': 'ball_tree', 'n_neighbors': 2, 'weights': 'uniform'}
+4, 0.939, 0.014, 0.821, {'algorithm': 'ball_tree', 'n_neighbors': 2, 'weights': 'distance'}
+24, 0.931, 0.013, 0.830, {'algorithm': 'ball_tree', 'n_neighbors': 3, 'weights': 'uniform'}
+10, 0.938, 0.013, 0.862, {'algorithm': 'ball_tree', 'n_neighbors': 3, 'weights': 'distance'}
+35, 0.926, 0.014, 0.871, {'algorithm': 'ball_tree', 'n_neighbors': 4, 'weights': 'uniform'}
+2, 0.941, 0.014, 0.848, {'algorithm': 'ball_tree', 'n_neighbors': 4, 'weights': 'distance'}
+29, 0.929, 0.013, 0.869, {'algorithm': 'ball_tree', 'n_neighbors': 5, 'weights': 'uniform'}
+14, 0.936, 0.014, 0.881, {'algorithm': 'ball_tree', 'n_neighbors': 5, 'weights': 'distance'}
+38, 0.924, 0.013, 0.867, {'algorithm': 'ball_tree', 'n_neighbors': 6, 'weights': 'uniform'}
+11, 0.937, 0.013, 0.868, {'algorithm': 'ball_tree', 'n_neighbors': 6, 'weights': 'distance'}
+41, 0.923, 0.014, 0.877, {'algorithm': 'ball_tree', 'n_neighbors': 7, 'weights': 'uniform'}
+16, 0.934, 0.013, 0.886, {'algorithm': 'ball_tree', 'n_neighbors': 7, 'weights': 'distance'}
+43, 0.918, 0.013, 0.904, {'algorithm': 'ball_tree', 'n_neighbors': 8, 'weights': 'uniform'}
+19, 0.933, 0.014, 0.901, {'algorithm': 'ball_tree', 'n_neighbors': 8, 'weights': 'distance'}
+47, 0.918, 0.014, 0.929, {'algorithm': 'ball_tree', 'n_neighbors': 9, 'weights': 'uniform'}
+25, 0.930, 0.014, 0.920, {'algorithm': 'ball_tree', 'n_neighbors': 9, 'weights': 'distance'}
+53, 0.914, 0.014, 0.917, {'algorithm': 'ball_tree', 'n_neighbors': 10, 'weights': 'uniform'}
+33, 0.928, 0.014, 0.927, {'algorithm': 'ball_tree', 'n_neighbors': 10, 'weights': 'distance'}
+50, 0.917, 0.017, 0.378, {'algorithm': 'kd_tree', 'n_neighbors': 2, 'weights': 'uniform'}
+5, 0.939, 0.019, 0.395, {'algorithm': 'kd_tree', 'n_neighbors': 2, 'weights': 'distance'}
+22, 0.931, 0.018, 0.460, {'algorithm': 'kd_tree', 'n_neighbors': 3, 'weights': 'uniform'}
+8, 0.938, 0.018, 0.453, {'algorithm': 'kd_tree', 'n_neighbors': 3, 'weights': 'distance'}
+35, 0.926, 0.017, 0.492, {'algorithm': 'kd_tree', 'n_neighbors': 4, 'weights': 'uniform'}
+3, 0.940, 0.018, 0.497, {'algorithm': 'kd_tree', 'n_neighbors': 4, 'weights': 'distance'}
+28, 0.929, 0.017, 0.536, {'algorithm': 'kd_tree', 'n_neighbors': 5, 'weights': 'uniform'}
+13, 0.937, 0.018, 0.561, {'algorithm': 'kd_tree', 'n_neighbors': 5, 'weights': 'distance'}
+39, 0.924, 0.017, 0.563, {'algorithm': 'kd_tree', 'n_neighbors': 6, 'weights': 'uniform'}
+9, 0.938, 0.018, 0.562, {'algorithm': 'kd_tree', 'n_neighbors': 6, 'weights': 'distance'}
+40, 0.923, 0.016, 0.572, {'algorithm': 'kd_tree', 'n_neighbors': 7, 'weights': 'uniform'}
+18, 0.934, 0.017, 0.595, {'algorithm': 'kd_tree', 'n_neighbors': 7, 'weights': 'distance'}
+44, 0.918, 0.018, 0.611, {'algorithm': 'kd_tree', 'n_neighbors': 8, 'weights': 'uniform'}
+20, 0.932, 0.018, 0.613, {'algorithm': 'kd_tree', 'n_neighbors': 8, 'weights': 'distance'}
+48, 0.917, 0.017, 0.635, {'algorithm': 'kd_tree', 'n_neighbors': 9, 'weights': 'uniform'}
+26, 0.930, 0.017, 0.632, {'algorithm': 'kd_tree', 'n_neighbors': 9, 'weights': 'distance'}
+54, 0.914, 0.017, 0.653, {'algorithm': 'kd_tree', 'n_neighbors': 10, 'weights': 'uniform'}
+32, 0.928, 0.017, 0.639, {'algorithm': 'kd_tree', 'n_neighbors': 10, 'weights': 'distance'}
+51, 0.917, 0.002, 0.506, {'algorithm': 'brute', 'n_neighbors': 2, 'weights': 'uniform'}
+6, 0.939, 0.002, 0.527, {'algorithm': 'brute', 'n_neighbors': 2, 'weights': 'distance'}
+23, 0.931, 0.002, 0.581, {'algorithm': 'brute', 'n_neighbors': 3, 'weights': 'uniform'}
+7, 0.938, 0.002, 0.569, {'algorithm': 'brute', 'n_neighbors': 3, 'weights': 'distance'}
+34, 0.926, 0.002, 0.858, {'algorithm': 'brute', 'n_neighbors': 4, 'weights': 'uniform'}
+1, 0.941, 0.002, 0.842, {'algorithm': 'brute', 'n_neighbors': 4, 'weights': 'distance'}
+31, 0.929, 0.002, 0.834, {'algorithm': 'brute', 'n_neighbors': 5, 'weights': 'uniform'}
+15, 0.936, 0.002, 0.825, {'algorithm': 'brute', 'n_neighbors': 5, 'weights': 'distance'}
+42, 0.922, 0.002, 0.829, {'algorithm': 'brute', 'n_neighbors': 6, 'weights': 'uniform'}
+12, 0.937, 0.002, 0.834, {'algorithm': 'brute', 'n_neighbors': 6, 'weights': 'distance'}
+37, 0.924, 0.002, 0.825, {'algorithm': 'brute', 'n_neighbors': 7, 'weights': 'uniform'}
+17, 0.934, 0.002, 0.839, {'algorithm': 'brute', 'n_neighbors': 7, 'weights': 'distance'}
+45, 0.918, 0.002, 0.820, {'algorithm': 'brute', 'n_neighbors': 8, 'weights': 'uniform'}
+20, 0.932, 0.002, 0.828, {'algorithm': 'brute', 'n_neighbors': 8, 'weights': 'distance'}
+46, 0.918, 0.002, 0.838, {'algorithm': 'brute', 'n_neighbors': 9, 'weights': 'uniform'}
+27, 0.929, 0.002, 0.863, {'algorithm': 'brute', 'n_neighbors': 9, 'weights': 'distance'}
+52, 0.915, 0.002, 0.843, {'algorithm': 'brute', 'n_neighbors': 10, 'weights': 'uniform'}
+29, 0.929, 0.002, 0.833, {'algorithm': 'brute', 'n_neighbors': 10, 'weights': 'distance'}
+
+Detailed classification report LETTER
+
+The model is trained on the full development set.
+The scores are computed on the full evaluation set.
+
+             precision    recall  f1-score   support
+
+          0       0.99      0.99      0.99       216
+          1       0.93      0.95      0.94       239
+          2       0.97      0.97      0.97       229
+          3       0.93      0.98      0.95       248
+          4       0.94      0.96      0.95       221
+          5       0.97      0.95      0.96       246
+          6       0.97      0.91      0.94       256
+          7       0.92      0.89      0.91       202
+          8       0.98      0.95      0.97       218
+          9       0.96      0.97      0.96       233
+         10       0.93      0.92      0.92       207
+         11       0.97      0.98      0.98       231
+         12       0.99      0.97      0.98       251
+         13       0.94      0.98      0.96       223
+         14       0.92      0.96      0.94       226
+         15       0.97      0.96      0.96       249
+         16       0.96      0.96      0.96       215
+         17       0.91      0.92      0.92       234
+         18       0.98      0.98      0.98       222
+         19       0.98      0.97      0.98       237
+         20       1.00      0.98      0.99       241
+         21       0.95      0.96      0.95       247
+         22       0.96      0.99      0.98       215
+         23       0.97      0.96      0.96       245
+         24       0.97      0.97      0.97       238
+         25       1.00      0.99      1.00       211
+
+avg / total       0.96      0.96      0.96      6000
+
+
+Confusion matrix, without normalization
+[[214   1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   1
+    0   0   0   0   0   0   0   0]
+ [  0 226   0   0   0   0   0   1   0   0   0   0   0   1   0   0   0   6
+    0   0   0   5   0   0   0   0]
+ [  0   0 222   0   0   0   3   0   0   0   0   1   0   0   2   0   1   0
+    0   0   0   0   0   0   0   0]
+ [  1   0   0 242   0   0   0   1   0   0   1   0   0   0   3   0   0   0
+    0   0   0   0   0   0   0   0]
+ [  0   0   1   0 212   0   3   0   0   0   0   2   0   0   0   0   1   0
+    0   0   0   0   0   2   0   0]
+ [  0   1   0   0   0 233   0   0   0   0   0   0   0   2   0   5   0   1
+    0   2   0   1   1   0   0   0]
+ [  0   2   2   3   8   0 232   0   0   0   0   0   0   0   5   0   0   1
+    1   0   0   1   1   0   0   0]
+ [  0   2   0   4   0   0   0 180   0   0  10   0   1   0   0   0   0   5
+    0   0   0   0   0   0   0   0]
+ [  0   0   1   0   0   0   0   0 207   9   0   1   0   0   0   0   0   0
+    0   0   0   0   0   0   0   0]
+ [  1   0   0   0   0   0   0   0   4 225   0   1   0   0   2   0   0   0
+    0   0   0   0   0   0   0   0]
+ [  0   0   0   0   0   0   0   8   0   0 190   0   0   0   0   0   0   4
+    0   0   0   0   0   5   0   0]
+ [  0   0   0   0   0   0   2   0   0   0   0 227   0   0   0   0   1   1
+    0   0   0   0   0   0   0   0]
+ [  0   0   0   0   0   0   0   0   0   0   0   0 243   0   2   0   0   0
+    0   0   0   4   2   0   0   0]
+ [  0   0   0   1   0   0   0   1   0   0   0   0   0 219   0   0   0   0
+    0   0   0   2   0   0   0   0]
+ [  0   0   2   2   0   0   0   0   0   0   0   0   0   1 217   0   4   0
+    0   0   0   0   0   0   0   0]
+ [  0   0   0   1   1   6   0   0   0   0   0   0   0   1   0 238   0   1
+    0   0   0   0   0   0   1   0]
+ [  0   0   0   0   1   0   0   0   0   0   0   0   0   0   6   1 207   0
+    0   0   0   0   0   0   0   0]
+ [  0   5   0   0   0   0   0   2   0   0   2   2   0   6   0   0   0 216
+    1   0   0   0   0   0   0   0]
+ [  0   3   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0   0
+  218   0   0   0   0   0   0   0]
+ [  0   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0   0   1
+    0 231   0   0   0   0   4   0]
+ [  0   0   0   2   0   0   0   2   0   0   0   0   0   1   0   0   0   0
+    0   0 236   0   0   0   0   0]
+ [  0   2   0   0   0   1   0   0   0   0   0   0   1   1   0   0   0   0
+    0   0   0 237   4   0   1   0]
+ [  0   0   0   0   0   0   0   0   0   0   0   0   1   0   0   0   0   0
+    0   0   1   0 213   0   0   0]
+ [  0   1   0   3   1   0   0   0   0   1   1   0   0   0   0   0   0   1
+    2   0   0   0   0 235   0   0]
+ [  1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   1   0   0
+    0   3   0   0   0   1 232   0]
+ [  0   0   0   0   1   0   0   0   0   0   0   0   0   0   0   0   1   0
+    0   0   0   0   0   0   0 209]]
