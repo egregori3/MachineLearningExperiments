@@ -1,0 +1,1099 @@
+Loading LETTER dataset
+Integer Encoding dataset
+[[ 2  8  3 ...,  8  0  8]
+ [ 5 12  3 ...,  8  4 10]
+ [ 4 11  6 ...,  7  3  9]
+ ..., 
+ [ 6  9  6 ..., 12  2  4]
+ [ 2  3  4 ...,  9  5  8]
+ [ 4  9  6 ...,  7  2  8]]
+[19  8  3 ..., 19 18  0]
+Tuning hyper-parameters for accuracy
+
+
+835, 0.353, 0.362, 0.008, 0.002, {'criterion': 'entropy', 'max_depth': 5, 'max_features': 'auto', 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'best'}
+914, 0.239, 0.240, 0.005, 0.001, {'criterion': 'entropy', 'max_depth': 5, 'max_features': 'auto', 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'random'}
+800, 0.382, 0.385, 0.008, 0.002, {'criterion': 'entropy', 'max_depth': 5, 'max_features': 'auto', 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'best'}
+935, 0.217, 0.220, 0.004, 0.001, {'criterion': 'entropy', 'max_depth': 5, 'max_features': 'auto', 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'random'}
+781, 0.408, 0.409, 0.008, 0.001, {'criterion': 'entropy', 'max_depth': 5, 'max_features': 'auto', 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'best'}
+919, 0.228, 0.231, 0.004, 0.002, {'criterion': 'entropy', 'max_depth': 5, 'max_features': 'auto', 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'random'}
+790, 0.393, 0.404, 0.009, 0.002, {'criterion': 'entropy', 'max_depth': 5, 'max_features': 'auto', 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'best'}
+925, 0.224, 0.226, 0.003, 0.002, {'criterion': 'entropy', 'max_depth': 5, 'max_features': 'auto', 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'random'}
+779, 0.417, 0.426, 0.008, 0.002, {'criterion': 'entropy', 'max_depth': 5, 'max_features': 'auto', 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'best'}
+904, 0.248, 0.254, 0.003, 0.002, {'criterion': 'entropy', 'max_depth': 5, 'max_features': 'auto', 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'random'}
+811, 0.372, 0.378, 0.010, 0.002, {'criterion': 'entropy', 'max_depth': 5, 'max_features': 'auto', 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'best'}
+895, 0.259, 0.254, 0.005, 0.002, {'criterion': 'entropy', 'max_depth': 5, 'max_features': 'auto', 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'random'}
+830, 0.362, 0.370, 0.008, 0.002, {'criterion': 'entropy', 'max_depth': 5, 'max_features': 'auto', 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'best'}
+894, 0.260, 0.270, 0.004, 0.001, {'criterion': 'entropy', 'max_depth': 5, 'max_features': 'auto', 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'random'}
+805, 0.375, 0.384, 0.008, 0.001, {'criterion': 'entropy', 'max_depth': 5, 'max_features': 'auto', 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'best'}
+916, 0.233, 0.240, 0.003, 0.002, {'criterion': 'entropy', 'max_depth': 5, 'max_features': 'auto', 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'random'}
+791, 0.392, 0.397, 0.007, 0.001, {'criterion': 'entropy', 'max_depth': 5, 'max_features': 'auto', 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'best'}
+941, 0.214, 0.216, 0.004, 0.001, {'criterion': 'entropy', 'max_depth': 5, 'max_features': 'auto', 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'random'}
+812, 0.372, 0.379, 0.008, 0.001, {'criterion': 'entropy', 'max_depth': 5, 'max_features': 'auto', 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'best'}
+905, 0.247, 0.249, 0.004, 0.002, {'criterion': 'entropy', 'max_depth': 5, 'max_features': 'auto', 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'random'}
+809, 0.373, 0.384, 0.007, 0.001, {'criterion': 'entropy', 'max_depth': 5, 'max_features': 'auto', 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'best'}
+945, 0.210, 0.219, 0.004, 0.001, {'criterion': 'entropy', 'max_depth': 5, 'max_features': 'auto', 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'random'}
+803, 0.377, 0.383, 0.010, 0.001, {'criterion': 'entropy', 'max_depth': 5, 'max_features': 'auto', 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'best'}
+921, 0.227, 0.234, 0.005, 0.001, {'criterion': 'entropy', 'max_depth': 5, 'max_features': 'auto', 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'random'}
+798, 0.384, 0.393, 0.008, 0.001, {'criterion': 'entropy', 'max_depth': 5, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'best'}
+938, 0.216, 0.225, 0.003, 0.002, {'criterion': 'entropy', 'max_depth': 5, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'random'}
+802, 0.378, 0.381, 0.008, 0.002, {'criterion': 'entropy', 'max_depth': 5, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'best'}
+897, 0.256, 0.256, 0.004, 0.001, {'criterion': 'entropy', 'max_depth': 5, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'random'}
+782, 0.408, 0.412, 0.007, 0.002, {'criterion': 'entropy', 'max_depth': 5, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'best'}
+900, 0.251, 0.256, 0.005, 0.001, {'criterion': 'entropy', 'max_depth': 5, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'random'}
+788, 0.393, 0.404, 0.007, 0.001, {'criterion': 'entropy', 'max_depth': 5, 'max_features': 'sqrt', 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'best'}
+956, 0.199, 0.204, 0.003, 0.001, {'criterion': 'entropy', 'max_depth': 5, 'max_features': 'sqrt', 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'random'}
+792, 0.391, 0.396, 0.007, 0.002, {'criterion': 'entropy', 'max_depth': 5, 'max_features': 'sqrt', 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'best'}
+898, 0.253, 0.258, 0.004, 0.001, {'criterion': 'entropy', 'max_depth': 5, 'max_features': 'sqrt', 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'random'}
+829, 0.363, 0.369, 0.007, 0.001, {'criterion': 'entropy', 'max_depth': 5, 'max_features': 'sqrt', 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'best'}
+954, 0.200, 0.203, 0.004, 0.001, {'criterion': 'entropy', 'max_depth': 5, 'max_features': 'sqrt', 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'random'}
+794, 0.390, 0.395, 0.007, 0.001, {'criterion': 'entropy', 'max_depth': 5, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'best'}
+915, 0.238, 0.247, 0.003, 0.001, {'criterion': 'entropy', 'max_depth': 5, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'random'}
+796, 0.386, 0.393, 0.007, 0.001, {'criterion': 'entropy', 'max_depth': 5, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'best'}
+932, 0.220, 0.223, 0.004, 0.001, {'criterion': 'entropy', 'max_depth': 5, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'random'}
+807, 0.375, 0.380, 0.007, 0.001, {'criterion': 'entropy', 'max_depth': 5, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'best'}
+948, 0.206, 0.214, 0.003, 0.001, {'criterion': 'entropy', 'max_depth': 5, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'random'}
+801, 0.382, 0.390, 0.007, 0.002, {'criterion': 'entropy', 'max_depth': 5, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'best'}
+939, 0.216, 0.219, 0.003, 0.001, {'criterion': 'entropy', 'max_depth': 5, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'random'}
+797, 0.386, 0.389, 0.008, 0.001, {'criterion': 'entropy', 'max_depth': 5, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'best'}
+890, 0.271, 0.277, 0.003, 0.001, {'criterion': 'entropy', 'max_depth': 5, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'random'}
+833, 0.357, 0.366, 0.006, 0.002, {'criterion': 'entropy', 'max_depth': 5, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'best'}
+940, 0.214, 0.219, 0.003, 0.001, {'criterion': 'entropy', 'max_depth': 5, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'random'}
+804, 0.376, 0.390, 0.008, 0.001, {'criterion': 'entropy', 'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'best'}
+892, 0.263, 0.266, 0.004, 0.001, {'criterion': 'entropy', 'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'random'}
+786, 0.399, 0.409, 0.007, 0.001, {'criterion': 'entropy', 'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'best'}
+942, 0.213, 0.218, 0.004, 0.001, {'criterion': 'entropy', 'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'random'}
+793, 0.391, 0.396, 0.007, 0.001, {'criterion': 'entropy', 'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'best'}
+933, 0.218, 0.225, 0.004, 0.001, {'criterion': 'entropy', 'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'random'}
+783, 0.407, 0.410, 0.007, 0.001, {'criterion': 'entropy', 'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'best'}
+917, 0.231, 0.237, 0.004, 0.001, {'criterion': 'entropy', 'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'random'}
+799, 0.382, 0.387, 0.007, 0.001, {'criterion': 'entropy', 'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'best'}
+908, 0.245, 0.249, 0.003, 0.002, {'criterion': 'entropy', 'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'random'}
+841, 0.344, 0.350, 0.009, 0.002, {'criterion': 'entropy', 'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'best'}
+907, 0.246, 0.252, 0.006, 0.002, {'criterion': 'entropy', 'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'random'}
+806, 0.375, 0.379, 0.013, 0.003, {'criterion': 'entropy', 'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'best'}
+912, 0.241, 0.243, 0.006, 0.002, {'criterion': 'entropy', 'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'random'}
+808, 0.374, 0.378, 0.010, 0.002, {'criterion': 'entropy', 'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'best'}
+899, 0.252, 0.252, 0.006, 0.002, {'criterion': 'entropy', 'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'random'}
+787, 0.394, 0.405, 0.010, 0.001, {'criterion': 'entropy', 'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'best'}
+913, 0.240, 0.241, 0.004, 0.001, {'criterion': 'entropy', 'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'random'}
+785, 0.400, 0.406, 0.008, 0.002, {'criterion': 'entropy', 'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'best'}
+909, 0.243, 0.250, 0.004, 0.002, {'criterion': 'entropy', 'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'random'}
+789, 0.393, 0.398, 0.008, 0.002, {'criterion': 'entropy', 'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'best'}
+896, 0.259, 0.262, 0.004, 0.002, {'criterion': 'entropy', 'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'random'}
+784, 0.406, 0.408, 0.008, 0.002, {'criterion': 'entropy', 'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'best'}
+922, 0.227, 0.230, 0.005, 0.002, {'criterion': 'entropy', 'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'random'}
+733, 0.495, 0.504, 0.025, 0.002, {'criterion': 'entropy', 'max_depth': 5, 'max_features': None, 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'best'}
+842, 0.342, 0.349, 0.009, 0.001, {'criterion': 'entropy', 'max_depth': 5, 'max_features': None, 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'random'}
+733, 0.495, 0.504, 0.024, 0.002, {'criterion': 'entropy', 'max_depth': 5, 'max_features': None, 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'best'}
+828, 0.366, 0.366, 0.008, 0.001, {'criterion': 'entropy', 'max_depth': 5, 'max_features': None, 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'random'}
+733, 0.495, 0.504, 0.023, 0.002, {'criterion': 'entropy', 'max_depth': 5, 'max_features': None, 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'best'}
+840, 0.348, 0.356, 0.008, 0.002, {'criterion': 'entropy', 'max_depth': 5, 'max_features': None, 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'random'}
+733, 0.495, 0.504, 0.021, 0.002, {'criterion': 'entropy', 'max_depth': 5, 'max_features': None, 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'best'}
+839, 0.349, 0.351, 0.009, 0.002, {'criterion': 'entropy', 'max_depth': 5, 'max_features': None, 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'random'}
+733, 0.495, 0.504, 0.021, 0.002, {'criterion': 'entropy', 'max_depth': 5, 'max_features': None, 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'best'}
+845, 0.341, 0.344, 0.013, 0.003, {'criterion': 'entropy', 'max_depth': 5, 'max_features': None, 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'random'}
+733, 0.495, 0.504, 0.027, 0.002, {'criterion': 'entropy', 'max_depth': 5, 'max_features': None, 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'best'}
+814, 0.367, 0.372, 0.010, 0.002, {'criterion': 'entropy', 'max_depth': 5, 'max_features': None, 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'random'}
+727, 0.495, 0.504, 0.027, 0.001, {'criterion': 'entropy', 'max_depth': 5, 'max_features': None, 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'best'}
+855, 0.324, 0.328, 0.009, 0.002, {'criterion': 'entropy', 'max_depth': 5, 'max_features': None, 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'random'}
+727, 0.495, 0.504, 0.023, 0.001, {'criterion': 'entropy', 'max_depth': 5, 'max_features': None, 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'best'}
+838, 0.349, 0.353, 0.007, 0.001, {'criterion': 'entropy', 'max_depth': 5, 'max_features': None, 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'random'}
+727, 0.495, 0.504, 0.023, 0.002, {'criterion': 'entropy', 'max_depth': 5, 'max_features': None, 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'best'}
+834, 0.357, 0.362, 0.011, 0.002, {'criterion': 'entropy', 'max_depth': 5, 'max_features': None, 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'random'}
+727, 0.495, 0.504, 0.027, 0.002, {'criterion': 'entropy', 'max_depth': 5, 'max_features': None, 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'best'}
+837, 0.351, 0.357, 0.011, 0.002, {'criterion': 'entropy', 'max_depth': 5, 'max_features': None, 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'random'}
+727, 0.495, 0.504, 0.026, 0.002, {'criterion': 'entropy', 'max_depth': 5, 'max_features': None, 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'best'}
+823, 0.366, 0.370, 0.011, 0.002, {'criterion': 'entropy', 'max_depth': 5, 'max_features': None, 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'random'}
+727, 0.495, 0.504, 0.025, 0.002, {'criterion': 'entropy', 'max_depth': 5, 'max_features': None, 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'best'}
+810, 0.373, 0.381, 0.007, 0.001, {'criterion': 'entropy', 'max_depth': 5, 'max_features': None, 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'random'}
+546, 0.706, 0.769, 0.014, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': 'auto', 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'best'}
+707, 0.514, 0.550, 0.006, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': 'auto', 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'random'}
+495, 0.717, 0.780, 0.013, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': 'auto', 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'best'}
+763, 0.470, 0.515, 0.006, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': 'auto', 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'random'}
+521, 0.710, 0.772, 0.015, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': 'auto', 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'best'}
+740, 0.493, 0.529, 0.006, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': 'auto', 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'random'}
+555, 0.703, 0.762, 0.014, 0.001, {'criterion': 'entropy', 'max_depth': 10, 'max_features': 'auto', 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'best'}
+715, 0.503, 0.532, 0.006, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': 'auto', 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'random'}
+489, 0.718, 0.772, 0.013, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': 'auto', 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'best'}
+712, 0.506, 0.538, 0.006, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': 'auto', 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'random'}
+545, 0.706, 0.769, 0.014, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': 'auto', 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'best'}
+765, 0.470, 0.503, 0.006, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': 'auto', 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'random'}
+469, 0.723, 0.783, 0.013, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': 'auto', 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'best'}
+698, 0.538, 0.574, 0.006, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': 'auto', 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'random'}
+634, 0.685, 0.738, 0.015, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': 'auto', 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'best'}
+777, 0.442, 0.467, 0.006, 0.001, {'criterion': 'entropy', 'max_depth': 10, 'max_features': 'auto', 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'random'}
+554, 0.704, 0.762, 0.016, 0.001, {'criterion': 'entropy', 'max_depth': 10, 'max_features': 'auto', 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'best'}
+709, 0.507, 0.537, 0.007, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': 'auto', 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'random'}
+532, 0.709, 0.760, 0.015, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': 'auto', 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'best'}
+719, 0.499, 0.532, 0.006, 0.001, {'criterion': 'entropy', 'max_depth': 10, 'max_features': 'auto', 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'random'}
+520, 0.710, 0.761, 0.013, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': 'auto', 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'best'}
+752, 0.481, 0.517, 0.007, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': 'auto', 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'random'}
+526, 0.710, 0.771, 0.016, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': 'auto', 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'best'}
+757, 0.474, 0.503, 0.008, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': 'auto', 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'random'}
+514, 0.712, 0.780, 0.017, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'best'}
+722, 0.499, 0.528, 0.006, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'random'}
+558, 0.702, 0.765, 0.016, 0.003, {'criterion': 'entropy', 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'best'}
+703, 0.522, 0.559, 0.009, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'random'}
+476, 0.721, 0.781, 0.023, 0.004, {'criterion': 'entropy', 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'best'}
+742, 0.491, 0.531, 0.010, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'random'}
+525, 0.710, 0.777, 0.020, 0.003, {'criterion': 'entropy', 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'best'}
+711, 0.506, 0.533, 0.008, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'random'}
+488, 0.718, 0.784, 0.018, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'best'}
+759, 0.472, 0.503, 0.007, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'random'}
+536, 0.708, 0.768, 0.014, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'best'}
+706, 0.517, 0.550, 0.007, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'random'}
+534, 0.708, 0.767, 0.015, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'best'}
+717, 0.501, 0.526, 0.006, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'random'}
+570, 0.700, 0.759, 0.015, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'best'}
+770, 0.457, 0.490, 0.008, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'random'}
+541, 0.707, 0.760, 0.014, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'best'}
+743, 0.491, 0.517, 0.006, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'random'}
+580, 0.697, 0.754, 0.017, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'best'}
+700, 0.524, 0.552, 0.009, 0.003, {'criterion': 'entropy', 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'random'}
+540, 0.707, 0.758, 0.019, 0.003, {'criterion': 'entropy', 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'best'}
+744, 0.490, 0.530, 0.007, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'random'}
+538, 0.708, 0.757, 0.021, 0.003, {'criterion': 'entropy', 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'best'}
+752, 0.481, 0.504, 0.007, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'random'}
+454, 0.728, 0.797, 0.021, 0.003, {'criterion': 'entropy', 'max_depth': 10, 'max_features': 'log2', 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'best'}
+760, 0.472, 0.514, 0.008, 0.003, {'criterion': 'entropy', 'max_depth': 10, 'max_features': 'log2', 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'random'}
+461, 0.725, 0.790, 0.020, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': 'log2', 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'best'}
+721, 0.499, 0.529, 0.011, 0.003, {'criterion': 'entropy', 'max_depth': 10, 'max_features': 'log2', 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'random'}
+509, 0.713, 0.776, 0.016, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': 'log2', 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'best'}
+754, 0.479, 0.507, 0.006, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': 'log2', 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'random'}
+582, 0.697, 0.757, 0.017, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'best'}
+697, 0.546, 0.581, 0.009, 0.003, {'criterion': 'entropy', 'max_depth': 10, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'random'}
+523, 0.710, 0.771, 0.016, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'best'}
+719, 0.499, 0.538, 0.007, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'random'}
+450, 0.729, 0.792, 0.014, 0.001, {'criterion': 'entropy', 'max_depth': 10, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'best'}
+701, 0.524, 0.559, 0.009, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'random'}
+547, 0.705, 0.772, 0.015, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'best'}
+705, 0.518, 0.546, 0.008, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'random'}
+562, 0.701, 0.759, 0.014, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'best'}
+710, 0.507, 0.542, 0.009, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'random'}
+575, 0.698, 0.751, 0.016, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'best'}
+746, 0.488, 0.519, 0.007, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'random'}
+529, 0.710, 0.763, 0.015, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'best'}
+745, 0.489, 0.529, 0.006, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'random'}
+578, 0.697, 0.749, 0.014, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'best'}
+739, 0.494, 0.520, 0.006, 0.001, {'criterion': 'entropy', 'max_depth': 10, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'random'}
+605, 0.692, 0.750, 0.013, 0.001, {'criterion': 'entropy', 'max_depth': 10, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'best'}
+713, 0.504, 0.532, 0.006, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'random'}
+236, 0.781, 0.859, 0.049, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': None, 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'best'}
+641, 0.680, 0.737, 0.016, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': None, 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'random'}
+241, 0.781, 0.858, 0.053, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': None, 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'best'}
+565, 0.701, 0.757, 0.016, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': None, 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'random'}
+227, 0.782, 0.857, 0.051, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': None, 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'best'}
+598, 0.693, 0.746, 0.016, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': None, 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'random'}
+273, 0.778, 0.852, 0.046, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': None, 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'best'}
+567, 0.700, 0.754, 0.015, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': None, 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'random'}
+257, 0.779, 0.852, 0.050, 0.003, {'criterion': 'entropy', 'max_depth': 10, 'max_features': None, 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'best'}
+513, 0.712, 0.772, 0.020, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': None, 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'random'}
+270, 0.778, 0.852, 0.053, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': None, 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'best'}
+578, 0.697, 0.752, 0.018, 0.001, {'criterion': 'entropy', 'max_depth': 10, 'max_features': None, 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'random'}
+278, 0.777, 0.847, 0.042, 0.001, {'criterion': 'entropy', 'max_depth': 10, 'max_features': None, 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'best'}
+635, 0.684, 0.727, 0.014, 0.001, {'criterion': 'entropy', 'max_depth': 10, 'max_features': None, 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'random'}
+267, 0.778, 0.847, 0.045, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': None, 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'best'}
+627, 0.687, 0.722, 0.020, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': None, 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'random'}
+269, 0.778, 0.847, 0.052, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': None, 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'best'}
+511, 0.712, 0.767, 0.022, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': None, 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'random'}
+312, 0.772, 0.840, 0.054, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': None, 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'best'}
+497, 0.716, 0.760, 0.022, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': None, 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'random'}
+313, 0.772, 0.840, 0.050, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': None, 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'best'}
+577, 0.697, 0.752, 0.015, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': None, 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'random'}
+305, 0.773, 0.840, 0.046, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': None, 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'best'}
+581, 0.697, 0.747, 0.017, 0.002, {'criterion': 'entropy', 'max_depth': 10, 'max_features': None, 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'random'}
+95, 0.810, 1.000, 0.021, 0.003, {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'auto', 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'best'}
+380, 0.758, 0.979, 0.016, 0.003, {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'auto', 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'random'}
+130, 0.802, 0.977, 0.020, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'auto', 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'best'}
+411, 0.749, 0.944, 0.014, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'auto', 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'random'}
+115, 0.805, 0.959, 0.023, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'auto', 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'best'}
+412, 0.748, 0.919, 0.013, 0.003, {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'auto', 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'random'}
+218, 0.784, 0.926, 0.018, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'auto', 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'best'}
+447, 0.729, 0.873, 0.011, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'auto', 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'random'}
+196, 0.788, 0.928, 0.023, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'auto', 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'best'}
+486, 0.718, 0.860, 0.011, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'auto', 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'random'}
+185, 0.789, 0.928, 0.018, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'auto', 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'best'}
+503, 0.714, 0.864, 0.011, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'auto', 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'random'}
+252, 0.779, 0.894, 0.021, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'auto', 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'best'}
+502, 0.714, 0.825, 0.012, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'auto', 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'random'}
+220, 0.783, 0.895, 0.017, 0.001, {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'auto', 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'best'}
+505, 0.713, 0.823, 0.010, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'auto', 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'random'}
+203, 0.786, 0.894, 0.019, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'auto', 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'best'}
+466, 0.723, 0.822, 0.013, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'auto', 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'random'}
+329, 0.770, 0.866, 0.020, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'auto', 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'best'}
+628, 0.687, 0.775, 0.010, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'auto', 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'random'}
+364, 0.763, 0.864, 0.024, 0.003, {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'auto', 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'best'}
+590, 0.695, 0.778, 0.012, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'auto', 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'random'}
+297, 0.774, 0.866, 0.019, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'auto', 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'best'}
+636, 0.684, 0.777, 0.011, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'auto', 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'random'}
+123, 0.804, 1.000, 0.023, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'best'}
+402, 0.752, 0.987, 0.013, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'random'}
+131, 0.802, 0.977, 0.021, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'best'}
+433, 0.735, 0.942, 0.013, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'random'}
+120, 0.804, 0.959, 0.019, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'best'}
+449, 0.729, 0.919, 0.014, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'random'}
+191, 0.788, 0.927, 0.021, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'best'}
+467, 0.723, 0.866, 0.013, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'random'}
+181, 0.790, 0.928, 0.025, 0.003, {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'best'}
+474, 0.721, 0.869, 0.015, 0.003, {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'random'}
+254, 0.779, 0.927, 0.023, 0.004, {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'best'}
+543, 0.707, 0.867, 0.015, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'random'}
+233, 0.782, 0.894, 0.021, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'best'}
+596, 0.694, 0.807, 0.012, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'random'}
+284, 0.777, 0.891, 0.023, 0.003, {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'best'}
+523, 0.710, 0.813, 0.014, 0.003, {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'random'}
+237, 0.781, 0.893, 0.022, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'best'}
+537, 0.708, 0.812, 0.013, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'random'}
+341, 0.768, 0.866, 0.017, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'best'}
+564, 0.701, 0.790, 0.009, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'random'}
+336, 0.769, 0.865, 0.015, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'best'}
+644, 0.675, 0.767, 0.012, 0.003, {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'random'}
+311, 0.772, 0.866, 0.020, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'best'}
+633, 0.685, 0.779, 0.011, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'random'}
+98, 0.810, 1.000, 0.028, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'log2', 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'best'}
+386, 0.757, 0.975, 0.016, 0.003, {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'log2', 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'random'}
+143, 0.798, 0.976, 0.021, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'log2', 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'best'}
+415, 0.747, 0.927, 0.012, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'log2', 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'random'}
+122, 0.804, 0.961, 0.018, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'log2', 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'best'}
+412, 0.748, 0.921, 0.013, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'log2', 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'random'}
+211, 0.785, 0.928, 0.023, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'best'}
+451, 0.729, 0.879, 0.012, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'random'}
+215, 0.784, 0.925, 0.017, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'best'}
+478, 0.720, 0.869, 0.011, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'random'}
+164, 0.793, 0.928, 0.017, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'best'}
+472, 0.722, 0.867, 0.010, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'random'}
+242, 0.780, 0.891, 0.016, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'best'}
+618, 0.690, 0.807, 0.010, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'random'}
+324, 0.771, 0.891, 0.016, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'best'}
+517, 0.711, 0.813, 0.009, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'random'}
+230, 0.782, 0.896, 0.018, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'best'}
+484, 0.718, 0.827, 0.010, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'random'}
+324, 0.771, 0.865, 0.020, 0.003, {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'best'}
+587, 0.695, 0.791, 0.009, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'random'}
+309, 0.773, 0.867, 0.019, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'best'}
+648, 0.668, 0.762, 0.011, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'random'}
+273, 0.778, 0.869, 0.025, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'best'}
+609, 0.691, 0.775, 0.013, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'random'}
+2, 0.842, 1.000, 0.070, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': None, 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'best'}
+27, 0.826, 1.000, 0.026, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': None, 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'random'}
+8, 0.839, 0.988, 0.056, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': None, 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'best'}
+66, 0.817, 0.981, 0.024, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': None, 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'random'}
+7, 0.839, 0.976, 0.061, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': None, 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'best'}
+59, 0.820, 0.966, 0.025, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': None, 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'random'}
+20, 0.829, 0.954, 0.069, 0.003, {'criterion': 'entropy', 'max_depth': 20, 'max_features': None, 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'best'}
+151, 0.797, 0.934, 0.028, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': None, 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'random'}
+27, 0.826, 0.954, 0.049, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': None, 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'best'}
+107, 0.807, 0.939, 0.024, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': None, 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'random'}
+30, 0.826, 0.954, 0.049, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': None, 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'best'}
+101, 0.809, 0.938, 0.025, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': None, 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'random'}
+31, 0.826, 0.931, 0.057, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': None, 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'best'}
+134, 0.800, 0.907, 0.023, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': None, 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'random'}
+29, 0.826, 0.931, 0.052, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': None, 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'best'}
+127, 0.802, 0.908, 0.019, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': None, 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'random'}
+33, 0.825, 0.931, 0.051, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': None, 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'best'}
+174, 0.792, 0.904, 0.026, 0.003, {'criterion': 'entropy', 'max_depth': 20, 'max_features': None, 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'random'}
+75, 0.815, 0.908, 0.045, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': None, 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'best'}
+279, 0.777, 0.876, 0.020, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': None, 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'random'}
+77, 0.815, 0.908, 0.043, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': None, 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'best'}
+293, 0.775, 0.873, 0.020, 0.003, {'criterion': 'entropy', 'max_depth': 20, 'max_features': None, 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'random'}
+69, 0.816, 0.908, 0.053, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': None, 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'best'}
+306, 0.773, 0.869, 0.025, 0.002, {'criterion': 'entropy', 'max_depth': 20, 'max_features': None, 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'random'}
+99, 0.810, 1.000, 0.027, 0.004, {'criterion': 'entropy', 'max_depth': 50, 'max_features': 'auto', 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'best'}
+331, 0.770, 1.000, 0.017, 0.003, {'criterion': 'entropy', 'max_depth': 50, 'max_features': 'auto', 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'random'}
+105, 0.808, 0.978, 0.025, 0.002, {'criterion': 'entropy', 'max_depth': 50, 'max_features': 'auto', 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'best'}
+392, 0.754, 0.960, 0.015, 0.002, {'criterion': 'entropy', 'max_depth': 50, 'max_features': 'auto', 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'random'}
+148, 0.797, 0.960, 0.020, 0.002, {'criterion': 'entropy', 'max_depth': 50, 'max_features': 'auto', 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'best'}
+419, 0.743, 0.929, 0.013, 0.002, {'criterion': 'entropy', 'max_depth': 50, 'max_features': 'auto', 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'random'}
+160, 0.794, 0.930, 0.022, 0.002, {'criterion': 'entropy', 'max_depth': 50, 'max_features': 'auto', 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'best'}
+463, 0.724, 0.878, 0.011, 0.002, {'criterion': 'entropy', 'max_depth': 50, 'max_features': 'auto', 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'random'}
+247, 0.780, 0.925, 0.019, 0.002, {'criterion': 'entropy', 'max_depth': 50, 'max_features': 'auto', 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'best'}
+455, 0.727, 0.880, 0.014, 0.002, {'criterion': 'entropy', 'max_depth': 50, 'max_features': 'auto', 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'random'}
+188, 0.789, 0.929, 0.023, 0.003, {'criterion': 'entropy', 'max_depth': 50, 'max_features': 'auto', 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'best'}
+407, 0.749, 0.886, 0.012, 0.002, {'criterion': 'entropy', 'max_depth': 50, 'max_features': 'auto', 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'random'}
+240, 0.781, 0.893, 0.020, 0.002, {'criterion': 'entropy', 'max_depth': 50, 'max_features': 'auto', 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'best'}
+492, 0.717, 0.824, 0.016, 0.003, {'criterion': 'entropy', 'max_depth': 50, 'max_features': 'auto', 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'random'}
+183, 0.790, 0.896, 0.022, 0.002, {'criterion': 'entropy', 'max_depth': 50, 'max_features': 'auto', 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'best'}
+515, 0.712, 0.823, 0.013, 0.003, {'criterion': 'entropy', 'max_depth': 50, 'max_features': 'auto', 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'random'}
+260, 0.779, 0.893, 0.022, 0.003, {'criterion': 'entropy', 'max_depth': 50, 'max_features': 'auto', 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'best'}
+519, 0.711, 0.822, 0.011, 0.002, {'criterion': 'entropy', 'max_depth': 50, 'max_features': 'auto', 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'random'}
+302, 0.774, 0.868, 0.019, 0.002, {'criterion': 'entropy', 'max_depth': 50, 'max_features': 'auto', 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'best'}
+637, 0.682, 0.776, 0.010, 0.002, {'criterion': 'entropy', 'max_depth': 50, 'max_features': 'auto', 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'random'}
+318, 0.771, 0.866, 0.016, 0.002, {'criterion': 'entropy', 'max_depth': 50, 'max_features': 'auto', 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'best'}
+623, 0.688, 0.777, 0.010, 0.002, {'criterion': 'entropy', 'max_depth': 50, 'max_features': 'auto', 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'random'}
+340, 0.768, 0.869, 0.019, 0.002, {'criterion': 'entropy', 'max_depth': 50, 'max_features': 'auto', 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'best'}
+621, 0.689, 0.777, 0.011, 0.002, {'criterion': 'entropy', 'max_depth': 50, 'max_features': 'auto', 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'random'}
+104, 0.808, 1.000, 0.020, 0.003, {'criterion': 'entropy', 'max_depth': 50, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'best'}
+249, 0.780, 1.000, 0.014, 0.003, {'criterion': 'entropy', 'max_depth': 50, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'random'}
+127, 0.802, 0.976, 0.019, 0.002, {'criterion': 'entropy', 'max_depth': 50, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'best'}
+393, 0.754, 0.959, 0.013, 0.003, {'criterion': 'entropy', 'max_depth': 50, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'random'}
+103, 0.808, 0.961, 0.019, 0.002, {'criterion': 'entropy', 'max_depth': 50, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'best'}
+401, 0.753, 0.931, 0.013, 0.002, {'criterion': 'entropy', 'max_depth': 50, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'random'}
+193, 0.788, 0.928, 0.019, 0.002, {'criterion': 'entropy', 'max_depth': 50, 'max_features': 'sqrt', 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'best'}
+446, 0.730, 0.878, 0.011, 0.002, {'criterion': 'entropy', 'max_depth': 50, 'max_features': 'sqrt', 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'random'}
+175, 0.791, 0.927, 0.017, 0.002, {'criterion': 'entropy', 'max_depth': 50, 'max_features': 'sqrt', 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'best'}
+473, 0.721, 0.874, 0.016, 0.002, {'criterion': 'entropy', 'max_depth': 50, 'max_features': 'sqrt', 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'random'}
+187, 0.789, 0.928, 0.022, 0.003, {'criterion': 'entropy', 'max_depth': 50, 'max_features': 'sqrt', 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'best'}
+457, 0.727, 0.879, 0.013, 0.002, {'criterion': 'entropy', 'max_depth': 50, 'max_features': 'sqrt', 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'random'}
+227, 0.782, 0.893, 0.017, 0.002, {'criterion': 'entropy', 'max_depth': 50, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'best'}
+516, 0.712, 0.825, 0.009, 0.002, {'criterion': 'entropy', 'max_depth': 50, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'random'}
+212, 0.784, 0.895, 0.017, 0.002, {'criterion': 'entropy', 'max_depth': 50, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'best'}
+535, 0.708, 0.824, 0.013, 0.003, {'criterion': 'entropy', 'max_depth': 50, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'random'}
+243, 0.780, 0.893, 0.018, 0.002, {'criterion': 'entropy', 'max_depth': 50, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'best'}
+471, 0.722, 0.826, 0.011, 0.002, {'criterion': 'entropy', 'max_depth': 50, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'random'}
+372, 0.761, 0.862, 0.019, 0.003, {'criterion': 'entropy', 'max_depth': 50, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'best'}
+585, 0.696, 0.782, 0.012, 0.002, {'criterion': 'entropy', 'max_depth': 50, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'random'}
+347, 0.768, 0.865, 0.022, 0.003, {'criterion': 'entropy', 'max_depth': 50, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'best'}
+647, 0.668, 0.763, 0.013, 0.004, {'criterion': 'entropy', 'max_depth': 50, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'random'}
+317, 0.771, 0.867, 0.024, 0.003, {'criterion': 'entropy', 'max_depth': 50, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'best'}
+597, 0.693, 0.779, 0.014, 0.003, {'criterion': 'entropy', 'max_depth': 50, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'random'}
+71, 0.815, 1.000, 0.027, 0.002, {'criterion': 'entropy', 'max_depth': 50, 'max_features': 'log2', 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'best'}
+373, 0.760, 1.000, 0.015, 0.002, {'criterion': 'entropy', 'max_depth': 50, 'max_features': 'log2', 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'random'}
+133, 0.801, 0.976, 0.021, 0.002, {'criterion': 'entropy', 'max_depth': 50, 'max_features': 'log2', 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'best'}
+395, 0.754, 0.960, 0.017, 0.002, {'criterion': 'entropy', 'max_depth': 50, 'max_features': 'log2', 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'random'}
+132, 0.801, 0.959, 0.026, 0.002, {'criterion': 'entropy', 'max_depth': 50, 'max_features': 'log2', 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'best'}
+398, 0.753, 0.934, 0.012, 0.002, {'criterion': 'entropy', 'max_depth': 50, 'max_features': 'log2', 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'random'}
+203, 0.786, 0.928, 0.018, 0.001, {'criterion': 'entropy', 'max_depth': 50, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'best'}
+445, 0.730, 0.875, 0.013, 0.002, {'criterion': 'entropy', 'max_depth': 50, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'random'}
+205, 0.786, 0.926, 0.022, 0.002, {'criterion': 'entropy', 'max_depth': 50, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'best'}
+423, 0.740, 0.882, 0.012, 0.003, {'criterion': 'entropy', 'max_depth': 50, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'random'}
+180, 0.790, 0.928, 0.019, 0.002, {'criterion': 'entropy', 'max_depth': 50, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'best'}
+434, 0.735, 0.881, 0.011, 0.004, {'criterion': 'entropy', 'max_depth': 50, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'random'}
+273, 0.778, 0.894, 0.022, 0.002, {'criterion': 'entropy', 'max_depth': 50, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'best'}
+566, 0.701, 0.817, 0.013, 0.003, {'criterion': 'entropy', 'max_depth': 50, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'random'}
+267, 0.778, 0.894, 0.021, 0.002, {'criterion': 'entropy', 'max_depth': 50, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'best'}
+493, 0.717, 0.821, 0.012, 0.002, {'criterion': 'entropy', 'max_depth': 50, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'random'}
+286, 0.776, 0.893, 0.021, 0.002, {'criterion': 'entropy', 'max_depth': 50, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'best'}
+499, 0.716, 0.827, 0.011, 0.002, {'criterion': 'entropy', 'max_depth': 50, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'random'}
+348, 0.768, 0.864, 0.019, 0.002, {'criterion': 'entropy', 'max_depth': 50, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'best'}
+620, 0.689, 0.780, 0.011, 0.002, {'criterion': 'entropy', 'max_depth': 50, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'random'}
+362, 0.764, 0.863, 0.016, 0.002, {'criterion': 'entropy', 'max_depth': 50, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'best'}
+623, 0.688, 0.783, 0.008, 0.002, {'criterion': 'entropy', 'max_depth': 50, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'random'}
+357, 0.765, 0.862, 0.018, 0.002, {'criterion': 'entropy', 'max_depth': 50, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'best'}
+640, 0.680, 0.774, 0.013, 0.003, {'criterion': 'entropy', 'max_depth': 50, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'random'}
+1, 0.843, 1.000, 0.060, 0.002, {'criterion': 'entropy', 'max_depth': 50, 'max_features': None, 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'best'}
+48, 0.822, 1.000, 0.027, 0.003, {'criterion': 'entropy', 'max_depth': 50, 'max_features': None, 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'random'}
+10, 0.837, 0.988, 0.061, 0.002, {'criterion': 'entropy', 'max_depth': 50, 'max_features': None, 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'best'}
+53, 0.821, 0.982, 0.022, 0.002, {'criterion': 'entropy', 'max_depth': 50, 'max_features': None, 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'random'}
+9, 0.838, 0.976, 0.055, 0.002, {'criterion': 'entropy', 'max_depth': 50, 'max_features': None, 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'best'}
+90, 0.813, 0.966, 0.023, 0.002, {'criterion': 'entropy', 'max_depth': 50, 'max_features': None, 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'random'}
+19, 0.830, 0.954, 0.052, 0.002, {'criterion': 'entropy', 'max_depth': 50, 'max_features': None, 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'best'}
+144, 0.798, 0.936, 0.022, 0.002, {'criterion': 'entropy', 'max_depth': 50, 'max_features': None, 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'random'}
+23, 0.828, 0.954, 0.056, 0.002, {'criterion': 'entropy', 'max_depth': 50, 'max_features': None, 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'best'}
+126, 0.803, 0.937, 0.022, 0.002, {'criterion': 'entropy', 'max_depth': 50, 'max_features': None, 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'random'}
+25, 0.827, 0.954, 0.053, 0.002, {'criterion': 'entropy', 'max_depth': 50, 'max_features': None, 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'best'}
+118, 0.804, 0.938, 0.031, 0.004, {'criterion': 'entropy', 'max_depth': 50, 'max_features': None, 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'random'}
+37, 0.825, 0.931, 0.063, 0.003, {'criterion': 'entropy', 'max_depth': 50, 'max_features': None, 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'best'}
+179, 0.791, 0.903, 0.024, 0.002, {'criterion': 'entropy', 'max_depth': 50, 'max_features': None, 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'random'}
+35, 0.825, 0.931, 0.053, 0.002, {'criterion': 'entropy', 'max_depth': 50, 'max_features': None, 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'best'}
+168, 0.793, 0.905, 0.021, 0.002, {'criterion': 'entropy', 'max_depth': 50, 'max_features': None, 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'random'}
+35, 0.825, 0.931, 0.050, 0.002, {'criterion': 'entropy', 'max_depth': 50, 'max_features': None, 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'best'}
+170, 0.792, 0.902, 0.025, 0.002, {'criterion': 'entropy', 'max_depth': 50, 'max_features': None, 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'random'}
+71, 0.815, 0.908, 0.046, 0.002, {'criterion': 'entropy', 'max_depth': 50, 'max_features': None, 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'best'}
+239, 0.781, 0.873, 0.028, 0.002, {'criterion': 'entropy', 'max_depth': 50, 'max_features': None, 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'random'}
+86, 0.814, 0.908, 0.060, 0.002, {'criterion': 'entropy', 'max_depth': 50, 'max_features': None, 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'best'}
+243, 0.780, 0.874, 0.031, 0.003, {'criterion': 'entropy', 'max_depth': 50, 'max_features': None, 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'random'}
+78, 0.815, 0.908, 0.065, 0.002, {'criterion': 'entropy', 'max_depth': 50, 'max_features': None, 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'best'}
+258, 0.779, 0.876, 0.025, 0.002, {'criterion': 'entropy', 'max_depth': 50, 'max_features': None, 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'random'}
+61, 0.818, 1.000, 0.023, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': 'auto', 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'best'}
+319, 0.771, 1.000, 0.014, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': 'auto', 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'random'}
+113, 0.805, 0.976, 0.020, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': 'auto', 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'best'}
+414, 0.748, 0.959, 0.015, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': 'auto', 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'random'}
+125, 0.803, 0.962, 0.021, 0.003, {'criterion': 'entropy', 'max_depth': None, 'max_features': 'auto', 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'best'}
+417, 0.746, 0.932, 0.014, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': 'auto', 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'random'}
+177, 0.791, 0.926, 0.019, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': 'auto', 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'best'}
+460, 0.726, 0.878, 0.014, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': 'auto', 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'random'}
+214, 0.784, 0.926, 0.017, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': 'auto', 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'best'}
+425, 0.739, 0.884, 0.014, 0.003, {'criterion': 'entropy', 'max_depth': None, 'max_features': 'auto', 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'random'}
+199, 0.787, 0.927, 0.021, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': 'auto', 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'best'}
+456, 0.727, 0.880, 0.012, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': 'auto', 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'random'}
+217, 0.784, 0.892, 0.020, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': 'auto', 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'best'}
+542, 0.707, 0.818, 0.011, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': 'auto', 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'random'}
+300, 0.774, 0.889, 0.016, 0.001, {'criterion': 'entropy', 'max_depth': None, 'max_features': 'auto', 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'best'}
+531, 0.709, 0.820, 0.009, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': 'auto', 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'random'}
+265, 0.779, 0.894, 0.018, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': 'auto', 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'best'}
+483, 0.718, 0.825, 0.009, 0.001, {'criterion': 'entropy', 'max_depth': None, 'max_features': 'auto', 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'random'}
+350, 0.767, 0.868, 0.015, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': 'auto', 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'best'}
+601, 0.693, 0.786, 0.009, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': 'auto', 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'random'}
+315, 0.772, 0.868, 0.016, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': 'auto', 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'best'}
+569, 0.700, 0.784, 0.008, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': 'auto', 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'random'}
+346, 0.768, 0.864, 0.020, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': 'auto', 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'best'}
+606, 0.692, 0.783, 0.010, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': 'auto', 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'random'}
+100, 0.809, 1.000, 0.023, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'best'}
+339, 0.768, 1.000, 0.014, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'random'}
+114, 0.805, 0.977, 0.027, 0.003, {'criterion': 'entropy', 'max_depth': None, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'best'}
+409, 0.749, 0.960, 0.020, 0.003, {'criterion': 'entropy', 'max_depth': None, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'random'}
+150, 0.797, 0.960, 0.027, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'best'}
+400, 0.753, 0.933, 0.016, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'random'}
+163, 0.794, 0.929, 0.019, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': 'sqrt', 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'best'}
+444, 0.731, 0.882, 0.010, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': 'sqrt', 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'random'}
+201, 0.787, 0.926, 0.018, 0.001, {'criterion': 'entropy', 'max_depth': None, 'max_features': 'sqrt', 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'best'}
+448, 0.729, 0.880, 0.009, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': 'sqrt', 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'random'}
+152, 0.797, 0.929, 0.017, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': 'sqrt', 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'best'}
+496, 0.716, 0.874, 0.011, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': 'sqrt', 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'random'}
+234, 0.782, 0.894, 0.016, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'best'}
+556, 0.703, 0.814, 0.010, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'random'}
+226, 0.783, 0.895, 0.017, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'best'}
+574, 0.698, 0.818, 0.014, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'random'}
+223, 0.783, 0.898, 0.021, 0.003, {'criterion': 'entropy', 'max_depth': None, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'best'}
+482, 0.719, 0.828, 0.015, 0.003, {'criterion': 'entropy', 'max_depth': None, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'random'}
+366, 0.763, 0.864, 0.024, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'best'}
+594, 0.694, 0.781, 0.014, 0.003, {'criterion': 'entropy', 'max_depth': None, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'random'}
+351, 0.767, 0.864, 0.019, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'best'}
+642, 0.680, 0.775, 0.012, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'random'}
+335, 0.769, 0.865, 0.023, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'best'}
+612, 0.691, 0.786, 0.010, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'random'}
+94, 0.811, 1.000, 0.024, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': 'log2', 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'best'}
+360, 0.764, 1.000, 0.015, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': 'log2', 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'random'}
+83, 0.814, 0.977, 0.019, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': 'log2', 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'best'}
+370, 0.761, 0.961, 0.013, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': 'log2', 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'random'}
+111, 0.805, 0.961, 0.024, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': 'log2', 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'best'}
+426, 0.739, 0.927, 0.016, 0.003, {'criterion': 'entropy', 'max_depth': None, 'max_features': 'log2', 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'random'}
+220, 0.783, 0.927, 0.021, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'best'}
+465, 0.723, 0.879, 0.011, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'random'}
+209, 0.785, 0.927, 0.019, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'best'}
+484, 0.718, 0.874, 0.014, 0.003, {'criterion': 'entropy', 'max_depth': None, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'random'}
+198, 0.787, 0.924, 0.020, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'best'}
+443, 0.732, 0.881, 0.013, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'random'}
+250, 0.779, 0.891, 0.018, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'best'}
+530, 0.709, 0.821, 0.011, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'random'}
+270, 0.778, 0.893, 0.019, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'best'}
+561, 0.702, 0.819, 0.012, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'random'}
+263, 0.779, 0.895, 0.016, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'best'}
+557, 0.703, 0.818, 0.013, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'random'}
+358, 0.765, 0.864, 0.016, 0.001, {'criterion': 'entropy', 'max_depth': None, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'best'}
+612, 0.691, 0.781, 0.010, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'random'}
+355, 0.765, 0.862, 0.019, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'best'}
+629, 0.687, 0.773, 0.009, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'random'}
+345, 0.768, 0.862, 0.017, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'best'}
+645, 0.674, 0.776, 0.011, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'random'}
+3, 0.841, 1.000, 0.071, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': None, 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'best'}
+65, 0.818, 1.000, 0.034, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': None, 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'random'}
+4, 0.840, 0.988, 0.058, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': None, 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'best'}
+47, 0.823, 0.980, 0.028, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': None, 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'random'}
+12, 0.835, 0.976, 0.052, 0.001, {'criterion': 'entropy', 'max_depth': None, 'max_features': None, 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'best'}
+63, 0.818, 0.963, 0.028, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': None, 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'random'}
+22, 0.828, 0.954, 0.064, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': None, 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'best'}
+110, 0.806, 0.937, 0.030, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': None, 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'random'}
+21, 0.828, 0.954, 0.058, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': None, 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'best'}
+146, 0.797, 0.935, 0.023, 0.001, {'criterion': 'entropy', 'max_depth': None, 'max_features': None, 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'random'}
+23, 0.828, 0.954, 0.057, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': None, 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'best'}
+141, 0.798, 0.934, 0.025, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': None, 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'random'}
+39, 0.825, 0.931, 0.054, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': None, 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'best'}
+145, 0.798, 0.906, 0.021, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': None, 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'random'}
+32, 0.826, 0.931, 0.050, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': None, 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'best'}
+171, 0.792, 0.902, 0.019, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': None, 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'random'}
+38, 0.825, 0.931, 0.050, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': None, 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'best'}
+159, 0.795, 0.903, 0.019, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': None, 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'random'}
+88, 0.814, 0.908, 0.047, 0.001, {'criterion': 'entropy', 'max_depth': None, 'max_features': None, 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'best'}
+254, 0.779, 0.873, 0.018, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': None, 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'random'}
+92, 0.812, 0.908, 0.046, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': None, 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'best'}
+344, 0.768, 0.873, 0.017, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': None, 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'random'}
+85, 0.814, 0.908, 0.049, 0.002, {'criterion': 'entropy', 'max_depth': None, 'max_features': None, 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'best'}
+322, 0.771, 0.870, 0.019, 0.001, {'criterion': 'entropy', 'max_depth': None, 'max_features': None, 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'random'}
+871, 0.309, 0.322, 0.006, 0.001, {'criterion': 'gini', 'max_depth': 5, 'max_features': 'auto', 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'best'}
+947, 0.208, 0.212, 0.003, 0.001, {'criterion': 'gini', 'max_depth': 5, 'max_features': 'auto', 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'random'}
+873, 0.307, 0.308, 0.006, 0.001, {'criterion': 'gini', 'max_depth': 5, 'max_features': 'auto', 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'best'}
+957, 0.196, 0.205, 0.004, 0.001, {'criterion': 'gini', 'max_depth': 5, 'max_features': 'auto', 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'random'}
+879, 0.295, 0.295, 0.007, 0.002, {'criterion': 'gini', 'max_depth': 5, 'max_features': 'auto', 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'best'}
+902, 0.249, 0.253, 0.004, 0.001, {'criterion': 'gini', 'max_depth': 5, 'max_features': 'auto', 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'random'}
+884, 0.290, 0.293, 0.008, 0.001, {'criterion': 'gini', 'max_depth': 5, 'max_features': 'auto', 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'best'}
+889, 0.274, 0.276, 0.004, 0.002, {'criterion': 'gini', 'max_depth': 5, 'max_features': 'auto', 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'random'}
+858, 0.323, 0.330, 0.008, 0.002, {'criterion': 'gini', 'max_depth': 5, 'max_features': 'auto', 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'best'}
+911, 0.242, 0.245, 0.004, 0.001, {'criterion': 'gini', 'max_depth': 5, 'max_features': 'auto', 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'random'}
+852, 0.329, 0.332, 0.013, 0.003, {'criterion': 'gini', 'max_depth': 5, 'max_features': 'auto', 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'best'}
+928, 0.222, 0.226, 0.005, 0.002, {'criterion': 'gini', 'max_depth': 5, 'max_features': 'auto', 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'random'}
+843, 0.342, 0.340, 0.009, 0.002, {'criterion': 'gini', 'max_depth': 5, 'max_features': 'auto', 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'best'}
+901, 0.251, 0.253, 0.005, 0.002, {'criterion': 'gini', 'max_depth': 5, 'max_features': 'auto', 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'random'}
+857, 0.323, 0.325, 0.008, 0.001, {'criterion': 'gini', 'max_depth': 5, 'max_features': 'auto', 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'best'}
+910, 0.242, 0.248, 0.005, 0.001, {'criterion': 'gini', 'max_depth': 5, 'max_features': 'auto', 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'random'}
+869, 0.310, 0.315, 0.008, 0.002, {'criterion': 'gini', 'max_depth': 5, 'max_features': 'auto', 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'best'}
+943, 0.212, 0.209, 0.004, 0.001, {'criterion': 'gini', 'max_depth': 5, 'max_features': 'auto', 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'random'}
+874, 0.305, 0.313, 0.007, 0.001, {'criterion': 'gini', 'max_depth': 5, 'max_features': 'auto', 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'best'}
+924, 0.224, 0.232, 0.003, 0.001, {'criterion': 'gini', 'max_depth': 5, 'max_features': 'auto', 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'random'}
+866, 0.312, 0.316, 0.006, 0.001, {'criterion': 'gini', 'max_depth': 5, 'max_features': 'auto', 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'best'}
+960, 0.176, 0.185, 0.004, 0.001, {'criterion': 'gini', 'max_depth': 5, 'max_features': 'auto', 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'random'}
+831, 0.359, 0.362, 0.006, 0.001, {'criterion': 'gini', 'max_depth': 5, 'max_features': 'auto', 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'best'}
+937, 0.216, 0.219, 0.003, 0.001, {'criterion': 'gini', 'max_depth': 5, 'max_features': 'auto', 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'random'}
+813, 0.372, 0.368, 0.006, 0.001, {'criterion': 'gini', 'max_depth': 5, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'best'}
+929, 0.222, 0.230, 0.003, 0.001, {'criterion': 'gini', 'max_depth': 5, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'random'}
+885, 0.288, 0.289, 0.007, 0.002, {'criterion': 'gini', 'max_depth': 5, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'best'}
+934, 0.218, 0.226, 0.004, 0.002, {'criterion': 'gini', 'max_depth': 5, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'random'}
+851, 0.332, 0.337, 0.006, 0.001, {'criterion': 'gini', 'max_depth': 5, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'best'}
+959, 0.188, 0.191, 0.005, 0.001, {'criterion': 'gini', 'max_depth': 5, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'random'}
+875, 0.304, 0.306, 0.007, 0.001, {'criterion': 'gini', 'max_depth': 5, 'max_features': 'sqrt', 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'best'}
+946, 0.209, 0.217, 0.003, 0.001, {'criterion': 'gini', 'max_depth': 5, 'max_features': 'sqrt', 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'random'}
+881, 0.294, 0.299, 0.006, 0.001, {'criterion': 'gini', 'max_depth': 5, 'max_features': 'sqrt', 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'best'}
+923, 0.225, 0.229, 0.003, 0.001, {'criterion': 'gini', 'max_depth': 5, 'max_features': 'sqrt', 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'random'}
+856, 0.324, 0.331, 0.006, 0.002, {'criterion': 'gini', 'max_depth': 5, 'max_features': 'sqrt', 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'best'}
+936, 0.216, 0.220, 0.004, 0.001, {'criterion': 'gini', 'max_depth': 5, 'max_features': 'sqrt', 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'random'}
+886, 0.286, 0.288, 0.006, 0.001, {'criterion': 'gini', 'max_depth': 5, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'best'}
+950, 0.203, 0.202, 0.004, 0.001, {'criterion': 'gini', 'max_depth': 5, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'random'}
+865, 0.313, 0.315, 0.008, 0.001, {'criterion': 'gini', 'max_depth': 5, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'best'}
+927, 0.223, 0.230, 0.004, 0.002, {'criterion': 'gini', 'max_depth': 5, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'random'}
+872, 0.307, 0.313, 0.007, 0.001, {'criterion': 'gini', 'max_depth': 5, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'best'}
+929, 0.222, 0.230, 0.004, 0.002, {'criterion': 'gini', 'max_depth': 5, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'random'}
+846, 0.340, 0.346, 0.008, 0.001, {'criterion': 'gini', 'max_depth': 5, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'best'}
+919, 0.228, 0.235, 0.006, 0.003, {'criterion': 'gini', 'max_depth': 5, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'random'}
+883, 0.291, 0.297, 0.009, 0.002, {'criterion': 'gini', 'max_depth': 5, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'best'}
+893, 0.262, 0.265, 0.004, 0.002, {'criterion': 'gini', 'max_depth': 5, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'random'}
+887, 0.284, 0.288, 0.007, 0.002, {'criterion': 'gini', 'max_depth': 5, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'best'}
+891, 0.270, 0.272, 0.005, 0.001, {'criterion': 'gini', 'max_depth': 5, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'random'}
+868, 0.310, 0.314, 0.009, 0.001, {'criterion': 'gini', 'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'best'}
+906, 0.247, 0.253, 0.006, 0.002, {'criterion': 'gini', 'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'random'}
+859, 0.323, 0.326, 0.009, 0.002, {'criterion': 'gini', 'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'best'}
+926, 0.224, 0.226, 0.005, 0.002, {'criterion': 'gini', 'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'random'}
+864, 0.314, 0.328, 0.009, 0.002, {'criterion': 'gini', 'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'best'}
+918, 0.229, 0.227, 0.006, 0.001, {'criterion': 'gini', 'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'random'}
+867, 0.311, 0.315, 0.009, 0.001, {'criterion': 'gini', 'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'best'}
+948, 0.206, 0.211, 0.005, 0.002, {'criterion': 'gini', 'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'random'}
+888, 0.279, 0.279, 0.008, 0.001, {'criterion': 'gini', 'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'best'}
+944, 0.211, 0.210, 0.004, 0.002, {'criterion': 'gini', 'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'random'}
+850, 0.332, 0.336, 0.007, 0.001, {'criterion': 'gini', 'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'best'}
+903, 0.249, 0.253, 0.004, 0.001, {'criterion': 'gini', 'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'random'}
+854, 0.325, 0.332, 0.007, 0.002, {'criterion': 'gini', 'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'best'}
+952, 0.202, 0.204, 0.004, 0.001, {'criterion': 'gini', 'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'random'}
+877, 0.301, 0.307, 0.008, 0.001, {'criterion': 'gini', 'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'best'}
+958, 0.194, 0.196, 0.005, 0.001, {'criterion': 'gini', 'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'random'}
+862, 0.316, 0.320, 0.007, 0.001, {'criterion': 'gini', 'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'best'}
+931, 0.220, 0.222, 0.005, 0.002, {'criterion': 'gini', 'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'random'}
+853, 0.326, 0.326, 0.007, 0.001, {'criterion': 'gini', 'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'best'}
+955, 0.199, 0.203, 0.004, 0.001, {'criterion': 'gini', 'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'random'}
+870, 0.309, 0.317, 0.007, 0.001, {'criterion': 'gini', 'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'best'}
+951, 0.202, 0.207, 0.005, 0.002, {'criterion': 'gini', 'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'random'}
+860, 0.322, 0.332, 0.008, 0.001, {'criterion': 'gini', 'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'best'}
+953, 0.201, 0.204, 0.004, 0.002, {'criterion': 'gini', 'max_depth': 5, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'random'}
+815, 0.366, 0.371, 0.022, 0.002, {'criterion': 'gini', 'max_depth': 5, 'max_features': None, 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'best'}
+844, 0.341, 0.350, 0.007, 0.001, {'criterion': 'gini', 'max_depth': 5, 'max_features': None, 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'random'}
+815, 0.366, 0.371, 0.018, 0.002, {'criterion': 'gini', 'max_depth': 5, 'max_features': None, 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'best'}
+863, 0.316, 0.316, 0.007, 0.001, {'criterion': 'gini', 'max_depth': 5, 'max_features': None, 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'random'}
+815, 0.366, 0.371, 0.021, 0.001, {'criterion': 'gini', 'max_depth': 5, 'max_features': None, 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'best'}
+878, 0.299, 0.302, 0.010, 0.001, {'criterion': 'gini', 'max_depth': 5, 'max_features': None, 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'random'}
+820, 0.366, 0.371, 0.023, 0.002, {'criterion': 'gini', 'max_depth': 5, 'max_features': None, 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'best'}
+847, 0.338, 0.344, 0.007, 0.001, {'criterion': 'gini', 'max_depth': 5, 'max_features': None, 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'random'}
+815, 0.366, 0.371, 0.021, 0.002, {'criterion': 'gini', 'max_depth': 5, 'max_features': None, 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'best'}
+880, 0.295, 0.306, 0.007, 0.001, {'criterion': 'gini', 'max_depth': 5, 'max_features': None, 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'random'}
+823, 0.366, 0.371, 0.019, 0.001, {'criterion': 'gini', 'max_depth': 5, 'max_features': None, 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'best'}
+848, 0.334, 0.341, 0.007, 0.002, {'criterion': 'gini', 'max_depth': 5, 'max_features': None, 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'random'}
+820, 0.366, 0.371, 0.018, 0.001, {'criterion': 'gini', 'max_depth': 5, 'max_features': None, 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'best'}
+882, 0.293, 0.295, 0.007, 0.001, {'criterion': 'gini', 'max_depth': 5, 'max_features': None, 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'random'}
+822, 0.366, 0.371, 0.018, 0.001, {'criterion': 'gini', 'max_depth': 5, 'max_features': None, 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'best'}
+836, 0.352, 0.357, 0.010, 0.002, {'criterion': 'gini', 'max_depth': 5, 'max_features': None, 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'random'}
+819, 0.366, 0.371, 0.025, 0.001, {'criterion': 'gini', 'max_depth': 5, 'max_features': None, 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'best'}
+861, 0.318, 0.321, 0.007, 0.001, {'criterion': 'gini', 'max_depth': 5, 'max_features': None, 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'random'}
+825, 0.366, 0.371, 0.025, 0.002, {'criterion': 'gini', 'max_depth': 5, 'max_features': None, 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'best'}
+876, 0.302, 0.305, 0.007, 0.001, {'criterion': 'gini', 'max_depth': 5, 'max_features': None, 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'random'}
+827, 0.366, 0.371, 0.021, 0.001, {'criterion': 'gini', 'max_depth': 5, 'max_features': None, 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'best'}
+832, 0.359, 0.365, 0.010, 0.002, {'criterion': 'gini', 'max_depth': 5, 'max_features': None, 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'random'}
+825, 0.366, 0.371, 0.023, 0.002, {'criterion': 'gini', 'max_depth': 5, 'max_features': None, 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'best'}
+849, 0.333, 0.334, 0.009, 0.002, {'criterion': 'gini', 'max_depth': 5, 'max_features': None, 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'random'}
+691, 0.594, 0.630, 0.015, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': 'auto', 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'best'}
+773, 0.448, 0.471, 0.012, 0.003, {'criterion': 'gini', 'max_depth': 10, 'max_features': 'auto', 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'random'}
+680, 0.610, 0.651, 0.016, 0.003, {'criterion': 'gini', 'max_depth': 10, 'max_features': 'auto', 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'best'}
+769, 0.460, 0.491, 0.009, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': 'auto', 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'random'}
+671, 0.622, 0.666, 0.015, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': 'auto', 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'best'}
+778, 0.433, 0.463, 0.008, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': 'auto', 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'random'}
+687, 0.605, 0.643, 0.013, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': 'auto', 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'best'}
+755, 0.478, 0.509, 0.005, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': 'auto', 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'random'}
+650, 0.664, 0.697, 0.011, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': 'auto', 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'best'}
+766, 0.467, 0.503, 0.006, 0.001, {'criterion': 'gini', 'max_depth': 10, 'max_features': 'auto', 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'random'}
+667, 0.625, 0.664, 0.011, 0.001, {'criterion': 'gini', 'max_depth': 10, 'max_features': 'auto', 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'best'}
+747, 0.485, 0.511, 0.007, 0.003, {'criterion': 'gini', 'max_depth': 10, 'max_features': 'auto', 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'random'}
+684, 0.607, 0.637, 0.014, 0.001, {'criterion': 'gini', 'max_depth': 10, 'max_features': 'auto', 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'best'}
+762, 0.471, 0.493, 0.008, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': 'auto', 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'random'}
+664, 0.631, 0.661, 0.012, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': 'auto', 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'best'}
+767, 0.467, 0.498, 0.008, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': 'auto', 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'random'}
+690, 0.597, 0.631, 0.014, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': 'auto', 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'best'}
+771, 0.456, 0.485, 0.007, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': 'auto', 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'random'}
+677, 0.612, 0.647, 0.014, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': 'auto', 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'best'}
+748, 0.485, 0.508, 0.008, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': 'auto', 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'random'}
+674, 0.618, 0.648, 0.013, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': 'auto', 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'best'}
+795, 0.388, 0.415, 0.008, 0.003, {'criterion': 'gini', 'max_depth': 10, 'max_features': 'auto', 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'random'}
+676, 0.615, 0.642, 0.017, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': 'auto', 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'best'}
+704, 0.518, 0.544, 0.007, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': 'auto', 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'random'}
+668, 0.625, 0.665, 0.015, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'best'}
+758, 0.474, 0.498, 0.007, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'random'}
+659, 0.643, 0.685, 0.015, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'best'}
+751, 0.483, 0.509, 0.009, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'random'}
+670, 0.623, 0.671, 0.015, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'best'}
+726, 0.495, 0.523, 0.008, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'random'}
+672, 0.621, 0.662, 0.013, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'best'}
+708, 0.511, 0.548, 0.005, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'random'}
+649, 0.664, 0.697, 0.015, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'best'}
+774, 0.445, 0.467, 0.005, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'random'}
+660, 0.642, 0.685, 0.010, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'best'}
+775, 0.445, 0.467, 0.005, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'random'}
+681, 0.608, 0.647, 0.011, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'best'}
+699, 0.534, 0.563, 0.008, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'random'}
+655, 0.649, 0.682, 0.015, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'best'}
+723, 0.497, 0.522, 0.008, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'random'}
+683, 0.607, 0.636, 0.011, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'best'}
+716, 0.502, 0.519, 0.006, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'random'}
+654, 0.652, 0.689, 0.011, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'best'}
+764, 0.470, 0.489, 0.005, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'random'}
+692, 0.592, 0.632, 0.011, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'best'}
+741, 0.492, 0.509, 0.006, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'random'}
+688, 0.605, 0.635, 0.010, 0.001, {'criterion': 'gini', 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'best'}
+723, 0.497, 0.523, 0.005, 0.001, {'criterion': 'gini', 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'random'}
+696, 0.553, 0.585, 0.011, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': 'log2', 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'best'}
+714, 0.503, 0.530, 0.006, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': 'log2', 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'random'}
+666, 0.629, 0.672, 0.013, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': 'log2', 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'best'}
+756, 0.475, 0.501, 0.007, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': 'log2', 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'random'}
+657, 0.647, 0.690, 0.011, 0.001, {'criterion': 'gini', 'max_depth': 10, 'max_features': 'log2', 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'best'}
+749, 0.484, 0.510, 0.005, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': 'log2', 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'random'}
+682, 0.608, 0.647, 0.012, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'best'}
+725, 0.496, 0.520, 0.008, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'random'}
+675, 0.616, 0.651, 0.011, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'best'}
+718, 0.500, 0.530, 0.007, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'random'}
+661, 0.635, 0.672, 0.011, 0.001, {'criterion': 'gini', 'max_depth': 10, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'best'}
+702, 0.522, 0.537, 0.005, 0.001, {'criterion': 'gini', 'max_depth': 10, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'random'}
+658, 0.646, 0.686, 0.011, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'best'}
+750, 0.483, 0.510, 0.007, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'random'}
+679, 0.610, 0.648, 0.014, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'best'}
+768, 0.463, 0.488, 0.005, 0.001, {'criterion': 'gini', 'max_depth': 10, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'random'}
+686, 0.606, 0.640, 0.011, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'best'}
+776, 0.444, 0.468, 0.006, 0.001, {'criterion': 'gini', 'max_depth': 10, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'random'}
+695, 0.579, 0.606, 0.014, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'best'}
+772, 0.453, 0.463, 0.007, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'random'}
+689, 0.602, 0.629, 0.016, 0.003, {'criterion': 'gini', 'max_depth': 10, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'best'}
+761, 0.471, 0.496, 0.007, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'random'}
+685, 0.606, 0.641, 0.013, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'best'}
+780, 0.415, 0.442, 0.007, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'random'}
+587, 0.695, 0.731, 0.040, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': None, 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'best'}
+662, 0.634, 0.670, 0.013, 0.001, {'criterion': 'gini', 'max_depth': 10, 'max_features': None, 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'random'}
+590, 0.695, 0.730, 0.038, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': None, 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'best'}
+665, 0.630, 0.671, 0.015, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': None, 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'random'}
+589, 0.695, 0.729, 0.035, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': None, 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'best'}
+678, 0.611, 0.642, 0.014, 0.001, {'criterion': 'gini', 'max_depth': 10, 'max_features': None, 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'random'}
+600, 0.693, 0.727, 0.039, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': None, 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'best'}
+653, 0.653, 0.694, 0.019, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': None, 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'random'}
+599, 0.693, 0.727, 0.045, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': None, 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'best'}
+651, 0.662, 0.699, 0.017, 0.001, {'criterion': 'gini', 'max_depth': 10, 'max_features': None, 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'random'}
+592, 0.694, 0.727, 0.040, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': None, 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'best'}
+669, 0.625, 0.666, 0.015, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': None, 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'random'}
+608, 0.692, 0.723, 0.037, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': None, 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'best'}
+694, 0.581, 0.612, 0.012, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': None, 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'random'}
+607, 0.692, 0.723, 0.036, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': None, 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'best'}
+673, 0.621, 0.650, 0.013, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': None, 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'random'}
+602, 0.692, 0.723, 0.031, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': None, 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'best'}
+663, 0.633, 0.665, 0.013, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': None, 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'random'}
+614, 0.690, 0.721, 0.032, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': None, 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'best'}
+693, 0.584, 0.611, 0.016, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': None, 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'random'}
+617, 0.690, 0.721, 0.040, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': None, 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'best'}
+656, 0.647, 0.679, 0.018, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': None, 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'random'}
+616, 0.690, 0.721, 0.037, 0.002, {'criterion': 'gini', 'max_depth': 10, 'max_features': None, 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'best'}
+652, 0.657, 0.684, 0.014, 0.001, {'criterion': 'gini', 'max_depth': 10, 'max_features': None, 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'random'}
+158, 0.795, 0.968, 0.015, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': 'auto', 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'best'}
+390, 0.755, 0.963, 0.010, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': 'auto', 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'random'}
+140, 0.799, 0.962, 0.019, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': 'auto', 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'best'}
+427, 0.738, 0.902, 0.009, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': 'auto', 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'random'}
+168, 0.793, 0.952, 0.017, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': 'auto', 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'best'}
+430, 0.737, 0.875, 0.009, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': 'auto', 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'random'}
+227, 0.782, 0.918, 0.016, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': 'auto', 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'best'}
+517, 0.711, 0.839, 0.009, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': 'auto', 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'random'}
+250, 0.779, 0.914, 0.016, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': 'auto', 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'best'}
+420, 0.742, 0.875, 0.010, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': 'auto', 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'random'}
+167, 0.793, 0.915, 0.019, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': 'auto', 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'best'}
+477, 0.721, 0.849, 0.010, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': 'auto', 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'random'}
+334, 0.769, 0.883, 0.015, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': 'auto', 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'best'}
+572, 0.699, 0.813, 0.011, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': 'auto', 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'random'}
+304, 0.773, 0.886, 0.018, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': 'auto', 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'best'}
+500, 0.715, 0.808, 0.012, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': 'auto', 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'random'}
+282, 0.777, 0.882, 0.017, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': 'auto', 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'best'}
+498, 0.716, 0.815, 0.015, 0.003, {'criterion': 'gini', 'max_depth': 20, 'max_features': 'auto', 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'random'}
+387, 0.756, 0.855, 0.019, 0.003, {'criterion': 'gini', 'max_depth': 20, 'max_features': 'auto', 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'best'}
+631, 0.686, 0.764, 0.012, 0.003, {'criterion': 'gini', 'max_depth': 20, 'max_features': 'auto', 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'random'}
+381, 0.758, 0.856, 0.020, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': 'auto', 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'best'}
+622, 0.689, 0.762, 0.010, 0.003, {'criterion': 'gini', 'max_depth': 20, 'max_features': 'auto', 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'random'}
+353, 0.766, 0.861, 0.013, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': 'auto', 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'best'}
+632, 0.686, 0.777, 0.008, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': 'auto', 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'random'}
+136, 0.800, 0.967, 0.021, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'best'}
+416, 0.746, 0.950, 0.014, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'random'}
+153, 0.796, 0.963, 0.021, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'best'}
+521, 0.710, 0.862, 0.010, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'random'}
+291, 0.776, 0.931, 0.015, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'best'}
+437, 0.734, 0.887, 0.009, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'random'}
+222, 0.783, 0.914, 0.018, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'best'}
+508, 0.713, 0.845, 0.010, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'random'}
+290, 0.776, 0.915, 0.019, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'best'}
+438, 0.733, 0.870, 0.009, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'random'}
+235, 0.782, 0.914, 0.022, 0.003, {'criterion': 'gini', 'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'best'}
+479, 0.719, 0.848, 0.013, 0.003, {'criterion': 'gini', 'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'random'}
+327, 0.770, 0.884, 0.021, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'best'}
+548, 0.705, 0.804, 0.013, 0.003, {'criterion': 'gini', 'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'random'}
+281, 0.777, 0.889, 0.019, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'best'}
+602, 0.692, 0.795, 0.011, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'random'}
+324, 0.771, 0.880, 0.017, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'best'}
+584, 0.696, 0.798, 0.009, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'random'}
+378, 0.758, 0.860, 0.015, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'best'}
+625, 0.688, 0.779, 0.008, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'random'}
+389, 0.755, 0.848, 0.015, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'best'}
+639, 0.681, 0.770, 0.008, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'random'}
+396, 0.754, 0.850, 0.016, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'best'}
+602, 0.692, 0.786, 0.009, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'random'}
+157, 0.796, 0.969, 0.017, 0.003, {'criterion': 'gini', 'max_depth': 20, 'max_features': 'log2', 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'best'}
+383, 0.758, 0.967, 0.012, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': 'log2', 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'random'}
+188, 0.789, 0.945, 0.017, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': 'log2', 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'best'}
+403, 0.752, 0.920, 0.010, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': 'log2', 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'random'}
+154, 0.796, 0.946, 0.015, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': 'log2', 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'best'}
+421, 0.742, 0.898, 0.009, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': 'log2', 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'random'}
+246, 0.780, 0.918, 0.014, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'best'}
+475, 0.721, 0.849, 0.008, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'random'}
+280, 0.777, 0.905, 0.015, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'best'}
+470, 0.723, 0.847, 0.009, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'random'}
+209, 0.785, 0.904, 0.016, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'best'}
+462, 0.724, 0.863, 0.011, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'random'}
+260, 0.779, 0.886, 0.014, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'best'}
+553, 0.704, 0.811, 0.009, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'random'}
+316, 0.772, 0.879, 0.016, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'best'}
+550, 0.705, 0.807, 0.009, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'random'}
+371, 0.761, 0.875, 0.015, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'best'}
+563, 0.701, 0.810, 0.008, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'random'}
+361, 0.764, 0.852, 0.015, 0.001, {'criterion': 'gini', 'max_depth': 20, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'best'}
+643, 0.678, 0.761, 0.008, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'random'}
+393, 0.754, 0.852, 0.014, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'best'}
+611, 0.691, 0.779, 0.007, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'random'}
+399, 0.753, 0.854, 0.018, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'best'}
+619, 0.689, 0.771, 0.010, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'random'}
+14, 0.835, 0.987, 0.057, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': None, 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'best'}
+40, 0.825, 0.990, 0.021, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': None, 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'random'}
+16, 0.832, 0.973, 0.063, 0.003, {'criterion': 'gini', 'max_depth': 20, 'max_features': None, 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'best'}
+109, 0.806, 0.963, 0.026, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': None, 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'random'}
+18, 0.832, 0.963, 0.058, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': None, 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'best'}
+93, 0.812, 0.959, 0.023, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': None, 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'random'}
+49, 0.822, 0.943, 0.059, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': None, 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'best'}
+178, 0.791, 0.918, 0.026, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': None, 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'random'}
+45, 0.823, 0.943, 0.057, 0.004, {'criterion': 'gini', 'max_depth': 20, 'max_features': None, 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'best'}
+137, 0.800, 0.931, 0.026, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': None, 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'random'}
+46, 0.823, 0.943, 0.061, 0.003, {'criterion': 'gini', 'max_depth': 20, 'max_features': None, 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'best'}
+166, 0.793, 0.929, 0.025, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': None, 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'random'}
+59, 0.820, 0.919, 0.054, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': None, 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'best'}
+160, 0.794, 0.900, 0.022, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': None, 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'random'}
+57, 0.820, 0.919, 0.053, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': None, 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'best'}
+207, 0.786, 0.899, 0.022, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': None, 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'random'}
+63, 0.818, 0.919, 0.051, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': None, 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'best'}
+208, 0.786, 0.896, 0.021, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': None, 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'random'}
+84, 0.814, 0.901, 0.046, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': None, 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'best'}
+296, 0.775, 0.868, 0.019, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': None, 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'random'}
+91, 0.813, 0.901, 0.048, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': None, 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'best'}
+294, 0.775, 0.861, 0.019, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': None, 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'random'}
+80, 0.814, 0.901, 0.051, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': None, 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'best'}
+283, 0.777, 0.864, 0.024, 0.002, {'criterion': 'gini', 'max_depth': 20, 'max_features': None, 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'random'}
+112, 0.805, 1.000, 0.018, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': 'auto', 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'best'}
+295, 0.775, 1.000, 0.012, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': 'auto', 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'random'}
+119, 0.804, 0.975, 0.018, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': 'auto', 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'best'}
+406, 0.750, 0.963, 0.015, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': 'auto', 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'random'}
+146, 0.797, 0.958, 0.021, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': 'auto', 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'best'}
+404, 0.751, 0.931, 0.017, 0.004, {'criterion': 'gini', 'max_depth': 50, 'max_features': 'auto', 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'random'}
+212, 0.784, 0.926, 0.020, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': 'auto', 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'best'}
+441, 0.732, 0.883, 0.012, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': 'auto', 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'random'}
+202, 0.786, 0.924, 0.018, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': 'auto', 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'best'}
+428, 0.738, 0.884, 0.009, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': 'auto', 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'random'}
+272, 0.778, 0.923, 0.017, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': 'auto', 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'best'}
+436, 0.734, 0.879, 0.010, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': 'auto', 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'random'}
+285, 0.776, 0.885, 0.017, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': 'auto', 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'best'}
+506, 0.713, 0.826, 0.010, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': 'auto', 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'random'}
+258, 0.779, 0.891, 0.015, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': 'auto', 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'best'}
+491, 0.717, 0.824, 0.009, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': 'auto', 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'random'}
+328, 0.770, 0.889, 0.016, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': 'auto', 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'best'}
+501, 0.715, 0.825, 0.009, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': 'auto', 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'random'}
+338, 0.769, 0.861, 0.015, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': 'auto', 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'best'}
+610, 0.691, 0.777, 0.009, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': 'auto', 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'random'}
+356, 0.765, 0.858, 0.015, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': 'auto', 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'best'}
+626, 0.687, 0.777, 0.008, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': 'auto', 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'random'}
+352, 0.767, 0.863, 0.014, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': 'auto', 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'best'}
+576, 0.698, 0.785, 0.015, 0.004, {'criterion': 'gini', 'max_depth': 50, 'max_features': 'auto', 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'random'}
+102, 0.808, 1.000, 0.023, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'best'}
+333, 0.769, 1.000, 0.015, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'random'}
+124, 0.803, 0.975, 0.023, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'best'}
+348, 0.768, 0.965, 0.015, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'random'}
+171, 0.792, 0.956, 0.018, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'best'}
+407, 0.749, 0.938, 0.013, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'random'}
+194, 0.788, 0.923, 0.015, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': 'sqrt', 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'best'}
+494, 0.717, 0.874, 0.013, 0.003, {'criterion': 'gini', 'max_depth': 50, 'max_features': 'sqrt', 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'random'}
+195, 0.788, 0.923, 0.018, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': 'sqrt', 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'best'}
+423, 0.740, 0.884, 0.011, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': 'sqrt', 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'random'}
+254, 0.779, 0.920, 0.016, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': 'sqrt', 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'best'}
+422, 0.742, 0.884, 0.009, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': 'sqrt', 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'random'}
+323, 0.771, 0.888, 0.015, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'best'}
+479, 0.719, 0.827, 0.009, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'random'}
+301, 0.774, 0.889, 0.016, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'best'}
+528, 0.710, 0.822, 0.008, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'random'}
+292, 0.775, 0.890, 0.019, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'best'}
+544, 0.706, 0.824, 0.011, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'random'}
+364, 0.763, 0.858, 0.016, 0.001, {'criterion': 'gini', 'max_depth': 50, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'best'}
+570, 0.700, 0.784, 0.008, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'random'}
+341, 0.768, 0.860, 0.013, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'best'}
+568, 0.700, 0.783, 0.008, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'random'}
+382, 0.758, 0.859, 0.015, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'best'}
+533, 0.709, 0.792, 0.008, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'random'}
+89, 0.813, 1.000, 0.019, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': 'log2', 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'best'}
+319, 0.771, 1.000, 0.013, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': 'log2', 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'random'}
+139, 0.799, 0.973, 0.016, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': 'log2', 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'best'}
+397, 0.753, 0.960, 0.010, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': 'log2', 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'random'}
+106, 0.807, 0.958, 0.017, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': 'log2', 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'best'}
+374, 0.759, 0.935, 0.010, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': 'log2', 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'random'}
+200, 0.787, 0.923, 0.016, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'best'}
+458, 0.727, 0.874, 0.010, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'random'}
+237, 0.781, 0.925, 0.017, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'best'}
+442, 0.732, 0.881, 0.012, 0.003, {'criterion': 'gini', 'max_depth': 50, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'random'}
+206, 0.786, 0.924, 0.015, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'best'}
+434, 0.735, 0.877, 0.011, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'random'}
+303, 0.774, 0.889, 0.018, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'best'}
+539, 0.707, 0.823, 0.012, 0.003, {'criterion': 'gini', 'max_depth': 50, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'random'}
+287, 0.776, 0.889, 0.022, 0.003, {'criterion': 'gini', 'max_depth': 50, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'best'}
+552, 0.704, 0.821, 0.011, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'random'}
+329, 0.770, 0.887, 0.020, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'best'}
+486, 0.718, 0.825, 0.009, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'random'}
+388, 0.756, 0.857, 0.015, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'best'}
+593, 0.694, 0.779, 0.009, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'random'}
+337, 0.769, 0.863, 0.014, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'best'}
+586, 0.695, 0.779, 0.008, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'random'}
+375, 0.759, 0.856, 0.016, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'best'}
+583, 0.696, 0.784, 0.009, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'random'}
+5, 0.839, 1.000, 0.046, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': None, 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'best'}
+33, 0.825, 1.000, 0.023, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': None, 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'random'}
+11, 0.836, 0.983, 0.063, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': None, 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'best'}
+61, 0.818, 0.979, 0.028, 0.003, {'criterion': 'gini', 'max_depth': 50, 'max_features': None, 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'random'}
+15, 0.833, 0.971, 0.061, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': None, 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'best'}
+86, 0.814, 0.965, 0.025, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': None, 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'random'}
+40, 0.825, 0.949, 0.047, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': None, 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'best'}
+173, 0.792, 0.931, 0.020, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': None, 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'random'}
+43, 0.823, 0.949, 0.059, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': None, 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'best'}
+162, 0.794, 0.932, 0.027, 0.003, {'criterion': 'gini', 'max_depth': 50, 'max_features': None, 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'random'}
+50, 0.822, 0.949, 0.050, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': None, 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'best'}
+117, 0.804, 0.934, 0.020, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': None, 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'random'}
+58, 0.820, 0.923, 0.046, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': None, 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'best'}
+192, 0.788, 0.897, 0.021, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': None, 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'random'}
+52, 0.821, 0.923, 0.045, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': None, 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'best'}
+253, 0.779, 0.894, 0.022, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': None, 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'random'}
+50, 0.822, 0.923, 0.044, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': None, 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'best'}
+165, 0.793, 0.901, 0.019, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': None, 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'random'}
+81, 0.814, 0.903, 0.047, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': None, 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'best'}
+308, 0.773, 0.870, 0.019, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': None, 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'random'}
+73, 0.815, 0.903, 0.049, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': None, 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'best'}
+265, 0.779, 0.867, 0.019, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': None, 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'random'}
+68, 0.816, 0.903, 0.053, 0.003, {'criterion': 'gini', 'max_depth': 50, 'max_features': None, 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'best'}
+313, 0.772, 0.866, 0.025, 0.002, {'criterion': 'gini', 'max_depth': 50, 'max_features': None, 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'random'}
+96, 0.810, 1.000, 0.022, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': 'auto', 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'best'}
+307, 0.773, 1.000, 0.011, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': 'auto', 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'random'}
+121, 0.804, 0.976, 0.020, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': 'auto', 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'best'}
+385, 0.757, 0.962, 0.013, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': 'auto', 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'random'}
+142, 0.798, 0.958, 0.018, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': 'auto', 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'best'}
+418, 0.744, 0.931, 0.011, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': 'auto', 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'random'}
+248, 0.780, 0.922, 0.016, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': 'auto', 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'best'}
+459, 0.727, 0.877, 0.009, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': 'auto', 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'random'}
+197, 0.787, 0.925, 0.017, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': 'auto', 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'best'}
+439, 0.733, 0.881, 0.010, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': 'auto', 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'random'}
+216, 0.784, 0.923, 0.019, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': 'auto', 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'best'}
+431, 0.736, 0.883, 0.010, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': 'auto', 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'random'}
+243, 0.780, 0.891, 0.020, 0.003, {'criterion': 'gini', 'max_depth': None, 'max_features': 'auto', 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'best'}
+468, 0.723, 0.826, 0.014, 0.003, {'criterion': 'gini', 'max_depth': None, 'max_features': 'auto', 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'random'}
+310, 0.772, 0.890, 0.022, 0.003, {'criterion': 'gini', 'max_depth': None, 'max_features': 'auto', 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'best'}
+527, 0.710, 0.824, 0.015, 0.003, {'criterion': 'gini', 'max_depth': None, 'max_features': 'auto', 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'random'}
+225, 0.783, 0.891, 0.018, 0.003, {'criterion': 'gini', 'max_depth': None, 'max_features': 'auto', 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'best'}
+489, 0.718, 0.829, 0.010, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': 'auto', 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'random'}
+359, 0.764, 0.861, 0.016, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': 'auto', 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'best'}
+558, 0.702, 0.789, 0.008, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': 'auto', 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'random'}
+367, 0.762, 0.857, 0.016, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': 'auto', 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'best'}
+615, 0.690, 0.783, 0.010, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': 'auto', 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'random'}
+341, 0.768, 0.865, 0.014, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': 'auto', 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'best'}
+630, 0.686, 0.779, 0.009, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': 'auto', 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'random'}
+82, 0.814, 1.000, 0.018, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'best'}
+288, 0.776, 1.000, 0.013, 0.003, {'criterion': 'gini', 'max_depth': None, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'random'}
+107, 0.807, 0.976, 0.020, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'best'}
+368, 0.761, 0.963, 0.013, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'random'}
+135, 0.800, 0.957, 0.020, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'best'}
+379, 0.758, 0.937, 0.013, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'random'}
+219, 0.784, 0.922, 0.021, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': 'sqrt', 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'best'}
+432, 0.736, 0.883, 0.009, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': 'sqrt', 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'random'}
+230, 0.782, 0.923, 0.017, 0.001, {'criterion': 'gini', 'max_depth': None, 'max_features': 'sqrt', 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'best'}
+440, 0.733, 0.883, 0.010, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': 'sqrt', 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'random'}
+184, 0.790, 0.925, 0.018, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': 'sqrt', 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'best'}
+429, 0.737, 0.881, 0.008, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': 'sqrt', 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'random'}
+299, 0.774, 0.889, 0.014, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'best'}
+549, 0.705, 0.821, 0.011, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'random'}
+289, 0.776, 0.886, 0.016, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'best'}
+510, 0.713, 0.823, 0.008, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'random'}
+273, 0.778, 0.888, 0.015, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'best'}
+481, 0.719, 0.828, 0.009, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'random'}
+377, 0.759, 0.860, 0.017, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'best'}
+560, 0.702, 0.789, 0.008, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'random'}
+383, 0.758, 0.858, 0.018, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'best'}
+638, 0.682, 0.772, 0.008, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'random'}
+332, 0.769, 0.862, 0.016, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'best'}
+646, 0.672, 0.766, 0.011, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'random'}
+138, 0.799, 1.000, 0.018, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': 'log2', 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'best'}
+354, 0.766, 1.000, 0.019, 0.003, {'criterion': 'gini', 'max_depth': None, 'max_features': 'log2', 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'random'}
+116, 0.804, 0.974, 0.022, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': 'log2', 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'best'}
+405, 0.751, 0.962, 0.015, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': 'log2', 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'random'}
+129, 0.802, 0.960, 0.021, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': 'log2', 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'best'}
+369, 0.761, 0.935, 0.009, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': 'log2', 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'random'}
+224, 0.783, 0.924, 0.015, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'best'}
+464, 0.724, 0.879, 0.009, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'random'}
+230, 0.782, 0.926, 0.018, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'best'}
+453, 0.728, 0.875, 0.011, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'random'}
+181, 0.790, 0.923, 0.018, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'best'}
+452, 0.728, 0.878, 0.011, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': 'log2', 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'random'}
+319, 0.771, 0.888, 0.016, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'best'}
+512, 0.712, 0.827, 0.010, 0.003, {'criterion': 'gini', 'max_depth': None, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'random'}
+363, 0.763, 0.884, 0.020, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'best'}
+507, 0.713, 0.825, 0.011, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'random'}
+298, 0.774, 0.887, 0.019, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'best'}
+504, 0.714, 0.822, 0.013, 0.003, {'criterion': 'gini', 'max_depth': None, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'random'}
+390, 0.755, 0.856, 0.018, 0.003, {'criterion': 'gini', 'max_depth': None, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'best'}
+594, 0.694, 0.784, 0.011, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'random'}
+375, 0.759, 0.859, 0.017, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'best'}
+573, 0.699, 0.788, 0.011, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'random'}
+410, 0.749, 0.857, 0.020, 0.003, {'criterion': 'gini', 'max_depth': None, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'best'}
+551, 0.704, 0.789, 0.010, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': 'log2', 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'random'}
+6, 0.839, 1.000, 0.055, 0.001, {'criterion': 'gini', 'max_depth': None, 'max_features': None, 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'best'}
+78, 0.815, 1.000, 0.022, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': None, 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'random'}
+13, 0.835, 0.983, 0.059, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': None, 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'best'}
+67, 0.817, 0.979, 0.027, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': None, 'min_samples_leaf': 1, 'min_samples_split': 3, 'splitter': 'random'}
+17, 0.832, 0.971, 0.049, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': None, 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'best'}
+97, 0.810, 0.962, 0.022, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': None, 'min_samples_leaf': 1, 'min_samples_split': 4, 'splitter': 'random'}
+42, 0.824, 0.949, 0.053, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': None, 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'best'}
+155, 0.796, 0.934, 0.026, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': None, 'min_samples_leaf': 2, 'min_samples_split': 2, 'splitter': 'random'}
+44, 0.823, 0.949, 0.044, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': None, 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'best'}
+155, 0.796, 0.932, 0.024, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': None, 'min_samples_leaf': 2, 'min_samples_split': 3, 'splitter': 'random'}
+26, 0.827, 0.949, 0.046, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': None, 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'best'}
+149, 0.797, 0.934, 0.022, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': None, 'min_samples_leaf': 2, 'min_samples_split': 4, 'splitter': 'random'}
+54, 0.821, 0.923, 0.047, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': None, 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'best'}
+186, 0.789, 0.899, 0.020, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': None, 'min_samples_leaf': 3, 'min_samples_split': 2, 'splitter': 'random'}
+54, 0.821, 0.923, 0.051, 0.003, {'criterion': 'gini', 'max_depth': None, 'max_features': None, 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'best'}
+188, 0.789, 0.900, 0.027, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': None, 'min_samples_leaf': 3, 'min_samples_split': 3, 'splitter': 'random'}
+56, 0.820, 0.923, 0.054, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': None, 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'best'}
+175, 0.791, 0.901, 0.022, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': None, 'min_samples_leaf': 3, 'min_samples_split': 4, 'splitter': 'random'}
+69, 0.816, 0.903, 0.046, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': None, 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'best'}
+263, 0.779, 0.874, 0.016, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': None, 'min_samples_leaf': 4, 'min_samples_split': 2, 'splitter': 'random'}
+74, 0.815, 0.903, 0.042, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': None, 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'best'}
+260, 0.779, 0.870, 0.023, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': None, 'min_samples_leaf': 4, 'min_samples_split': 3, 'splitter': 'random'}
+76, 0.815, 0.903, 0.049, 0.002, {'criterion': 'gini', 'max_depth': None, 'max_features': None, 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'best'}
+277, 0.778, 0.869, 0.025, 0.004, {'criterion': 'gini', 'max_depth': None, 'max_features': None, 'min_samples_leaf': 4, 'min_samples_split': 4, 'splitter': 'random'}
+
+Best parameters set found on development set LETTER
+{'criterion': 'entropy', 'max_depth': 50, 'max_features': None, 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'best'}
+
+Best parameters classification report LETTER
+
+             precision    recall  f1-score   support
+
+          0       0.97      0.93      0.95       216
+          1       0.83      0.80      0.81       239
+          2       0.88      0.90      0.89       229
+          3       0.87      0.85      0.86       248
+          4       0.86      0.89      0.87       221
+          5       0.89      0.84      0.86       246
+          6       0.86      0.85      0.85       256
+          7       0.83      0.85      0.84       202
+          8       0.92      0.89      0.91       218
+          9       0.92      0.88      0.90       233
+         10       0.85      0.86      0.85       207
+         11       0.89      0.91      0.90       231
+         12       0.93      0.90      0.91       251
+         13       0.87      0.93      0.90       223
+         14       0.86      0.82      0.84       226
+         15       0.88      0.92      0.90       249
+         16       0.85      0.87      0.86       215
+         17       0.85      0.83      0.84       234
+         18       0.84      0.83      0.84       222
+         19       0.91      0.89      0.90       237
+         20       0.92      0.96      0.94       241
+         21       0.87      0.94      0.90       247
+         22       0.93      0.93      0.93       215
+         23       0.91      0.92      0.91       245
+         24       0.93      0.89      0.91       238
+         25       0.87      0.92      0.89       211
+
+avg / total       0.88      0.88      0.88      6000
+
+
+Classification report
+Parameters:
+{'criterion': 'entropy', 'max_depth': 50, 'max_features': None, 'min_samples_leaf': 1, 'min_samples_split': 2, 'splitter': 'best'}
+             precision    recall  f1-score   support
+
+          0       0.96      0.92      0.94       216
+          1       0.82      0.82      0.82       239
+          2       0.84      0.90      0.87       229
+          3       0.86      0.85      0.85       248
+          4       0.85      0.86      0.86       221
+          5       0.87      0.83      0.85       246
+          6       0.85      0.83      0.84       256
+          7       0.85      0.83      0.84       202
+          8       0.92      0.90      0.91       218
+          9       0.92      0.87      0.89       233
+         10       0.83      0.86      0.85       207
+         11       0.90      0.90      0.90       231
+         12       0.95      0.90      0.92       251
+         13       0.89      0.93      0.91       223
+         14       0.87      0.81      0.84       226
+         15       0.89      0.90      0.90       249
+         16       0.84      0.86      0.85       215
+         17       0.86      0.82      0.84       234
+         18       0.86      0.84      0.85       222
+         19       0.90      0.90      0.90       237
+         20       0.93      0.95      0.94       241
+         21       0.85      0.95      0.90       247
+         22       0.93      0.93      0.93       215
+         23       0.90      0.91      0.90       245
+         24       0.91      0.88      0.90       238
+         25       0.87      0.92      0.89       211
+
+avg / total       0.88      0.88      0.88      6000
+
+
+Confusion matrix, without normalization
+[[200   0   0   1   0   1   0   3   1   0   0   3   0   0   1   0   1   2
+    3   0   0   0   0   0   0   0]
+ [  0 194   0   1   0   2   2   5   3   2   1   0   0   0   0   2   0   8
+    2   1   0   9   1   3   1   2]
+ [  0   0 207   0   2   0   8   0   0   0   4   1   1   0   1   0   1   0
+    0   3   0   0   0   0   0   1]
+ [  0   4   0 212   0   1   1   7   0   1   1   1   1   1   4   4   1   3
+    0   0   0   1   0   4   1   0]
+ [  0   2   5   0 196   1   3   2   0   0   2   0   0   0   0   0   1   0
+    1   2   1   0   0   0   1   4]
+ [  1   2   1   1   0 207   2   0   1   1   0   0   0   4   1  11   0   0
+    4   1   0   4   0   2   1   2]
+ [  1   5   4   2   6   0 219   0   0   0   1   2   0   0   2   0   7   1
+    1   0   2   3   0   0   0   0]
+ [  0   0   0   7   0   0   1 170   1   2   8   1   2   0   0   2   0   3
+    2   0   1   1   0   0   0   1]
+ [  0   2   1   1   0   4   0   1 196   6   1   0   0   0   0   2   0   0
+    2   0   0   0   0   0   1   1]
+ [  1   1   0   3   1   1   1   1   6 202   1   1   0   0   3   1   1   0
+    3   1   0   0   0   0   1   4]
+ [  0   2   2   2   6   0   0   3   0   0 180   0   2   0   0   0   0   2
+    0   0   2   0   1   5   0   0]
+ [  1   0   1   0   7   0   2   3   0   1   1 212   0   1   0   0   1   1
+    0   0   0   0   0   0   0   0]
+ [  0   3   2   0   2   1   2   0   0   1   0   0 225   7   1   1   0   0
+    0   0   2   0   3   1   0   0]
+ [  0   0   0   1   1   1   1   2   0   0   1   0   2 206   2   0   0   1
+    0   0   1   2   2   0   0   0]
+ [  1   3   1   7   0   0   0   3   1   0   0   0   1   0 186   2  11   0
+    0   1   4   1   1   2   1   0]
+ [  0   1   0   1   1   5   1   0   1   1   0   2   0   1   1 229   2   0
+    1   1   0   1   0   0   0   0]
+ [  0   3   5   0   2   0   3   1   0   0   0   0   0   0   6   2 182   2
+    0   4   0   1   0   0   1   3]
+ [  0   3   3   3   4   1   1   1   1   1   7   0   0   4   0   0   3 196
+    2   0   0   1   1   2   0   0]
+ [  0   5   2   0   5   0   2   3   4   1   1   5   0   0   0   1   0   1
+  182   1   1   0   0   4   2   2]
+ [  0   0   3   0   1   2   3   0   0   0   1   0   1   0   0   1   0   3
+    0 213   0   3   1   1   2   2]
+ [  0   0   1   0   0   0   2   0   0   0   0   0   1   6   1   0   0   0
+    0   0 230   0   0   0   0   0]
+ [  0   1   0   0   0   1   0   0   0   0   0   0   0   0   0   1   2   0
+    1   0   0 233   5   1   2   0]
+ [  0   1   0   0   0   0   0   2   0   0   0   0   3   2   1   0   1   0
+    1   0   1   3 199   0   1   0]
+ [  1   0   2   2   0   1   1   1   1   0   6   3   0   0   0   0   1   1
+    1   0   0   0   0 223   1   0]
+ [  1   0   0   1   1   2   0   2   0   0   0   0   0   0   0   1   0   0
+    0   5   1   6   1   0 211   6]
+ [  1   0   0   2   1   0   0   0   1   2   0   0   0   0   0   0   2   0
+    2   0   0   0   2   2   0 196]]

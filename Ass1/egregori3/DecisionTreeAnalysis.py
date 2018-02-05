@@ -9,10 +9,43 @@ from PlotClassifiers import PlotClassifiers
 
 
 PlotThese = [
+# Gridsearch
                 {'dataset':'wifi', 'default':'best','type':['CM','LC=accuracy','LC=neg_mean_squared_error']}, # plot wifi CM and LC best parameters curves
                 {'dataset':'wifi2', 'default':'best','type':['CM','LC=accuracy','LC=neg_mean_squared_error']}, # plot wifi CM and LC best parameters curves
                 {'dataset':'wifi3', 'default':'best','type':['CM','LC=accuracy','LC=neg_mean_squared_error']}, # plot wifi CM and LC best parameters curves
                 {'dataset':'letter', 'default':'best','type':['CM','LC=accuracy','LC=neg_mean_squared_error']}, # plot wifi CM and LC best parameters curves
+
+# WiFi Validation
+                {'dataset':'wifi','default':'manual','vc_name':'max_depth','vc_range':[3,4,5,6],'type':['VC=accuracy']}, # plot wifi CM and LC best parameters curves
+                {'dataset':'wifi2','default':'manual','vc_name':'max_depth','vc_range':[3,4,5,6],'type':['VC=accuracy']}, # plot wifi CM and LC best parameters curves
+                {'dataset':'wifi3','default':'manual','vc_name':'max_depth','vc_range':[3,4,5,6],'type':['VC=accuracy']}, # plot wifi CM and LC best parameters curves
+
+# Letter Validation
+                {'dataset':'letter','default':'manual',
+                'max_depth':50,
+                'min_samples_leaf':1,
+                'vc_name':'min_samples_split','vc_range':[3,4,5,6,7,8,9,10],'type':['VC=accuracy']}, # plot wifi CM and LC best parameters curves
+
+                {'dataset':'letter','default':'manual',
+                'max_depth':50,
+                'min_samples_leaf':5,
+                'vc_name':'min_samples_split','vc_range':[3,4,5,6,7,8,9,10],'type':['VC=accuracy']}, # plot wifi CM and LC best parameters curves
+
+                {'dataset':'letter','default':'manual',
+                'max_depth':50,
+                'min_samples_leaf':10,
+                'vc_name':'min_samples_split','vc_range':[3,4,5,6,7,8,9,10],'type':['VC=accuracy']}, # plot wifi CM and LC best parameters curves
+
+# Final
+                {'dataset':'wifi', 'default':'manual','type':['CM','LC=accuracy']}, # plot wifi CM and LC best parameters curves
+                {'dataset':'wifi2', 'default':'manual','type':['CM','LC=accuracy']}, # plot wifi CM and LC best parameters curves
+                {'dataset':'wifi3', 'default':'manual','type':['CM','LC=accuracy']}, # plot wifi CM and LC best parameters curves
+
+                {'dataset':'letter', 'default':'manual',
+                'max_depth':50,
+                'min_samples_leaf':1,
+                'min_samples_split':4,
+                'type':['CM','LC=accuracy']}, # plot wifi CM and LC best parameters curves
             ]
 
 
@@ -29,7 +62,7 @@ tuned_parameters =  [
                             'criterion':['entropy','gini'],
                             'splitter':['best','random'],
                             'max_features':['auto','sqrt','log2',None],
-                            'max_depth':[3,4,5,6,None],
+                            'max_depth':[5,10,20,50,None],
                             'min_samples_split':[2,3,4],
                             'min_samples_leaf':[1,2,3,4]
                         }
@@ -38,7 +71,7 @@ manual_params =   {
                             'criterion':'entropy',
                             'splitter':'best',
                             'max_features':'auto',
-                            'max_depth':None,
+                            'max_depth':5,
                             'min_samples_split':2,
                             'min_samples_leaf':1
                     }

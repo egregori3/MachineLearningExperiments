@@ -1,4 +1,5 @@
 from sklearn.model_selection import train_test_split
+from sklearn.metrics import classification_report
 from PlotLearningCurve import PlotLearningCurve
 from LoadPreprocessDataset import LoadPreprocessDataset
 from FindBestParameters import FindBestParameters
@@ -42,6 +43,17 @@ def PlotClassifiers(list_of_dicts,CreateClassifier,clf,kfolds,test_size,prefix,s
             if parameter in params.keys():
                 top[parameter] = params[parameter]
         clf = CreateClassifier( top )
+
+        # -----------------------------------------------------------------------------
+        # Generate classification report
+        # ----------------------------------------------------------------------------- 
+        print("Classification report")
+        print("Parameters:")
+        print(top)
+        clf.fit(X_train, y_train)
+        y_true, y_pred = y_test, clf.predict(X_test)
+        print(classification_report(y_true, y_pred))
+        print()
 
         # -----------------------------------------------------------------------------
         # Put parameters in title

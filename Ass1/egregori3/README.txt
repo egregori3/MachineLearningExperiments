@@ -78,3 +78,15 @@ To create figure 1: python VisualizeWiFi.py
 To create figures 2: python VisualizeLetter.py
 
 To collect data from all classifiers: python RunMe.py
+
+
+Directory Tree
+--------------
+Data->Runx = console ouptut of each classifier run
+Experiments<directory> = Code I found online and experimented with
+FailedDatasets<directory> = datasets I treid that were not interesting
+Plots->GridSearch = Plot generated using GridSearch
+Plots->Manual = Plots generated using manual tuning
+
+BoostingAnalysis.py = Parameters and script for running AdaBoost classifier
+DecisionTreeAnalysis.py = Parameters and script for running decision classifier

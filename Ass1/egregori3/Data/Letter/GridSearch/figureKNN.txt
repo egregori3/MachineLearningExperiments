@@ -1,0 +1,193 @@
+Loading LETTER dataset
+Integer Encoding dataset
+[[ 2  8  3 ...,  8  0  8]
+ [ 5 12  3 ...,  8  4 10]
+ [ 4 11  6 ...,  7  3  9]
+ ..., 
+ [ 6  9  6 ..., 12  2  4]
+ [ 2  3  4 ...,  9  5  8]
+ [ 4  9  6 ...,  7  2  8]]
+[19  8  3 ..., 19 18  0]
+Tuning hyper-parameters for accuracy
+
+
+49, 0.917, 0.969, 0.020, 1.085, {'algorithm': 'ball_tree', 'n_neighbors': 2, 'weights': 'uniform'}
+4, 0.939, 1.000, 0.017, 1.082, {'algorithm': 'ball_tree', 'n_neighbors': 2, 'weights': 'distance'}
+24, 0.931, 0.975, 0.020, 1.115, {'algorithm': 'ball_tree', 'n_neighbors': 3, 'weights': 'uniform'}
+10, 0.938, 1.000, 0.019, 1.163, {'algorithm': 'ball_tree', 'n_neighbors': 3, 'weights': 'distance'}
+35, 0.926, 0.965, 0.021, 1.106, {'algorithm': 'ball_tree', 'n_neighbors': 4, 'weights': 'uniform'}
+2, 0.941, 1.000, 0.019, 1.138, {'algorithm': 'ball_tree', 'n_neighbors': 4, 'weights': 'distance'}
+29, 0.929, 0.965, 0.021, 1.158, {'algorithm': 'ball_tree', 'n_neighbors': 5, 'weights': 'uniform'}
+14, 0.936, 1.000, 0.017, 1.155, {'algorithm': 'ball_tree', 'n_neighbors': 5, 'weights': 'distance'}
+38, 0.924, 0.960, 0.017, 1.175, {'algorithm': 'ball_tree', 'n_neighbors': 6, 'weights': 'uniform'}
+11, 0.937, 1.000, 0.019, 1.195, {'algorithm': 'ball_tree', 'n_neighbors': 6, 'weights': 'distance'}
+41, 0.923, 0.957, 0.021, 1.192, {'algorithm': 'ball_tree', 'n_neighbors': 7, 'weights': 'uniform'}
+16, 0.934, 1.000, 0.020, 1.194, {'algorithm': 'ball_tree', 'n_neighbors': 7, 'weights': 'distance'}
+43, 0.918, 0.952, 0.017, 1.195, {'algorithm': 'ball_tree', 'n_neighbors': 8, 'weights': 'uniform'}
+19, 0.933, 1.000, 0.020, 1.166, {'algorithm': 'ball_tree', 'n_neighbors': 8, 'weights': 'distance'}
+47, 0.918, 0.949, 0.019, 1.200, {'algorithm': 'ball_tree', 'n_neighbors': 9, 'weights': 'uniform'}
+25, 0.930, 1.000, 0.017, 1.202, {'algorithm': 'ball_tree', 'n_neighbors': 9, 'weights': 'distance'}
+53, 0.914, 0.946, 0.018, 1.227, {'algorithm': 'ball_tree', 'n_neighbors': 10, 'weights': 'uniform'}
+33, 0.928, 1.000, 0.018, 1.251, {'algorithm': 'ball_tree', 'n_neighbors': 10, 'weights': 'distance'}
+50, 0.917, 0.969, 0.025, 0.492, {'algorithm': 'kd_tree', 'n_neighbors': 2, 'weights': 'uniform'}
+5, 0.939, 1.000, 0.023, 0.507, {'algorithm': 'kd_tree', 'n_neighbors': 2, 'weights': 'distance'}
+22, 0.931, 0.975, 0.024, 0.554, {'algorithm': 'kd_tree', 'n_neighbors': 3, 'weights': 'uniform'}
+8, 0.938, 1.000, 0.025, 0.565, {'algorithm': 'kd_tree', 'n_neighbors': 3, 'weights': 'distance'}
+35, 0.926, 0.965, 0.024, 0.639, {'algorithm': 'kd_tree', 'n_neighbors': 4, 'weights': 'uniform'}
+3, 0.940, 1.000, 0.026, 0.621, {'algorithm': 'kd_tree', 'n_neighbors': 4, 'weights': 'distance'}
+28, 0.929, 0.965, 0.024, 0.689, {'algorithm': 'kd_tree', 'n_neighbors': 5, 'weights': 'uniform'}
+13, 0.937, 1.000, 0.024, 0.659, {'algorithm': 'kd_tree', 'n_neighbors': 5, 'weights': 'distance'}
+39, 0.924, 0.960, 0.021, 0.712, {'algorithm': 'kd_tree', 'n_neighbors': 6, 'weights': 'uniform'}
+9, 0.938, 1.000, 0.022, 0.718, {'algorithm': 'kd_tree', 'n_neighbors': 6, 'weights': 'distance'}
+40, 0.923, 0.956, 0.018, 0.609, {'algorithm': 'kd_tree', 'n_neighbors': 7, 'weights': 'uniform'}
+18, 0.934, 1.000, 0.018, 0.606, {'algorithm': 'kd_tree', 'n_neighbors': 7, 'weights': 'distance'}
+44, 0.918, 0.952, 0.018, 0.629, {'algorithm': 'kd_tree', 'n_neighbors': 8, 'weights': 'uniform'}
+20, 0.932, 1.000, 0.021, 0.653, {'algorithm': 'kd_tree', 'n_neighbors': 8, 'weights': 'distance'}
+48, 0.917, 0.949, 0.018, 0.647, {'algorithm': 'kd_tree', 'n_neighbors': 9, 'weights': 'uniform'}
+26, 0.930, 1.000, 0.018, 0.653, {'algorithm': 'kd_tree', 'n_neighbors': 9, 'weights': 'distance'}
+54, 0.914, 0.946, 0.021, 0.665, {'algorithm': 'kd_tree', 'n_neighbors': 10, 'weights': 'uniform'}
+32, 0.928, 1.000, 0.017, 0.698, {'algorithm': 'kd_tree', 'n_neighbors': 10, 'weights': 'distance'}
+51, 0.917, 0.969, 0.002, 0.557, {'algorithm': 'brute', 'n_neighbors': 2, 'weights': 'uniform'}
+6, 0.939, 1.000, 0.002, 0.574, {'algorithm': 'brute', 'n_neighbors': 2, 'weights': 'distance'}
+23, 0.931, 0.975, 0.002, 0.591, {'algorithm': 'brute', 'n_neighbors': 3, 'weights': 'uniform'}
+7, 0.938, 1.000, 0.002, 0.597, {'algorithm': 'brute', 'n_neighbors': 3, 'weights': 'distance'}
+34, 0.926, 0.966, 0.003, 0.911, {'algorithm': 'brute', 'n_neighbors': 4, 'weights': 'uniform'}
+1, 0.941, 1.000, 0.002, 0.953, {'algorithm': 'brute', 'n_neighbors': 4, 'weights': 'distance'}
+31, 0.929, 0.966, 0.002, 0.939, {'algorithm': 'brute', 'n_neighbors': 5, 'weights': 'uniform'}
+15, 0.936, 1.000, 0.002, 0.929, {'algorithm': 'brute', 'n_neighbors': 5, 'weights': 'distance'}
+42, 0.922, 0.959, 0.002, 1.007, {'algorithm': 'brute', 'n_neighbors': 6, 'weights': 'uniform'}
+12, 0.937, 1.000, 0.003, 0.974, {'algorithm': 'brute', 'n_neighbors': 6, 'weights': 'distance'}
+37, 0.924, 0.956, 0.003, 0.953, {'algorithm': 'brute', 'n_neighbors': 7, 'weights': 'uniform'}
+17, 0.934, 1.000, 0.002, 0.968, {'algorithm': 'brute', 'n_neighbors': 7, 'weights': 'distance'}
+45, 0.918, 0.952, 0.003, 0.925, {'algorithm': 'brute', 'n_neighbors': 8, 'weights': 'uniform'}
+20, 0.932, 1.000, 0.002, 0.930, {'algorithm': 'brute', 'n_neighbors': 8, 'weights': 'distance'}
+46, 0.918, 0.949, 0.003, 0.959, {'algorithm': 'brute', 'n_neighbors': 9, 'weights': 'uniform'}
+27, 0.929, 1.000, 0.003, 0.945, {'algorithm': 'brute', 'n_neighbors': 9, 'weights': 'distance'}
+52, 0.915, 0.946, 0.003, 0.926, {'algorithm': 'brute', 'n_neighbors': 10, 'weights': 'uniform'}
+29, 0.929, 1.000, 0.002, 0.945, {'algorithm': 'brute', 'n_neighbors': 10, 'weights': 'distance'}
+
+Best parameters set found on development set LETTER
+{'algorithm': 'brute', 'n_neighbors': 4, 'weights': 'distance'}
+
+Best parameters classification report LETTER
+
+             precision    recall  f1-score   support
+
+          0       0.99      0.99      0.99       216
+          1       0.93      0.95      0.94       239
+          2       0.97      0.97      0.97       229
+          3       0.93      0.98      0.95       248
+          4       0.94      0.96      0.95       221
+          5       0.97      0.95      0.96       246
+          6       0.97      0.91      0.94       256
+          7       0.92      0.89      0.91       202
+          8       0.98      0.95      0.97       218
+          9       0.96      0.97      0.96       233
+         10       0.93      0.92      0.92       207
+         11       0.97      0.98      0.98       231
+         12       0.99      0.97      0.98       251
+         13       0.94      0.98      0.96       223
+         14       0.92      0.96      0.94       226
+         15       0.97      0.96      0.96       249
+         16       0.96      0.96      0.96       215
+         17       0.91      0.92      0.92       234
+         18       0.98      0.98      0.98       222
+         19       0.98      0.97      0.98       237
+         20       1.00      0.98      0.99       241
+         21       0.95      0.96      0.95       247
+         22       0.96      0.99      0.98       215
+         23       0.97      0.96      0.96       245
+         24       0.97      0.97      0.97       238
+         25       1.00      0.99      1.00       211
+
+avg / total       0.96      0.96      0.96      6000
+
+
+Classification report
+Parameters:
+{'algorithm': 'brute', 'n_neighbors': 4, 'weights': 'distance'}
+             precision    recall  f1-score   support
+
+          0       0.99      0.99      0.99       216
+          1       0.93      0.95      0.94       239
+          2       0.97      0.97      0.97       229
+          3       0.93      0.98      0.95       248
+          4       0.94      0.96      0.95       221
+          5       0.97      0.95      0.96       246
+          6       0.97      0.91      0.94       256
+          7       0.92      0.89      0.91       202
+          8       0.98      0.95      0.97       218
+          9       0.96      0.97      0.96       233
+         10       0.93      0.92      0.92       207
+         11       0.97      0.98      0.98       231
+         12       0.99      0.97      0.98       251
+         13       0.94      0.98      0.96       223
+         14       0.92      0.96      0.94       226
+         15       0.97      0.96      0.96       249
+         16       0.96      0.96      0.96       215
+         17       0.91      0.92      0.92       234
+         18       0.98      0.98      0.98       222
+         19       0.98      0.97      0.98       237
+         20       1.00      0.98      0.99       241
+         21       0.95      0.96      0.95       247
+         22       0.96      0.99      0.98       215
+         23       0.97      0.96      0.96       245
+         24       0.97      0.97      0.97       238
+         25       1.00      0.99      1.00       211
+
+avg / total       0.96      0.96      0.96      6000
+
+
+Confusion matrix, without normalization
+[[214   1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   1
+    0   0   0   0   0   0   0   0]
+ [  0 226   0   0   0   0   0   1   0   0   0   0   0   1   0   0   0   6
+    0   0   0   5   0   0   0   0]
+ [  0   0 222   0   0   0   3   0   0   0   0   1   0   0   2   0   1   0
+    0   0   0   0   0   0   0   0]
+ [  1   0   0 242   0   0   0   1   0   0   1   0   0   0   3   0   0   0
+    0   0   0   0   0   0   0   0]
+ [  0   0   1   0 212   0   3   0   0   0   0   2   0   0   0   0   1   0
+    0   0   0   0   0   2   0   0]
+ [  0   1   0   0   0 233   0   0   0   0   0   0   0   2   0   5   0   1
+    0   2   0   1   1   0   0   0]
+ [  0   2   2   3   8   0 232   0   0   0   0   0   0   0   5   0   0   1
+    1   0   0   1   1   0   0   0]
+ [  0   2   0   4   0   0   0 180   0   0  10   0   1   0   0   0   0   5
+    0   0   0   0   0   0   0   0]
+ [  0   0   1   0   0   0   0   0 207   9   0   1   0   0   0   0   0   0
+    0   0   0   0   0   0   0   0]
+ [  1   0   0   0   0   0   0   0   4 225   0   1   0   0   2   0   0   0
+    0   0   0   0   0   0   0   0]
+ [  0   0   0   0   0   0   0   8   0   0 190   0   0   0   0   0   0   4
+    0   0   0   0   0   5   0   0]
+ [  0   0   0   0   0   0   2   0   0   0   0 227   0   0   0   0   1   1
+    0   0   0   0   0   0   0   0]
+ [  0   0   0   0   0   0   0   0   0   0   0   0 243   0   2   0   0   0
+    0   0   0   4   2   0   0   0]
+ [  0   0   0   1   0   0   0   1   0   0   0   0   0 219   0   0   0   0
+    0   0   0   2   0   0   0   0]
+ [  0   0   2   2   0   0   0   0   0   0   0   0   0   1 217   0   4   0
+    0   0   0   0   0   0   0   0]
+ [  0   0   0   1   1   6   0   0   0   0   0   0   0   1   0 238   0   1
+    0   0   0   0   0   0   1   0]
+ [  0   0   0   0   1   0   0   0   0   0   0   0   0   0   6   1 207   0
+    0   0   0   0   0   0   0   0]
+ [  0   5   0   0   0   0   0   2   0   0   2   2   0   6   0   0   0 216
+    1   0   0   0   0   0   0   0]
+ [  0   3   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0   0
+  218   0   0   0   0   0   0   0]
+ [  0   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0   0   1
+    0 231   0   0   0   0   4   0]
+ [  0   0   0   2   0   0   0   2   0   0   0   0   0   1   0   0   0   0
+    0   0 236   0   0   0   0   0]
+ [  0   2   0   0   0   1   0   0   0   0   0   0   1   1   0   0   0   0
+    0   0   0 237   4   0   1   0]
+ [  0   0   0   0   0   0   0   0   0   0   0   0   1   0   0   0   0   0
+    0   0   1   0 213   0   0   0]
+ [  0   1   0   3   1   0   0   0   0   1   1   0   0   0   0   0   0   1
+    2   0   0   0   0 235   0   0]
+ [  1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   1   0   0
+    0   3   0   0   0   1 232   0]
+ [  0   0   0   0   1   0   0   0   0   0   0   0   0   0   0   0   1   0
+    0   0   0   0   0   0   0 209]]

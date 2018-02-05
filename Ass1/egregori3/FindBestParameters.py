@@ -19,21 +19,19 @@ def FindBestParameters( clf, parms, cv, scores, name, X_train, y_train, X_test,y
                            scoring=score)
         bclf.fit(X_train, y_train)
 
-        print("Best parameters set found on development set "+name)
-        print()
-        print(bclf.best_params_)
         print()
         mts = bclf.cv_results_['mean_test_score']
+        mtrs = bclf.cv_results_['mean_train_score']
         rts = bclf.cv_results_['rank_test_score']
         mft = bclf.cv_results_['mean_fit_time']
         mst = bclf.cv_results_['mean_score_time']
-        for rts,mts,mft,mst,params in zip(rts,mts,mft,mst,bclf.cv_results_['params']):
-            print("%d, %0.3f, %0.3f, %0.3f, %r" % (rts,mts,mft,mst,params))
+        for rts,mts,mtrs,mft,mst,params in zip(rts,mts,mtrs,mft,mst,bclf.cv_results_['params']):
+            print("%d, %0.3f, %0.3f, %0.3f, %0.3f, %r" % (rts,mts,mtrs,mft,mst,params))
         print()
-        print("Detailed classification report "+name)
+        print("Best parameters set found on development set "+name)
+        print(bclf.best_params_)
         print()
-        print("The model is trained on the full development set.")
-        print("The scores are computed on the full evaluation set.")
+        print("Best parameters classification report "+name)
         print()
         y_true, y_pred = y_test, bclf.predict(X_test)
         print(classification_report(y_true, y_pred))
