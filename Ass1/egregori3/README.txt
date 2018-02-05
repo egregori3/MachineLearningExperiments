@@ -74,6 +74,9 @@ Instructions for reproducing data
 ----------------------------------------------------------
 
 Environment built using Anaconda: conda env create -f CondaEnv.yml
+If there are any problems importing the CondaEnv.yml file.
+Just install: scikitlearn, pandas
+
 To create figure 1: python VisualizeWiFi.py
 To create figures 2: python VisualizeLetter.py
 
@@ -82,11 +85,45 @@ To collect data from all classifiers: python RunMe.py
 
 Directory Tree
 --------------
-Data->Runx = console ouptut of each classifier run
-Experiments<directory> = Code I found online and experimented with
-FailedDatasets<directory> = datasets I treid that were not interesting
-Plots->GridSearch = Plot generated using GridSearch
-Plots->Manual = Plots generated using manual tuning
+egregori
+    Data
+        Letter
+            GridSearch
+            Manual
+                Learning = Learning curves and confusion matrix
+                Validation = Validation curves
+        WiFi
+            GridSearch
+            Manual
+                Learning = Learning curves and confusion matrix
+                Validation = Validation curves
 
-BoostingAnalysis.py = Parameters and script for running AdaBoost classifier
-DecisionTreeAnalysis.py = Parameters and script for running decision classifier
+    Experiments = Code I found online and experimented with
+    FailedDatasets = datasets I treid that were not interesting
+    Plots
+       Letter
+            GridSearch
+            Manual
+                Learning = Learning curves and confusion matrix
+                Validation = Validation curves
+        WiFi
+            GridSearch
+            Manual
+                Learning = Learning curves and confusion matrix
+                Validation = Validation curves
+
+    BoostingAnalysis.py = Parameters and script for running AdaBoost classifier
+    DecisionTreeAnalysis.py = Parameters and script for running decision tree classifier
+    KNNAnalysis.py = Parameters and script for running KNN classifier
+    MLPAnalysis.py = Parameters and script for running ANN classifier
+    SVMAnalysis.py = Parameters and script for running SVM classifier
+
+    DisplayValidationCurve.py = Utility function
+    FindBestParameters.py = Utility function
+    LoadPreprocessDataset.py = Utility function
+    PlotClassifiers.py = Utility function
+    PlotConfusionMatrix.py = Utility function
+    PlotLearningCurve.py = Script engine
+
+    letter-recognition.data = letter dataset
+    wifi_localization.txt = wifi dataset
