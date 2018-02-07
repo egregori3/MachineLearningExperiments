@@ -86,10 +86,17 @@ def CreateClassifier(dop):
                                     min_samples_leaf=dop['min_samples_leaf']
                                 )
 
-# -----------------------------------------------------------------------------
-# Call engine
-# -----------------------------------------------------------------------------
-PlotClassifiers(    PlotThese,
-                    CreateClassifier,
-                    DecisionTreeClassifier(),
-                    kfolds,test_size,prefix,scores,lop,tuned_parameters,manual_params)
+
+def run():
+    # -----------------------------------------------------------------------------
+    # Call engine
+    # -----------------------------------------------------------------------------
+    PlotClassifiers(    PlotThese,
+                        CreateClassifier,
+                        DecisionTreeClassifier(),
+                        kfolds,test_size,prefix,scores,lop,tuned_parameters,manual_params)
+
+
+if __name__ == '__main__':
+    run()
+

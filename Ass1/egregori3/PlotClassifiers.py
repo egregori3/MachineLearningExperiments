@@ -77,7 +77,6 @@ def PlotClassifiers(list_of_dicts,CreateClassifier,clf,kfolds,test_size,prefix,s
             # ----------------------------------------------------------------------------- 
             if plottype == 'CM':
                 title = name+" "+prefix+" Confusion Matrix"+"\n"+pvalues
-                plt.figure()
                 PlotConfusionMatrix(clf,X_train,y_train,X_test,y_test,classes,title=title)
 
             # -----------------------------------------------------------------------------
@@ -92,7 +91,6 @@ def PlotClassifiers(list_of_dicts,CreateClassifier,clf,kfolds,test_size,prefix,s
             # -----------------------------------------------------------------------------
             if plottype == 'VC':
                 title = name+" "+prefix+" Validation Curve"+"\n"+pvalues
-                plt.figure()
                 DisplayValidationCurve(clf, X_train,y_train, params['vc_name'], params['vc_range'], title, kfolds)
 
-    plt.show()
+#    plt.show()

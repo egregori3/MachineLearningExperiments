@@ -58,7 +58,7 @@ def PlotConfusionMatrix(  clf, X_train,y_train,X_test,y_test,classes,
         print('Confusion matrix, without normalization')
 
     print(cm)
-
+    plt.figure()
     plt.imshow(cm, interpolation='nearest', cmap=cmap)
     plt.title(title)
     plt.colorbar()
@@ -77,3 +77,7 @@ def PlotConfusionMatrix(  clf, X_train,y_train,X_test,y_test,classes,
     plt.ylabel('True label')
     plt.xlabel('Predicted label')
 
+    import uuid
+    plt.tight_layout()
+    plt.savefig("..//"+uuid.uuid4().hex)
+    plt.close()

@@ -79,5 +79,10 @@ def PlotLearningCurve(estimator, title, X, y, ylim=None, cv=None, scorer=None,
              label="Cross-validation score")
 
     plt.legend(loc="best")
-    return plt
+
+    import uuid
+    plt.tight_layout()
+    plt.savefig("..//"+uuid.uuid4().hex)
+    plt.close()
+
 

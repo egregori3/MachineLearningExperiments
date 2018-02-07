@@ -72,13 +72,17 @@ def CreateClassifier(dop):
                         )
 
 
-# -----------------------------------------------------------------------------
-# Call engine
-# -----------------------------------------------------------------------------
-PlotClassifiers(    PlotThese,
-                    CreateClassifier,
-                    MLPClassifier(),
-                    kfolds,test_size,prefix,scores,lop,tuned_parameters,manual_params)
+def run():
+    # -----------------------------------------------------------------------------
+    # Call engine
+    # -----------------------------------------------------------------------------
+    PlotClassifiers(    PlotThese,
+                        CreateClassifier,
+                        MLPClassifier(),
+                        kfolds,test_size,prefix,scores,lop,tuned_parameters,manual_params)
 
+
+if __name__ == '__main__':
+    run()
 
 

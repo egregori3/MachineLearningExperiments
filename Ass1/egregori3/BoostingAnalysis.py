@@ -79,10 +79,17 @@ def CreateClassifier(dop):
     return AdaBoostClassifier( base_estimator=DTC, n_estimators=dop['n_estimators'] )
 
 
-#-----------------------------------------------------------------------------
-# Call engine
-# -----------------------------------------------------------------------------
-PlotClassifiers(    PlotThese,
-                    CreateClassifier,
-                    AdaBoostClassifier(base_estimator=DecisionTreeClassifier()),
-                    kfolds,test_size,prefix,scores,lop,tuned_parameters,manual_params)
+def run():
+    #-----------------------------------------------------------------------------
+    # Call engine
+    # -----------------------------------------------------------------------------
+    PlotClassifiers(    PlotThese,
+                        CreateClassifier,
+                        AdaBoostClassifier(base_estimator=DecisionTreeClassifier()),
+                        kfolds,test_size,prefix,scores,lop,tuned_parameters,manual_params)
+
+
+if __name__ == '__main__':
+    run()
+
+

@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 from sklearn.model_selection import validation_curve
 
 def DisplayValidationCurve(clf,X,y,validation_param,validation_param_range,title, kfolds):
+    plt.figure()
     # -----------------------------------------------------------------------------
     # Validation Curve
     # -----------------------------------------------------------------------------
@@ -31,3 +32,7 @@ def DisplayValidationCurve(clf,X,y,validation_param,validation_param_range,title
                      color="navy", lw=lw)
     plt.legend(loc="best")
 
+    import uuid
+    plt.tight_layout()
+    plt.savefig("..//"+uuid.uuid4().hex)
+    plt.close()
