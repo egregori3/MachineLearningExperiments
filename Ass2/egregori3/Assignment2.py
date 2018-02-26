@@ -2,6 +2,12 @@ from csv import reader
 from emg.NeuralNet import NeuralNet
 from emg.EvaluateClassifier import EvaluateClassifier
 from emg.LoadPreprocessDataset import LoadPreprocessDataset
+from emg.HillClimbingSimulatedAnnealing import test_hill_climbing
+
+
+
+test_hill_climbing()
+stop
 
 
 # Load File
