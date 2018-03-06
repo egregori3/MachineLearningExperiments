@@ -1,2 +1,6 @@
 *.zip
 __pycache__
+*.class
+*.jar
+
+
