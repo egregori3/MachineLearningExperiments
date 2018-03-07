@@ -1,5 +1,10 @@
 # MLCS7641 Spring 2018 Assignment 2 - Eric Gregori
 
+## Tools
+http://download.oracle.com/otn-pub/java/jdk/8u162-b12/0da788060d494f5095bf8624735fa2f1/jdk-8u162-windows-x64.exe
+http://ant.apache.org/bindownload.cgi
+https://www.mkyong.com/ant/how-to-install-apache-ant-on-windows/
+
 ## This assignment has two parts
 
 ### Optimization problems
@@ -11,8 +16,13 @@ See lines below for how to execute each simulation.
 The graphs are made by redirecting the simulation output to a file, and importing the file into Excel.
 ```
 egregori3\ABAGAIL-master>ant
-egregori3\ABAGAIL-master>java -cp ABAGAIL.jar opt.test.emgFourPeaksRHC > rhc_fourpeaks.txt
+egregori3\ABAGAIL-master>java -cp ABAGAIL.jar opt.test.FourPeaksTest
+egregori3\ABAGAIL-master>java -cp ABAGAIL.jar opt.test.emgFourPeaksRHC
+egregori3\ABAGAIL-master>java -cp ABAGAIL.jar opt.test.emgFourPeaksSA
+egregori3\ABAGAIL-master>java -cp ABAGAIL.jar opt.test.emgFourPeaksGA
+egregori3\ABAGAIL-master>java -cp ABAGAIL.jar opt.test.emgFourPeaksMIMIC
 ```
+
 #### Results
 rhc_fourpeaks.txt = Random Hill Climbing four peaks results
 

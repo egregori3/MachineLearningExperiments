@@ -24,14 +24,13 @@ import opt.ga.StandardGeneticAlgorithm;
 import opt.prob.GenericProbabilisticOptimizationProblem;
 import opt.prob.MIMIC;
 import opt.prob.ProbabilisticOptimizationProblem;
-import shared.FixedIterationTrainer;
 import shared.emgEqualityTrainer;
 
 /**
  * Copied from ContinuousPeaksTest
  * @version 1.0
  */
-public class emgFourPeaksRHC 
+public class emgFourPeaksMIMIC 
 {
     private static void unitTest(int N, int T)
     {
@@ -49,9 +48,13 @@ public class emgFourPeaksRHC
             EvaluationFunction ef = new FourPeaksEvaluationFunction(T);   // eval the evaulation function
             Distribution odd = new DiscreteUniformDistribution(ranges);   // dist the initial distribution
             NeighborFunction nf = new DiscreteChangeOneNeighbor(ranges);  // neigh the neighbor function
-            HillClimbingProblem hcp = new GenericHillClimbingProblem(ef, odd, nf);
-            RandomizedHillClimbing rhc= new RandomizedHillClimbing(hcp); 
-            emgEqualityTrainer fit = new emgEqualityTrainer(rhc, optima, runs);
+            MutationFunction mf = new DiscreteChangeOneMutation(ranges);
+            CrossoverFunction cf = new SingleCrossOver();
+            GeneticAlgorithmProblem gap = new GenericGeneticAlgorithmProblem(ef, odd, mf, cf);
+            Distribution df = new DiscreteDependencyTree(.1, ranges); 
+            ProbabilisticOptimizationProblem pop = new GenericProbabilisticOptimizationProblem(ef, odd, df);
+            MIMIC mimic = new MIMIC(N, N/10, pop);   
+            emgEqualityTrainer fit = new emgEqualityTrainer(mimic, optima, runs);
             double result = fit.train();
             if( result >= 0 )
             {

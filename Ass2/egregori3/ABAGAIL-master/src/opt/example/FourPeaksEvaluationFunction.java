@@ -49,7 +49,7 @@ public class FourPeaksEvaluationFunction implements EvaluationFunction {
         if((rv > data.size()) && (rv > a)) 
         {
             a = rv;
-            System.out.println("htr: "+a+"->"+head+","+tail+","+r);
+//            System.out.println("htr: "+a+"->"+head+","+tail+","+r);
         }
         return rv;
     }

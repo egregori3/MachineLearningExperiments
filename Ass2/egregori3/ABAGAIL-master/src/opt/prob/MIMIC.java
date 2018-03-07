@@ -99,7 +99,25 @@ public class MIMIC extends OptimizationAlgorithm {
             }
         }
         distribution.estimate(new DataSet(kept));
-        return cutoff;
+
+// EMG start
+       Instance[] data2 = new Instance[samples];
+        for (int i = 0; i < data2.length; i++) {
+            data2[i] = distribution.sample(null);
+        } 
+        double bestVal = op.value(data2[0]);
+        Instance best = data2[0];
+        for (int i = 1; i < data2.length; i++) {
+            double value = op.value(data2[i]);
+            if (value > bestVal) {
+                bestVal = value;
+                best = data2[i];
+            }
+        }
+        return bestVal;
+// EMG end
+
+ //       return cutoff;
     }
 
 }
