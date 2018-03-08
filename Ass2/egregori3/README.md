@@ -21,10 +21,58 @@ egregori3\ABAGAIL-master>java -cp ABAGAIL.jar opt.test.emgFourPeaksRHC
 egregori3\ABAGAIL-master>java -cp ABAGAIL.jar opt.test.emgFourPeaksSA
 egregori3\ABAGAIL-master>java -cp ABAGAIL.jar opt.test.emgFourPeaksGA
 egregori3\ABAGAIL-master>java -cp ABAGAIL.jar opt.test.emgFourPeaksMIMIC
+
+egregori3\ABAGAIL-master>java -cp ABAGAIL.jar opt.test.TwoColorsTest
+egregori3\ABAGAIL-master>java -cp ABAGAIL.jar opt.test.emgTwoColorsRHC
+egregori3\ABAGAIL-master>java -cp ABAGAIL.jar opt.test.emgTwoColorsSA
+egregori3\ABAGAIL-master>java -cp ABAGAIL.jar opt.test.emgTwoColorsGA
+egregori3\ABAGAIL-master>java -cp ABAGAIL.jar opt.test.emgTwoColorsMIMIC
+
+egregori3\ABAGAIL-master>java -cp ABAGAIL.jar opt.test.NQueensTest
+egregori3\ABAGAIL-master>java -cp ABAGAIL.jar opt.test.emgNQueensRHC
+egregori3\ABAGAIL-master>java -cp ABAGAIL.jar opt.test.emgNQueensSA
+egregori3\ABAGAIL-master>java -cp ABAGAIL.jar opt.test.emgNQueensGA
+egregori3\ABAGAIL-master>java -cp ABAGAIL.jar opt.test.emgNQueensMIMIC
+
+egregori3\ABAGAIL-master>java -cp ABAGAIL.jar opt.test.emgNQueensSAtune
+egregori3\ABAGAIL-master>java -cp ABAGAIL.jar opt.test.emgNQueensGAtune
+egregori3\ABAGAIL-master>java -cp ABAGAIL.jar opt.test.emgNQueensMIMICtune
+
 ```
 
-#### Results
-rhc_fourpeaks.txt = Random Hill Climbing four peaks results
+#### Example Results
+```
+D:\GT\ML_CS7641\GIT\Ass2\egregori3\ABAGAIL-master>java -cp ABAGAIL.jar opt.test.emgTwoColorsRHC
+20,2,18,1000,0.0,60.719,304.0
+40,2,38,1000,33.0,162.17,715.0
+80,2,78,997,145.0,403.6228686058175,936.0
+160,2,158,585,430.0,787.651282051282,998.0
+
+D:\GT\ML_CS7641\GIT\Ass2\egregori3\ABAGAIL-master>java -cp ABAGAIL.jar opt.test.emgTwoColorsSA
+20,2,18,1000,0.0,107.671,283.0
+40,2,38,1000,85.0,219.948,624.0
+80,2,78,995,205.0,469.851256281407,990.0
+160,2,158,456,514.0,827.9714912280701,999.0
+
+D:\GT\ML_CS7641\GIT\Ass2\egregori3\ABAGAIL-master>java -cp ABAGAIL.jar opt.test.emgTwoColorsGA
+20,2,18,709,0.0,10.097320169252468,32.0
+40,2,38,336,9.0,38.26488095238095,68.0
+80,2,78,59,73.0,108.42372881355932,138.0
+160,2,158,0,1000.0,NaN,0.0
+
+D:\GT\ML_CS7641\GIT\Ass2\egregori3\ABAGAIL-master>java -cp ABAGAIL.jar opt.test.emgTwoColorsMIMIC
+20,2,18,1000,0.0,9.267,47.0
+40,2,38,1000,3.0,22.558,116.0
+80,2,78,1000,8.0,36.163,134.0
+160,2,158,1000,20.0,84.232,245.0
+
+```
+
+#### ABAGAIL Customization
+All files that start with 'emg' are custom. The following files were modified.
+egregori3\ABAGAIL-master\src\opt\ga\StandardGeneticAlgorithm.java
+egregori3\ABAGAIL-master\src\opt\prob\MIMIC.java
+
 
 
 ### Neural Network Training
