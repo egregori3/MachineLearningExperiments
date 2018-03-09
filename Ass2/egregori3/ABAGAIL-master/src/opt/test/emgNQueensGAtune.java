@@ -27,6 +27,7 @@ import opt.prob.ProbabilisticOptimizationProblem;
 import shared.FixedIterationTrainer;
 import shared.emgEqualityTrainer;
 import opt.ga.UniformCrossOver;
+import opt.ga.TwoPointCrossOver;
 
 import java.util.Random;
 import opt.ga.NQueensFitnessFunction;
@@ -59,7 +60,7 @@ public class emgNQueensGAtune
             NQueensFitnessFunction ef = new NQueensFitnessFunction();
             Distribution odd = new DiscretePermutationDistribution(N);
             MutationFunction mf = new SwapMutation();
-            CrossoverFunction cf = new UniformCrossOver(); //SingleCrossOver();
+            CrossoverFunction cf = new TwoPointCrossOver(); //UniformCrossOver(); //SingleCrossOver();
             Distribution df = new DiscreteDependencyTree(.1); 
             GeneticAlgorithmProblem gap = new GenericGeneticAlgorithmProblem(ef, odd, mf, cf);
             StandardGeneticAlgorithm ga = new StandardGeneticAlgorithm(p1, p2, p3, gap);
@@ -80,20 +81,63 @@ public class emgNQueensGAtune
     public static void main(String[] args) 
     {
         int[] optima = {45,190,435,778,1221,1763,2405};
-        int[] p1 = {50,100,300,400};
+        int[] A = {50,100,300,400};
         int N = 20;
         int P = optima[(N/10)-1];
+        System.out.println("A[i], A[i]/2, A[i]/10");
         for( int i=0; i<4; ++i )
         {
-            System.out.print(N+","+p1[i]+"->");
-            unitTest(N, P, p1[i], p1[i]/2, p1[i]/10);
+            System.out.print(A[i]+"->");
+            unitTest(N, P, A[i], A[i]/2, A[i]/10);
         }
-        N = 30;
-        P = optima[(N/10)-1];
+
+        System.out.println("A[i], A[i]/10, A[i]/2");
         for( int i=0; i<4; ++i )
         {
-            System.out.print(N+","+p1[i]+"->");
-            unitTest(N, P, p1[i], p1[i]/2, p1[i]/10);
+            System.out.print(A[i]+"->");
+            unitTest(N, P, A[i], A[i]/10, A[i]/2);
+        }
+
+        System.out.println("A[i], A[i]/10, A[i]/10");
+        for( int i=0; i<4; ++i )
+        {
+            System.out.print(A[i]+"->");
+            unitTest(N, P, A[i], A[i]/10, A[i]/10);
+        }
+
+        System.out.println("A[i], A[i]/20, A[i]/20");
+        for( int i=0; i<4; ++i )
+        {
+            System.out.print(A[i]+"->");
+            unitTest(N, P, A[i], A[i]/20, A[i]/20);
+        }
+
+        System.out.println("A[i], 0, A[i]/2");
+        for( int i=0; i<4; ++i )
+        {
+            System.out.print(A[i]+"->");
+            unitTest(N, P, A[i], 0, A[i]/2);
+        }
+
+        System.out.println("A[i], 0, A[i]/5");
+        for( int i=0; i<4; ++i )
+        {
+            System.out.print(A[i]+"->");
+            unitTest(N, P, A[i], 0, A[i]/5);
+        }
+
+        System.out.println("A[i], 0, A[i]/10");
+        for( int i=0; i<4; ++i )
+        {
+            System.out.print(A[i]+"->");
+            unitTest(N, P, A[i], 0, A[i]/10);
+        }
+
+        System.out.println("A[i], 0, A[i]/20");
+        for( int i=0; i<4; ++i )
+        {
+            System.out.print(A[i]+"->");
+            unitTest(N, P, A[i], 0, A[i]/20);
         }
     }
 }

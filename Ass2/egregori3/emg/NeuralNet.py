@@ -5,6 +5,14 @@ from math import exp
 
 class NeuralNet:
 
+    def __init__(self, l_rate, n_epoch, n_hidden):
+        self.l_rate = l_rate
+        self.n_epoch = n_epoch
+        self.n_hidden = n_hidden
+        self.network = 0
+        self.n_inputs = 0
+        self.n_outputs = 0
+
 #--------------------------------------------------------------------------------
 # Forward propogate
 #--------------------------------------------------------------------------------
@@ -22,9 +30,9 @@ class NeuralNet:
 
 
     # Forward propagate input to a network output
-    def _forward_propagate(self, network, row):
+    def _forward_propagate(self, row):
         inputs = row
-        for layer in network:
+        for layer in self.network:
             new_inputs = []
             for neuron in layer:
                 activation = self._activate(neuron['weights'], inputs)
@@ -43,14 +51,14 @@ class NeuralNet:
 
 
     # Backpropagate error and store in neurons
-    def _backward_propagate_error(self, network, expected):
-        for i in reversed(range(len(network))):
-            layer = network[i]
+    def _backward_propagate_error(self, expected):
+        for i in reversed(range(len(self.network))):
+            layer = self.network[i]
             errors = list()
-            if i != len(network)-1:
+            if i != len(self.network)-1:
                 for j in range(len(layer)):
                     error = 0.0
-                    for neuron in network[i + 1]:
+                    for neuron in self.network[i + 1]:
                         error += (neuron['weights'][j] * neuron['delta'])
                     errors.append(error)
             else:
@@ -63,24 +71,24 @@ class NeuralNet:
 
 
     # Update network weights with error
-    def _update_weights(self, network, row, l_rate):
-        for i in range(len(network)):
+    def _update_weights(self, row):
+        for i in range(len(self.network)):
             inputs = row[:-1]
             if i != 0:
-                inputs = [neuron['output'] for neuron in network[i - 1]]
-            for neuron in network[i]:
+                inputs = [neuron['output'] for neuron in self.network[i - 1]]
+            for neuron in self.network[i]:
                 for j in range(len(inputs)):
-                    neuron['weights'][j] += l_rate * neuron['delta'] * inputs[j]
-                neuron['weights'][-1] += l_rate * neuron['delta']
+                    neuron['weights'][j] += self.l_rate * neuron['delta'] * inputs[j]
+                neuron['weights'][-1] += self.l_rate * neuron['delta']
 
 
 #--------------------------------------------------------------------------------
 # API
 #--------------------------------------------------------------------------------
     # Output weights to console
-    def dump_weights(self, network):
+    def dump_weights(self):
         print("Neural Net weights")
-        for layer in network:
+        for layer in self.network:
             print("layer:", end=" ")
             for neuron in layer:
                 print(neuron['weights'])
@@ -88,30 +96,32 @@ class NeuralNet:
 
 
     # Train a network for a fixed number of epochs
-    def train_network(self, network, train, l_rate, n_epoch, n_outputs):
-        for epoch in range(n_epoch):
+    def train_network_sgd(self, train):
+        for epoch in range(self.n_epoch):
             for row in train:
-                outputs = self._forward_propagate(network, row)
-                expected = [0 for i in range(n_outputs)]
+                outputs = self._forward_propagate(row)
+                expected = [0 for i in range(self.n_outputs)]
                 expected[row[-1]] = 1
-                self._backward_propagate_error(network, expected)
-                self._update_weights(network, row, l_rate)
+                self._backward_propagate_error(expected)
+                self._update_weights(row)
 
 
     # Initialize a network
-    def initialize_network(self, n_inputs, n_hidden, n_outputs):
-        print("Initialize Network: {},{},{}".format(n_inputs, n_hidden, n_outputs))
+    def initialize_network(self, n_inputs, n_outputs):
+        print("Initialize Network: {},{},{}".format(n_inputs, self.n_hidden, n_outputs))
         network = list()
-        hidden_layer = [{'weights':[random() for i in range(n_inputs + 1)]} for i in range(n_hidden)]
+        hidden_layer = [{'weights':[random() for i in range(n_inputs + 1)]} for i in range(self.n_hidden)]
         network.append(hidden_layer)
-        output_layer = [{'weights':[random() for i in range(n_hidden + 1)]} for i in range(n_outputs)]
+        output_layer = [{'weights':[random() for i in range(self.n_hidden + 1)]} for i in range(n_outputs)]
         network.append(output_layer)
-        return network
+        self.n_outputs = n_outputs
+        self.n_inputs = n_inputs
+        self.network = network
 
 
     # Make a prediction with a network
-    def predict(self, network, row):
-        outputs = self._forward_propagate(network, row)
-        return outputs.index(max(outputs))
+    def predict(self, row):
+        outputs = self._forward_propagate(row)
+        return outputs.index(max(outputs)) # one hot decoding
 
 
