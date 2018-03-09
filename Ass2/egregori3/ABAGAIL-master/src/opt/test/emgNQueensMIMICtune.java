@@ -40,7 +40,7 @@ import opt.ga.SwapMutation;
  */
 public class emgNQueensMIMICtune 
 {
-    private static void unitTest(int N, int optima)
+    private static void unitTest(int N, int optima, int p1, int p2)
     {
         int runs = 1000;
         double min = (double)runs;
@@ -57,18 +57,10 @@ public class emgNQueensMIMICtune
             }
             NQueensFitnessFunction ef = new NQueensFitnessFunction();
             Distribution odd = new DiscretePermutationDistribution(N);
-            NeighborFunction nf = new SwapNeighbor();
-            MutationFunction mf = new SwapMutation();
-            CrossoverFunction cf = new SingleCrossOver();
             Distribution df = new DiscreteDependencyTree(.1); 
-            HillClimbingProblem hcp = new GenericHillClimbingProblem(ef, odd, nf);
-            GeneticAlgorithmProblem gap = new GenericGeneticAlgorithmProblem(ef, odd, mf, cf);
             ProbabilisticOptimizationProblem pop = new GenericProbabilisticOptimizationProblem(ef, odd, df);
-            RandomizedHillClimbing rhc = new RandomizedHillClimbing(hcp);     
-            SimulatedAnnealing sa = new SimulatedAnnealing(1E1, .1, hcp);
-            StandardGeneticAlgorithm ga = new StandardGeneticAlgorithm(200, 0, 10, gap);
-            MIMIC mimic = new MIMIC(200, 10, pop);
 
+            MIMIC mimic = new MIMIC(p1, p2, pop);
             emgEqualityTrainer fit = new emgEqualityTrainer(mimic, optima, runs);
             double result = fit.train();
             if( result >= 0 )
@@ -79,16 +71,26 @@ public class emgNQueensMIMICtune
                 if( result > max ) max = result;
             }
         }
-        System.out.println(successes+","+min+","+(sum/(double)successes)+","+max);
+        System.out.println(successes+","+(sum/(double)successes));
     }
 
     public static void main(String[] args) 
     {
         int[] optima = {45,190,435,778,1221,1763,2405};
-        for( int N=10; N<=40; N+=10 )
+        int[] p1 = {50,100,300,400};
+        int N = 20;
+        int P = optima[(N/10)-1];
+        for( int i=0; i<4; ++i )
         {
-            System.out.print(N+",");
-            unitTest(N, optima[(N/10)-1]);
+            System.out.print(N+","+p1[i]+"->");
+            unitTest(N, P, p1[i], p1[i]/10);
+        }
+        N = 30;
+        P = optima[(N/10)-1];
+        for( int i=0; i<4; ++i )
+        {
+            System.out.print(N+","+p1[i]+"->");
+            unitTest(N, P, p1[i], p1[i]/10);
         }
     }
 }

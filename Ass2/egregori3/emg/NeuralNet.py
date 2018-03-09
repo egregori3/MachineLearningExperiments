@@ -18,7 +18,7 @@ class NeuralNet:
 
     # Transfer neuron activation
     def _transfer(self, activation):
-        return 1.0 / (1.0 + exp(-activation))
+        return 1.0 / (1.0 + exp(-activation)) 
 
 
     # Forward propagate input to a network output
@@ -39,7 +39,7 @@ class NeuralNet:
 #--------------------------------------------------------------------------------
     # Calculate the derivative of an neuron output
     def _transfer_derivative(self, output):
-        return output * (1.0 - output)
+            return output * (1.0 - output) 
 
 
     # Backpropagate error and store in neurons
@@ -77,6 +77,16 @@ class NeuralNet:
 #--------------------------------------------------------------------------------
 # API
 #--------------------------------------------------------------------------------
+    # Output weights to console
+    def dump_weights(self, network):
+        print("Neural Net weights")
+        for layer in network:
+            print("layer:", end=" ")
+            for neuron in layer:
+                print(neuron['weights'])
+        print()
+
+
     # Train a network for a fixed number of epochs
     def train_network(self, network, train, l_rate, n_epoch, n_outputs):
         for epoch in range(n_epoch):

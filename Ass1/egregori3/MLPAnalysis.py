@@ -56,7 +56,7 @@ tuned_parameters =  [
 manual_params =  {
                             'hidden_layer_sizes':10,
                             'activation':'relu',
-                            'solver':'adam',
+                            'solver':'sgd',
                             'learning_rate':'constant',
                             'learning_rate_init':0.010,
                             'max_iter':200

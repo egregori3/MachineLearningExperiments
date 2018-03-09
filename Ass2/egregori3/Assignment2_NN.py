@@ -6,8 +6,8 @@ from emg.HillClimbingSimulatedAnnealing import test_hill_climbing
 
 
 
-test_hill_climbing()
-stop
+#test_hill_climbing()
+#stop
 
 
 # Load File
@@ -16,16 +16,17 @@ dataset = preprocess.GetDataset()
 
 
 # evaluate algorithm
-n_folds = 3
 l_rate = 0.01
-n_epoch = 10
+n_epoch = 100
 n_hidden = 10
 
 
 Evaluator = EvaluateClassifier()
-training_scores, validation_scores = Evaluator.CrossValidate( NeuralNet(), dataset, n_folds, l_rate, n_epoch, n_hidden)
+examples, training_scores, validation_scores = Evaluator.LearningCurve( NeuralNet(), dataset, l_rate, n_epoch, n_hidden)
+print('Examples: %s' % examples)
 print('Training Scores: %s' % training_scores)
 print('Validation Scores: %s' % validation_scores)
-mean_training = sum(training_scores)/float(len(training_scores))
-mean_validation = sum(validation_scores)/float(len(validation_scores))
-print('Mean Accuracy: %.3f%%   %.3f%%' % (mean_training,mean_validation) )
+
+print("examples, training, validation")
+for i in range(0,len(examples)):
+    print("%s,%s,%s" % (examples[i],training_scores[i],validation_scores[i]))

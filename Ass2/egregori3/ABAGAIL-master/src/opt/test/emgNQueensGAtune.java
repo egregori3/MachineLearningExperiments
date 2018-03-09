@@ -59,7 +59,7 @@ public class emgNQueensGAtune
             NQueensFitnessFunction ef = new NQueensFitnessFunction();
             Distribution odd = new DiscretePermutationDistribution(N);
             MutationFunction mf = new SwapMutation();
-            CrossoverFunction cf = new SingleCrossOver();
+            CrossoverFunction cf = new UniformCrossOver(); //SingleCrossOver();
             Distribution df = new DiscreteDependencyTree(.1); 
             GeneticAlgorithmProblem gap = new GenericGeneticAlgorithmProblem(ef, odd, mf, cf);
             StandardGeneticAlgorithm ga = new StandardGeneticAlgorithm(p1, p2, p3, gap);
@@ -74,7 +74,7 @@ public class emgNQueensGAtune
                 if( result > max ) max = result;
             }
         }
-        System.out.println(successes+","+min+","+(sum/(double)successes)+","+max);
+        System.out.println(successes+","+(sum/(double)successes));
     }
 
     public static void main(String[] args) 

@@ -1,16 +1,29 @@
 # MLCS7641 Spring 2018 Assignment 2 - Eric Gregori
 
-## Tools
+## Directory Tree
+**ABAGAIL-master** - Optimization portion of assignment
+**aima-python-master** - Neural network portion of assignment (RHC, SA, GA algorithms in Python)
+**DataSets** - Datasets from assignment 1
+**emg** - Custom neural network code written in Python
+**Experiments** - Just code I had some fun with
+**Assignment2_NN.py** - Run this for the neural network portion of assignment
+
+## Optimization problems
+### Tools
 http://download.oracle.com/otn-pub/java/jdk/8u162-b12/0da788060d494f5095bf8624735fa2f1/jdk-8u162-windows-x64.exe
 http://ant.apache.org/bindownload.cgi
 https://www.mkyong.com/ant/how-to-install-apache-ant-on-windows/
 
-## This assignment has two parts
-
-### Optimization problems
+### Libraries
 These problems were addresses using the ABAGAIL library: https://github.com/pushkar/ABAGAIL
 The ABAGAIL library was instrumented for data collection.
 
+#### ABAGAIL Customization
+All files that start with 'emg' are custom. The following files were modified.
+egregori3\ABAGAIL-master\src\opt\ga\StandardGeneticAlgorithm.java
+egregori3\ABAGAIL-master\src\opt\prob\MIMIC.java
+
+### Build/Execute Intructions
 To build the library and simulations use ant.
 See lines below for how to execute each simulation.
 The graphs are made by redirecting the simulation output to a file, and importing the file into Excel.
@@ -40,7 +53,7 @@ egregori3\ABAGAIL-master>java -cp ABAGAIL.jar opt.test.emgNQueensMIMICtune
 
 ```
 
-#### Example Results
+### Example Results
 ```
 D:\GT\ML_CS7641\GIT\Ass2\egregori3\ABAGAIL-master>java -cp ABAGAIL.jar opt.test.emgTwoColorsRHC
 20,2,18,1000,0.0,60.719,304.0
@@ -68,14 +81,51 @@ D:\GT\ML_CS7641\GIT\Ass2\egregori3\ABAGAIL-master>java -cp ABAGAIL.jar opt.test.
 
 ```
 
-#### ABAGAIL Customization
-All files that start with 'emg' are custom. The following files were modified.
-egregori3\ABAGAIL-master\src\opt\ga\StandardGeneticAlgorithm.java
-egregori3\ABAGAIL-master\src\opt\prob\MIMIC.java
+---
+---
+---
+
+## Neural Network Training
+### Tools
+Python 3
+attrs==17.4.0
+certifi==2018.1.18
+colorama==0.3.9
+cycler==0.10.0
+matplotlib==2.1.2
+numpy==1.14.0
+pandas==0.22.0
+pluggy==0.6.0
+py==1.5.2
+pyparsing==2.2.0
+pytest==3.3.2
+python-dateutil==2.6.1
+pytz==2017.3
+scikit-learn==0.19.1
+scipy==1.0.0
+six==1.11.0
+tornado==4.5.3
+wincertstore==0.2
+
+### Base Code Source
+https://machinelearningmastery.com/implement-backpropagation-algorithm-scratch-python/
+http://aima.cs.berkeley.edu/python/search.html
+https://github.com/aimacode/aima-python
+
+#### Custom Code
+Custom Neural network and evaluation software was created for this project in Python.
+This code is in the emg directory.
+
+### Build/Execute Intructions
+```
+python Assignment2_NN.py
+```
 
 
 
-### Neural Network Training
+
+
+
 
 
 
@@ -101,7 +151,3 @@ x = mycar.make;     // x gets the value "Honda"
 myFunc(mycar);
 y = mycar.make;     // y still gets the value "Honda"
 ```
-
-## Feedback
-
-https://github.com/chenzhiwei/chrome-markdown-editor
