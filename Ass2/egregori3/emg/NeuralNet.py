@@ -62,7 +62,7 @@ class NeuralNet:
                         error += (neuron['weights'][j] * neuron['delta'])
                     errors.append(error)
             else:
-                for j in range(len(layer)):
+                for j in range(len(layer)):                                 # 
                     neuron = layer[j]
                     errors.append(expected[j] - neuron['output'])
             for j in range(len(layer)):
@@ -81,6 +81,31 @@ class NeuralNet:
                 for j in range(len(inputs)):
                     neuron['weights'][j] += self.l_rate * neuron['delta'] * inputs[j]
                 neuron['weights'][-1] += self.l_rate * neuron['delta']
+
+
+#--------------------------------------------------------------------------------
+# Utilities
+#--------------------------------------------------------------------------------
+    def _calc_error(self, train):
+        error = 0
+        for row in train:
+            outputs = self._forward_propagate(row)          # get prediction
+            expected = [0 for i in range(self.n_outputs)]   # get actual
+            expected[row[-1]] = 1                           # one hot encoding
+            print()
+            temp_error = 0
+            for i in range(self.n_outputs):
+                temp_error += (expected[i] - outputs[i])    # calc error
+                print("%s,%s,%s" % (outputs[i], expected[i], temp_error))
+            error += temp_error
+        return (error / len(train))
+
+
+    def _change_weights(self,direction):
+        for layer in self.network:
+            for neuron in layer:
+                for i in range(len(neuron['weights'])):
+                    neuron['weights'][i] += (direction*self.l_rate)
 
 
 #--------------------------------------------------------------------------------
@@ -103,7 +128,7 @@ class NeuralNet:
             for row in train:
                 outputs = self._forward_propagate(row)
                 expected = [0 for i in range(self.n_outputs)]
-                expected[row[-1]] = 1
+                expected[row[-1]] = 1                           # one hot encoding
                 average_error = self._backward_propagate_error(expected)
                 self._update_weights(row)
             average_error_per_epoch.append(average_error)
@@ -112,13 +137,17 @@ class NeuralNet:
 
     # Train a network for a fixed number of epochs
     def train_network_rhc(self, train):
+        average_error_per_epoch = list()
+        direction = 1;
+        previous_error = self._calc_error(train)
         for epoch in range(self.n_epoch):
-            for row in train:
-                outputs = self._forward_propagate(row)
-                expected = [0 for i in range(self.n_outputs)]
-                expected[row[-1]] = 1
-                self._backward_propagate_error(expected)
-                self._update_weights(row)
+            error = self._calc_error(train)       # Get error
+            if error > 0: direction = 1
+            if error < 0: direction = -1
+            previous_error = error
+            self._change_weights(direction)
+            average_error_per_epoch.append(error)
+        return average_error_per_epoch
 
 
     # Initialize a network
