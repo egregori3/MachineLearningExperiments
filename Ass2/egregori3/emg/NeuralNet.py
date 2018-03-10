@@ -52,23 +52,31 @@ class NeuralNet:
 
     # Backpropagate error and store in neurons
     def _backward_propagate_error(self, expected):
-        for i in reversed(range(len(self.network))):
+        average_output_error = 0
+        average_output_error_divider = 0
+        for i in reversed(range(len(self.network))):                        # propogate backwards
             layer = self.network[i]
             errors = list()
+
             if i != len(self.network)-1:
-                for j in range(len(layer)):
+                for j in range(len(layer)):                                 # calculate hidden layer error
                     error = 0.0
                     for neuron in self.network[i + 1]:
                         error += (neuron['weights'][j] * neuron['delta'])
                     errors.append(error)
             else:
-                for j in range(len(layer)):                                 # 
+                for j in range(len(layer)):                                 # calculate output layer error
                     neuron = layer[j]
-                    errors.append(expected[j] - neuron['output'])
-            for j in range(len(layer)):
+                    output_error = expected[j] - neuron['output']
+                    errors.append(output_error)
+                    average_output_error_divider += 1
+                    average_output_error += output_error
+
+            for j in range(len(layer)):                                     # sgd
                 neuron = layer[j]
                 neuron['delta'] = errors[j] * self._transfer_derivative(neuron['output'])
-        return (sum(errors)/len(errors))
+
+        return (average_output_error/average_output_error_divider)
 
 
     # Update network weights with error
