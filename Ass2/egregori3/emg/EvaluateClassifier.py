@@ -88,9 +88,6 @@ class EvaluateClassifier:
 
 
     def LearningCurve(self, kfolds):
-        # create/init network
-        self._init_classifier()
-
         # break dataset up into folds
         folds = self._cross_validation_split(kfolds)
 
@@ -116,6 +113,7 @@ class EvaluateClassifier:
 
             examples.append(len(train_set))
 
+            self._init_classifier()
             self.trainer(train_set)
             validation_prediction = self._test_classifier(test_set)
             validation_scores.append(self._accuracy_metric(test_actual, validation_prediction))
@@ -125,3 +123,37 @@ class EvaluateClassifier:
 
         return examples, training_scores, validation_scores
 
+
+    def GetAccuracy(self, kfolds, foldsintraining):
+        # break dataset up into folds
+        folds = self._cross_validation_split(kfolds)
+
+        validation_scores = list()
+        training_scores = list()
+        examples = list()
+
+        train_set = list()
+        train_actual = list()
+        test_set = list()
+        test_actual = list()
+
+        for i in range(kfolds):
+            if i< foldsintraining:
+                for row in folds[i]:
+                    train_set.append(row)      # combine arrays
+                    train_actual.append(row[-1])
+            else:
+               for row in folds[i]:
+                    test_set.append(row)      # combine arrays
+                    test_actual.append(row[-1])
+
+        self._init_classifier()
+        examples.append(len(test_set))
+        average_error_per_epoch = self.trainer(train_set)
+        validation_prediction = self._test_classifier(test_set)
+        validation_scores.append(self._accuracy_metric(test_actual, validation_prediction))
+
+        training_prediction = self._test_classifier(train_set)
+        training_scores.append(self._accuracy_metric(train_actual, training_prediction))
+
+        return examples, training_scores, validation_scores, average_error_per_epoch

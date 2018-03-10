@@ -68,6 +68,7 @@ class NeuralNet:
             for j in range(len(layer)):
                 neuron = layer[j]
                 neuron['delta'] = errors[j] * self._transfer_derivative(neuron['output'])
+        return (sum(errors)/len(errors))
 
 
     # Update network weights with error
@@ -97,6 +98,20 @@ class NeuralNet:
 
     # Train a network for a fixed number of epochs
     def train_network_sgd(self, train):
+        average_error_per_epoch = list()
+        for epoch in range(self.n_epoch):
+            for row in train:
+                outputs = self._forward_propagate(row)
+                expected = [0 for i in range(self.n_outputs)]
+                expected[row[-1]] = 1
+                average_error = self._backward_propagate_error(expected)
+                self._update_weights(row)
+            average_error_per_epoch.append(average_error)
+        return average_error_per_epoch
+
+
+    # Train a network for a fixed number of epochs
+    def train_network_rhc(self, train):
         for epoch in range(self.n_epoch):
             for row in train:
                 outputs = self._forward_propagate(row)
@@ -108,7 +123,7 @@ class NeuralNet:
 
     # Initialize a network
     def initialize_network(self, n_inputs, n_outputs):
-        print("Initialize Network: {},{},{}".format(n_inputs, self.n_hidden, n_outputs))
+#        print("Initialize Network: {},{},{}".format(n_inputs, self.n_hidden, n_outputs))
         network = list()
         hidden_layer = [{'weights':[random() for i in range(n_inputs + 1)]} for i in range(self.n_hidden)]
         network.append(hidden_layer)

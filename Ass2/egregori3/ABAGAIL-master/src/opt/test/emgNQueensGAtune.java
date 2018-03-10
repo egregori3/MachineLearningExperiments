@@ -60,7 +60,7 @@ public class emgNQueensGAtune
             NQueensFitnessFunction ef = new NQueensFitnessFunction();
             Distribution odd = new DiscretePermutationDistribution(N);
             MutationFunction mf = new SwapMutation();
-            CrossoverFunction cf = new TwoPointCrossOver(); //UniformCrossOver(); //SingleCrossOver();
+            CrossoverFunction cf = new SingleCrossOver();
             Distribution df = new DiscreteDependencyTree(.1); 
             GeneticAlgorithmProblem gap = new GenericGeneticAlgorithmProblem(ef, odd, mf, cf);
             StandardGeneticAlgorithm ga = new StandardGeneticAlgorithm(p1, p2, p3, gap);
