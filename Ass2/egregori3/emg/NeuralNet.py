@@ -1,5 +1,6 @@
 # https://machinelearningmastery.com/implement-backpropagation-algorithm-scratch-python/
 
+import json
 from random import random
 from math import exp
 
@@ -161,11 +162,17 @@ class NeuralNet:
     # Initialize a network
     def initialize_network(self, n_inputs, n_outputs):
 #        print("Initialize Network: {},{},{}".format(n_inputs, self.n_hidden, n_outputs))
-        network = list()
-        hidden_layer = [{'weights':[random() for i in range(n_inputs + 1)]} for i in range(self.n_hidden)]
-        network.append(hidden_layer)
-        output_layer = [{'weights':[random() for i in range(self.n_hidden + 1)]} for i in range(n_outputs)]
-        network.append(output_layer)
+        if 0:
+            network = list()
+            hidden_layer = [{'weights':[random() for i in range(n_inputs + 1)]} for i in range(self.n_hidden)]
+            network.append(hidden_layer)
+            output_layer = [{'weights':[random() for i in range(self.n_hidden + 1)]} for i in range(n_outputs)]
+            network.append(output_layer)
+            with open('data.json', 'w') as fp:
+                json.dump(network, fp)
+        else:
+            with open('data.json', 'r') as fp:
+                network = json.load(fp)
         self.n_outputs = n_outputs
         self.n_inputs = n_inputs
         self.network = network
