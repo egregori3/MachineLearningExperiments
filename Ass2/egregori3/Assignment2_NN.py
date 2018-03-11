@@ -75,10 +75,10 @@ if 0:
 #-----------------------------------------------------------------------
 # Baseling RHC - Training Error
 #-----------------------------------------------------------------------
-if 1:
-    epochs = 500
+if 0:
+    epochs = 100
     print("\nRHC Training Error %s epochs" % epochs)
-    dump1, dump2, dump3, average_error_per_epoch = CreateNetwork(epochs,'rhc').GetAccuracy(10,5)
+    dump1, dump2, dump3, average_error_per_epoch = CreateNetwork(epochs,'rhc').GetAccuracy(10,1)
     for i in range(len(average_error_per_epoch)):
        print("%s,%s" % (i,average_error_per_epoch[i]))
 
@@ -89,16 +89,16 @@ if 1:
 if 0:
     print("\nRHC Accuracy")
     print("epochs, training, validation")
-    for epochs in range(5,500,5):
-        examples, training_scores, validation_scores, dump = CreateNetwork(epochs,'rhc').GetAccuracy(10,5)
+    for epochs in range(50,500,50):
+        examples, training_scores, validation_scores, dump = CreateNetwork(epochs,'rhc').GetAccuracy(10,1)
         print("%s,%s" % (epochs,validation_scores[0]))
 
 
 #-----------------------------------------------------------------------
 # Baseling SGD - Learning Curve
 #-----------------------------------------------------------------------
-if 0:
-    epochs = 200
+if 1:
+    epochs = 250
     Evaluator = CreateNetwork(epochs,'rhc')
     examples, training_scores, validation_scores = Evaluator.LearningCurve(10)
     print("\nRHC Learning Curve %s epochs" % epochs)

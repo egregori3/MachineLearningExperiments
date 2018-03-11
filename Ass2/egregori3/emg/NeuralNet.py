@@ -103,21 +103,29 @@ class NeuralNet:
     # Calculate black box error (treat NN as black box)
     def _black_box_error(self, row):
         outputs = self._forward_propagate(row)
-        expected = [0 for i in range(self.n_outputs)]
-        expected[row[-1]] = 1                      # one hot encoding
+        measured = outputs.index(max(outputs))
+        actual = row[-1]
+#        expected = [0 for i in range(self.n_outputs)]
+#        expected[row[-1]] = 1                      # one hot encoding
+        return measured-actual
         error = 0
         for i in range(self.n_outputs):
             error += (expected[i] - outputs[i])    # calc error
         return error/self.n_outputs
 
 
+    def _turn_knob(self, knob, row, neuron):
+        original = neuron['weights'][knob]
+        initial_error = self._black_box_error(row)
+        if initial_error < 0: neuron['weights'][knob] = original + self.l_rate
+        if initial_error > 0: neuron['weights'][knob] = original - self.l_rate
+#        post_error = self._black_box_error(row)
+#        if initial_error <= post_error: neuron['weights'][knob] = original
+
+
     def _rhc(self, row, neuron):
-        for i in range(len(neuron['weights'])):
-            initial_error = self._black_box_error(row)
-            neuron['weights'][i] += self.l_rate
-            post_error = self._black_box_error(row)
-            if initial_error < post_error:
-                neuron['weights'][i] += (2.0*self.l_rate)
+        for knob in range(len(neuron['weights'])):
+            self._turn_knob(knob, row, neuron)
 
 
 #--------------------------------------------------------------------------------
