@@ -44,15 +44,21 @@ class NeuralNet:
 
 
 #--------------------------------------------------------------------------------
-# Backward propogate
+# Backward propogate Stochastic Gradient Descent
 #--------------------------------------------------------------------------------
     # Calculate the derivative of an neuron output
     def _transfer_derivative(self, output):
             return output * (1.0 - output) 
 
 
+    def _sgd(self,layer,errors):
+        for j in range(len(layer)):
+            neuron = layer[j]
+            neuron['delta'] = errors[j] * self._transfer_derivative(neuron['output'])
+
+
     # Backpropagate error and store in neurons
-    def _backward_propagate_error(self, expected):
+    def _backward_propagate_error_sgd(self, expected):
         average_output_error = 0
         average_output_error_divider = 0
         for i in reversed(range(len(self.network))):                        # propogate backwards
@@ -73,15 +79,13 @@ class NeuralNet:
                     average_output_error_divider += 1
                     average_output_error += output_error
 
-            for j in range(len(layer)):                                     # sgd
-                neuron = layer[j]
-                neuron['delta'] = errors[j] * self._transfer_derivative(neuron['output'])
+            self._sgd(layer,errors)                                              # Adjust deltas based on errors
 
         return (average_output_error/average_output_error_divider)
 
 
     # Update network weights with error
-    def _update_weights(self, row):
+    def _update_weights_sgd(self, row):
         for i in range(len(self.network)):
             inputs = row[:-1]
             if i != 0:
@@ -93,28 +97,27 @@ class NeuralNet:
 
 
 #--------------------------------------------------------------------------------
-# Utilities
+# Stochastic Hill Climbing
 #--------------------------------------------------------------------------------
-    def _calc_error(self, train):
+
+    # Calculate black box error (treat NN as black box)
+    def _black_box_error(self, row):
+        outputs = self._forward_propagate(row)
+        expected = [0 for i in range(self.n_outputs)]
+        expected[row[-1]] = 1                      # one hot encoding
         error = 0
-        for row in train:
-            outputs = self._forward_propagate(row)          # get prediction
-            expected = [0 for i in range(self.n_outputs)]   # get actual
-            expected[row[-1]] = 1                           # one hot encoding
-            print()
-            temp_error = 0
-            for i in range(self.n_outputs):
-                temp_error += (expected[i] - outputs[i])    # calc error
-                print("%s,%s,%s" % (outputs[i], expected[i], temp_error))
-            error += temp_error
-        return (error / len(train))
+        for i in range(self.n_outputs):
+            error += (expected[i] - outputs[i])    # calc error
+        return error/self.n_outputs
 
 
-    def _change_weights(self,direction):
-        for layer in self.network:
-            for neuron in layer:
-                for i in range(len(neuron['weights'])):
-                    neuron['weights'][i] += (direction*self.l_rate)
+    def _rhc(self, row, neuron):
+        for i in range(len(neuron['weights'])):
+            initial_error = self._black_box_error(row)
+            neuron['weights'][i] += self.l_rate
+            post_error = self._black_box_error(row)
+            if initial_error < post_error:
+                neuron['weights'][i] += (2.0*self.l_rate)
 
 
 #--------------------------------------------------------------------------------
@@ -134,28 +137,28 @@ class NeuralNet:
     def train_network_sgd(self, train):
         average_error_per_epoch = list()
         for epoch in range(self.n_epoch):
+            average_error = 0
             for row in train:
                 outputs = self._forward_propagate(row)
                 expected = [0 for i in range(self.n_outputs)]
                 expected[row[-1]] = 1                           # one hot encoding
-                average_error = self._backward_propagate_error(expected)
-                self._update_weights(row)
-            average_error_per_epoch.append(average_error)
+                average_error += self._backward_propagate_error_sgd(expected)
+                self._update_weights_sgd(row)
+            average_error_per_epoch.append(average_error/len(train))
         return average_error_per_epoch
 
 
     # Train a network for a fixed number of epochs
     def train_network_rhc(self, train):
         average_error_per_epoch = list()
-        direction = 1;
-        previous_error = self._calc_error(train)
         for epoch in range(self.n_epoch):
-            error = self._calc_error(train)       # Get error
-            if error > 0: direction = 1
-            if error < 0: direction = -1
-            previous_error = error
-            self._change_weights(direction)
-            average_error_per_epoch.append(error)
+            average_error = 0
+            for row in train:
+                for layer in self.network:
+                    for neuron in layer:
+                        self._rhc(row, neuron)
+                average_error += self._black_box_error(row)
+            average_error_per_epoch.append(average_error/len(train))
         return average_error_per_epoch
 
 

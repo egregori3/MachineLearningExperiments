@@ -45,7 +45,7 @@ if 0:
 #-----------------------------------------------------------------------
 # Baseling SGD - Finding accruacy
 #-----------------------------------------------------------------------
-if 1:
+if 0:
     print("\nSGD Accuracy")
     print("epochs, training, validation")
     for epochs in range(5,500,5):
@@ -75,7 +75,7 @@ if 0:
 #-----------------------------------------------------------------------
 # Baseling RHC - Training Error
 #-----------------------------------------------------------------------
-if 0:
+if 1:
     epochs = 500
     print("\nRHC Training Error %s epochs" % epochs)
     dump1, dump2, dump3, average_error_per_epoch = CreateNetwork(epochs,'rhc').GetAccuracy(10,5)
