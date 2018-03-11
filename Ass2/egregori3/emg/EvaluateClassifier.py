@@ -5,11 +5,12 @@ from random import randrange
 
 class EvaluateClassifier:
 
-    def __init__(self, initializer, dataset, trainer, predicter):
+    def __init__(self, initializer, dataset, trainer, predicter, parms):
         self.initializer = initializer
-        self.dataset    = dataset
-        self.trainer    = trainer
-        self.predicter  = predicter
+        self.dataset     = dataset
+        self.trainer     = trainer
+        self.predicter   = predicter
+        self.parms       = parms
 
 
     # Split a dataset into k folds
@@ -114,7 +115,7 @@ class EvaluateClassifier:
             examples.append(len(train_set))
 
             self._init_classifier()
-            self.trainer(train_set)
+            self.trainer(train_set, self.parms)
             validation_prediction = self._test_classifier(test_set)
             validation_scores.append(self._accuracy_metric(test_actual, validation_prediction))
 
@@ -149,7 +150,7 @@ class EvaluateClassifier:
 
         self._init_classifier()
         examples.append(len(test_set))
-        average_error_per_epoch = self.trainer(train_set)
+        average_error_per_epoch = self.trainer(train_set, self.parms)
         validation_prediction = self._test_classifier(test_set)
         validation_scores.append(self._accuracy_metric(test_actual, validation_prediction))
 

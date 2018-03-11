@@ -3,6 +3,7 @@
 import json
 from random import random
 from math import exp
+from copy import deepcopy
 
 class NeuralNet:
 
@@ -97,7 +98,7 @@ class NeuralNet:
 
 
 #--------------------------------------------------------------------------------
-# Stochastic Hill Climbing
+# Training Utilities
 #--------------------------------------------------------------------------------
 
     # Calculate black box error (treat NN as black box)
@@ -105,27 +106,16 @@ class NeuralNet:
         outputs = self._forward_propagate(row)
         measured = outputs.index(max(outputs))
         actual = row[-1]
-#        expected = [0 for i in range(self.n_outputs)]
-#        expected[row[-1]] = 1                      # one hot encoding
         return measured-actual
-        error = 0
-        for i in range(self.n_outputs):
-            error += (expected[i] - outputs[i])    # calc error
-        return error/self.n_outputs
 
 
-    def _turn_knob(self, knob, row, neuron):
-        original = neuron['weights'][knob]
-        initial_error = self._black_box_error(row)
-        if initial_error < 0: neuron['weights'][knob] = original + self.l_rate
-        if initial_error > 0: neuron['weights'][knob] = original - self.l_rate
-#        post_error = self._black_box_error(row)
-#        if initial_error <= post_error: neuron['weights'][knob] = original
-
-
-    def _rhc(self, row, neuron):
+    # for each knob, calc current error, then adjust knob based on error
+    def _turn_knobs(self, row, neuron, amount):
         for knob in range(len(neuron['weights'])):
-            self._turn_knob(knob, row, neuron)
+            original = neuron['weights'][knob]
+            initial_error = self._black_box_error(row)
+            if initial_error < 0: neuron['weights'][knob] = original + amount
+            if initial_error > 0: neuron['weights'][knob] = original - amount
 
 
 #--------------------------------------------------------------------------------
@@ -142,7 +132,7 @@ class NeuralNet:
 
 
     # Train a network for a fixed number of epochs
-    def train_network_sgd(self, train):
+    def train_network_sgd(self, train, parms):
         average_error_per_epoch = list()
         for epoch in range(self.n_epoch):
             average_error = 0
@@ -157,16 +147,40 @@ class NeuralNet:
 
 
     # Train a network for a fixed number of epochs
-    def train_network_rhc(self, train):
+    def train_network_rhc(self, train, parms):
         average_error_per_epoch = list()
         for epoch in range(self.n_epoch):
             average_error = 0
             for row in train:
                 for layer in self.network:
                     for neuron in layer:
-                        self._rhc(row, neuron)
+                        self._turn_knobs(row, neuron, self.l_rate)
                 average_error += self._black_box_error(row)
             average_error_per_epoch.append(average_error/len(train))
+        return average_error_per_epoch
+
+
+    # Train a network for a fixed number of epochs
+    def train_network_sa(self, train, params):
+        average_error_per_epoch = list()
+        min_error = 1000
+        temperature = 1.0
+        best_network = deepcopy(self.network)
+        for epoch in range(self.n_epoch):
+            average_error = 0
+            bias = 10.0*random()*temperature
+            for row in train:
+                for layer in self.network:
+                    for neuron in layer:
+                        self._turn_knobs(row, neuron, self.l_rate*bias)
+                average_error += self._black_box_error(row)
+            average_error_per_epoch.append(average_error/len(train))
+            temperature *= params['rate']
+            if abs(average_error/len(train)) < min_error:
+                 min_error = abs(average_error/len(train))   # improved, keep network
+                 best_network = deepcopy(self.network)
+
+        self.network = best_network
         return average_error_per_epoch
 
 
