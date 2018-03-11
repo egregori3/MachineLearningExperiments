@@ -77,20 +77,25 @@ public class emgNQueensMIMICtune
     public static void main(String[] args) 
     {
         int[] optima = {45,190,435,778,1221,1763,2405};
-        int[] p1 = {50,100,300,400};
+        int[] p1 = {100,300,400};
+        double[] p2 = {1.0/50.0, 1.0/25.0, 1.0/10.0, 1.0/5.0, 1.0/2.0};
         int N = 20;
         int P = optima[(N/10)-1];
-        for( int i=0; i<4; ++i )
+
+//        for( int i=0; i<4; ++i )
+//       {
+//            System.out.print(p1[i]+","+"0"+"->");
+//            unitTest(N, P, p1[i], 0);
+//        }
+
+
+        for( int a=0; a<3; ++a)
         {
-            System.out.print(N+","+p1[i]+"->");
-            unitTest(N, P, p1[i], p1[i]/10);
-        }
-        N = 30;
-        P = optima[(N/10)-1];
-        for( int i=0; i<4; ++i )
-        {
-            System.out.print(N+","+p1[i]+"->");
-            unitTest(N, P, p1[i], p1[i]/10);
+            for( int b=0; b<5; ++b )
+            {
+                System.out.print(p1[a]+","+(p1[a]*p2[b])+"->");
+                unitTest(N, P, p1[a], (int)(p1[a]*p2[b]));
+            }
         }
     }
 }
