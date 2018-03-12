@@ -2,7 +2,6 @@
 
 ## Directory Tree
 **ABAGAIL-master** - Optimization portion of assignment
-**aima-python-master** - Neural network portion of assignment (RHC, SA, GA algorithms in Python)
 **DataSets** - Datasets from assignment 1
 **emg** - Custom neural network code written in Python
 **Experiments** - Just code I had some fun with
@@ -129,25 +128,3 @@ python Assignment2_NN.py
 
 
 
-* Save your data at real time
-* Drag and drop a file to load it
-* Ctrl/Cmd + S to save the source file
-* Support Github Flavored Markdown syntax
-* Support many languages highlight in editor and preview mode
-
-## Syntax Highlight
-
-```javascript
-function myFunc(theObject) {
-  theObject = {make: "Ford", model: "Focus", year: 2006};
-}
-
-var mycar = {make: "Honda", model: "Accord", year: 1998},
-    x,
-    y;
-
-x = mycar.make;     // x gets the value "Honda"
-
-myFunc(mycar);
-y = mycar.make;     // y still gets the value "Honda"
-```
