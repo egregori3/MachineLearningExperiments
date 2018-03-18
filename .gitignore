@@ -3,5 +3,10 @@ __pycache__
 *.class
 *.jar
 *.mf
+*.png
+*.jpg
+*.gz
+
+
 
 
