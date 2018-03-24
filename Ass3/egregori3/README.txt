@@ -28,5 +28,12 @@ python assignment3.py
 
 Each simulation is enabled or disabled by a if 0: or if 1:
 Sub simulations can be enabled at the top of each module.
- 
+
+### Directory Structure
+DataSets:                                           WiFi and letter datasets
+python-machine-learning-book-2nd-edition-master:    Code examples from book
+Assignment3.py                                      Run this
+LoadPreprocessedDataset.py                          Loads datasets
+Visualize.py                                        Create scatter matrix
+part1.py                                            k-means and EM
 
