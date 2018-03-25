@@ -13,11 +13,13 @@ from sklearn import metrics
 from sklearn.cluster import KMeans
 from sklearn.preprocessing import scale
 from sklearn.metrics import silhouette_samples
+from PlotConfusionMatrix import PlotConfusionMatrix
 
 
-_statistics     = 0     # set to 1 to output statistics
-_elbowplot      = 1     # Set to 1 to create elbow plot
-_silhouetteplot = 1     # Set to 1 to create silhouette plots
+_statistics      = 1     # set to 1 to output statistics
+_confusionmatrix = 1     # set to 1 to output confusion matrix
+_elbowplot       = 1     # Set to 1 to create elbow plot
+_silhouetteplot  = 1     # Set to 1 to create silhouette plots
 
 
 def bench_k_means(estimator, name, X, labels, sample_size):
@@ -35,35 +37,72 @@ def bench_k_means(estimator, name, X, labels, sample_size):
                                       sample_size=sample_size)))
 
 
+#------------------------------------------------------------------------------
+#------------------------------------------------------------------------------
+#---------------  PART 1 - Run EM and K-means on two datasets------------------
+#---------- You can choose your own measures of distance/similarity.----------- 
+#--------------- Naturally, you'll have to justify your choices, -------------- 
+#------------- but you're practiced at that sort of thing by now. -------------
+#------------------------------------------------------------------------------
+#------------------------------------------------------------------------------
 def part1( dataset ):
     print("k-means - "+dataset['name'])
     X = scale(dataset['X'])
     n_samples, n_features = X.shape
-    n_classes = len(np.unique(dataset['y']))
     labels = dataset['y']
+    n_classes = len(np.unique(labels))
 
+    print("n_classes: %d, \t n_samples %d, \t n_features %d" % (n_classes, n_samples, n_features))
+    print("labels: "+str(np.unique(labels)))
+
+#------------------------------------------------------------------------------
+#  k-means
+#------------------------------------------------------------------------------
+    n_init=10
+    max_iter=300
+    random_state=0
+
+    km_pp = KMeans(n_clusters=n_classes, init='k-means++', n_init=n_init, max_iter=max_iter, random_state=random_state)
+    km_r  = KMeans(n_clusters=n_classes, init='random', n_init=n_init, max_iter=max_iter, random_state=random_state)
+
+#------------------------------------------------------------------------------
+#  Statistics
+#------------------------------------------------------------------------------
     if _statistics: 
         sample_size = 300
-        print("n_classes: %d, \t n_samples %d, \t n_features %d"
-            % (n_classes, n_samples, n_features))
-
         print(82 * '_')
         print('init\t\ttime\tinertia\thomo\tcompl\tv-meas\tARI\tAMI\tsilhouette')
 
-        bench_k_means(KMeans(init='k-means++', n_clusters=n_classes, n_init=10),
-                             name="k-means++", data=data, labels=labels, sample_size=sample_size)
+        bench_k_means(km_pp, name="k-means++", X=X, labels=labels, sample_size=sample_size)
+        bench_k_means(km_r, name="random", X=X, labels=labels, sample_size=sample_size)
 
-        bench_k_means(KMeans(init='random', n_clusters=n_classes, n_init=10),
-                             name="random", data=data, labels=labels, sample_size=sample_size)
+#------------------------------------------------------------------------------
+#  Confusion Matrix
+#------------------------------------------------------------------------------
+    if _confusionmatrix:
+        data = km_pp.fit(X)
+        # Scale dataset labels to start with 0
+        dataset_labels_starting_at_zero = [i-min(labels) for i in labels]
+        print("Dataset - labels: "+str(np.unique(labels)))
+        print("Kmeans - labels: "+str(np.unique(data.labels_)))
+        PlotConfusionMatrix( dataset_labels_starting_at_zero, data.labels_, dataset['classes'])
 
+        import uuid
+        plt.tight_layout()
+        plt.savefig("./Plots/"+uuid.uuid4().hex)
+        plt.close()
+
+#------------------------------------------------------------------------------
+#  Elbowplot
+#------------------------------------------------------------------------------
     if _elbowplot: 
         distortions = []
         for i in range(1, 11):
             km = KMeans(n_clusters=i, 
                         init='k-means++', 
-                        n_init=10, 
-                        max_iter=300, 
-                        random_state=0)
+                        n_init=n_init, 
+                        max_iter=max_iter, 
+                        random_state=random_state)
             km.fit(X)
             distortions.append(km.inertia_)
         plt.plot(range(1, 11), distortions, marker='o')
@@ -76,15 +115,11 @@ def part1( dataset ):
         plt.savefig("./Plots/"+uuid.uuid4().hex)
         plt.close()
 
+#------------------------------------------------------------------------------
+#  Silhoutteplot
+#------------------------------------------------------------------------------
     if _silhouetteplot: 
-        km = KMeans(n_clusters=3, 
-                    init='k-means++', 
-                    n_init=10, 
-                    max_iter=300,
-                    tol=1e-04,
-                    random_state=0)
-        y_km = km.fit_predict(X)
-
+        y_km = km_pp.fit_predict(X)
         cluster_labels = np.unique(y_km)
         n_clusters = cluster_labels.shape[0]
         silhouette_vals = silhouette_samples(X, y_km, metric='euclidean')

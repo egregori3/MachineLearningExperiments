@@ -37,3 +37,13 @@ LoadPreprocessedDataset.py                          Loads datasets
 Visualize.py                                        Create scatter matrix
 part1.py                                            k-means and EM
 
+### References
+https://arxiv.org/ftp/arxiv/papers/1405/1405.7471.pdf
+http://madhugnadig.com/articles/machine-learning/2017/03/04/implementing-k-means-clustering-from-scratch-in-python.html
+https://jakevdp.github.io/PythonDataScienceHandbook/05.11-k-means.html
+http://stanford.edu/~cpiech/cs221/handouts/kmeans.html
+https://hub.packtpub.com/k-means-clustering-python/
+
+https://github.com/rasbt/python-machine-learning-book
+http://scikit-learn.org/stable/modules/clustering.html
+http://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html#sklearn.cluster.KMeans

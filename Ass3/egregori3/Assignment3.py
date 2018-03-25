@@ -12,7 +12,7 @@ To enable a simulation, change if 0: to if 1:
 
 from LoadPreprocessDataset import LoadPreprocessDataset
 from Visualize import Visualize
-from part1 import part1
+from part1_km import part1_km
 
 # -----------------------------------------------------------------------------
 # Load datasets from ass 1 (unscaled)
@@ -36,10 +36,10 @@ if 1: # set to 1 to enable
     print("PART 1 - Run EM and K-means on two datasets")
     print(82 * '_')
     print()
-    part1_wifi = part1(datasets['wifi'])
+    part1_wifi = part1_km(datasets['wifi'])
     print(82 * '_')
     print()
-    part1_letter = part1(datasets['letter'])
+    part1_letter = part1_km(datasets['letter'])
 
 # -----------------------------------------------------------------------------
 # PART 2 - Run PCA, ICA, RP, ?? on two datasets
