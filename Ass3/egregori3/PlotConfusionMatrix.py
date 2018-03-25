@@ -1,5 +1,6 @@
 """
 http://scikit-learn.org/stable/auto_examples/model_selection/plot_confusion_matrix.html#sphx-glr-auto-examples-model-selection-plot-confusion-matrix-py
+http://scikit-learn.org/stable/modules/generated/sklearn.metrics.confusion_matrix.html
 
 ================
 Confusion matrix

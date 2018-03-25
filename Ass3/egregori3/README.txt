@@ -43,7 +43,12 @@ http://madhugnadig.com/articles/machine-learning/2017/03/04/implementing-k-means
 https://jakevdp.github.io/PythonDataScienceHandbook/05.11-k-means.html
 http://stanford.edu/~cpiech/cs221/handouts/kmeans.html
 https://hub.packtpub.com/k-means-clustering-python/
-
 https://github.com/rasbt/python-machine-learning-book
+
 http://scikit-learn.org/stable/modules/clustering.html
 http://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html#sklearn.cluster.KMeans
+http://scikit-learn.org/stable/modules/generated/sklearn.metrics.confusion_matrix.html
+http://scikit-learn.org/stable/auto_examples/cluster/plot_kmeans_silhouette_analysis.html#sphx-glr-auto-examples-cluster-plot-kmeans-silhouette-analysis-py
+http://scikit-learn.org/stable/modules/clustering.html#clustering-performance-evaluation
+http://scikit-learn.org/stable/auto_examples/cluster/plot_cluster_comparison.html
+http://scikit-learn.org/stable/modules/generated/sklearn.metrics.silhouette_score.html

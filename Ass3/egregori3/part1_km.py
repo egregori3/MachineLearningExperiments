@@ -69,12 +69,11 @@ def part1_km( dataset ):
 #  Statistics
 #------------------------------------------------------------------------------
     if _statistics: 
-        sample_size = 300
         print(82 * '_')
         print('init\t\ttime\tinertia\thomo\tcompl\tv-meas\tARI\tAMI\tsilhouette')
 
-        bench_k_means(km_pp, name="k-means++", X=X, labels=labels, sample_size=sample_size)
-        bench_k_means(km_r, name="random", X=X, labels=labels, sample_size=sample_size)
+        bench_k_means(km_pp, name="k-means++", X=X, labels=labels, sample_size=len(labels))
+        bench_k_means(km_r, name="random", X=X, labels=labels, sample_size=len(labels))
 
 #------------------------------------------------------------------------------
 #  Confusion Matrix

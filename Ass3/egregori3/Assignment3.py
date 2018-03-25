@@ -31,15 +31,26 @@ if 0: # set to 1 to enable
 # -----------------------------------------------------------------------------
 # PART 1 - Run EM and K-means on two datasets
 # -----------------------------------------------------------------------------
+if 0: # set to 1 to enable
+    print(82 * '_')
+    print("PART 1a - Run K-means on two datasets")
+    print(82 * '_')
+    print()
+    part1km_wifi = part1_km(datasets['wifi'])
+    print(82 * '_')
+    print()
+    part1km_letter = part1_km(datasets['letter'])
+
 if 1: # set to 1 to enable
     print(82 * '_')
-    print("PART 1 - Run EM and K-means on two datasets")
+    print("PART 1b - Run EM on two datasets")
     print(82 * '_')
     print()
-    part1_wifi = part1_km(datasets['wifi'])
+    part1em_wifi = part1_em(datasets['wifi'])
     print(82 * '_')
     print()
-    part1_letter = part1_km(datasets['letter'])
+    part1em_letter = part1_em(datasets['letter'])
+
 
 # -----------------------------------------------------------------------------
 # PART 2 - Run PCA, ICA, RP, ?? on two datasets
