@@ -107,7 +107,7 @@ def part1_km( dataset ):
                         random_state=random_state)
             km.fit(X)
             distortions.append(km.inertia_)
-        plt.plot(range(1, 11), distortions, marker='o')
+        plt.plot(range(1, (n_classes*2)+1), distortions, marker='o')
         plt.xlabel('Number of clusters')
         plt.ylabel('Distortion')
         plt.tight_layout()
