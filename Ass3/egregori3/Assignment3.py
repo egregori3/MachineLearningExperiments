@@ -23,7 +23,7 @@ datasets = LoadPreprocessDataset()
 # -----------------------------------------------------------------------------
 # Visualize DataSet - Scatter Matrix
 # -----------------------------------------------------------------------------
-if 0: # set to 1 to enable
+if 1: # set to 1 to enable
     print(82 * '_')
     Visualize(datasets['wifi'])
     print(82 * '_')
@@ -32,7 +32,7 @@ if 0: # set to 1 to enable
 # -----------------------------------------------------------------------------
 # PART 1 - Run EM and K-means on two datasets
 # -----------------------------------------------------------------------------
-if 0: # set to 1 to enable
+if 1: # set to 1 to enable
     print(82 * '_')
     print("PART 1a - Run K-means on two datasets")
     print(82 * '_')
