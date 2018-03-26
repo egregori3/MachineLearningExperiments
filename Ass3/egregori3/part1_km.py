@@ -4,6 +4,9 @@
 # http://scikit-learn.org/stable/auto_examples/datasets/plot_iris_dataset.html#sphx-glr-auto-examples-datasets-plot-iris-dataset-py
 # http://scikit-learn.org/stable/modules/mixture.html#mixture
 # https://github.com/rasbt/python-machine-learning-book-2nd-edition
+# http://scikit-learn.org/stable/modules/clustering.html#clustering-performance-evaluation
+# http://scikit-learn.org/stable/modules/clustering.html
+
 
 from time import time
 import numpy as np
@@ -84,7 +87,7 @@ def part1_km( dataset ):
         dataset_labels_starting_at_zero = [i-min(labels) for i in labels]
         print("Dataset - labels: "+str(np.unique(labels)))
         print("Kmeans - labels: "+str(np.unique(data.labels_)))
-        PlotConfusionMatrix( dataset_labels_starting_at_zero, data.labels_, dataset['classes'])
+        PlotConfusionMatrix( dataset_labels_starting_at_zero, data.labels_, dataset['classes'], title="KM")
 
         import uuid
         plt.tight_layout()
@@ -96,7 +99,7 @@ def part1_km( dataset ):
 #------------------------------------------------------------------------------
     if _elbowplot: 
         distortions = []
-        for i in range(1, 11):
+        for i in range(1, (n_classes*2)+1):
             km = KMeans(n_clusters=i, 
                         init='k-means++', 
                         n_init=n_init, 
@@ -145,7 +148,7 @@ def part1_km( dataset ):
         plt.tight_layout()
 
         import uuid
-        plt.suptitle(dataset['name'])
+        plt.suptitle("KM:"+dataset['name'])
         plt.savefig("./Plots/"+uuid.uuid4().hex)
         plt.close()
 

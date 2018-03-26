@@ -13,6 +13,7 @@ To enable a simulation, change if 0: to if 1:
 from LoadPreprocessDataset import LoadPreprocessDataset
 from Visualize import Visualize
 from part1_km import part1_km
+from part1_em import part1_em
 
 # -----------------------------------------------------------------------------
 # Load datasets from ass 1 (unscaled)
