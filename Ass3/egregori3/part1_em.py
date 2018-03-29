@@ -96,7 +96,7 @@ def sp(algo, X, title):
 #------------------------------------------------------------------------------
 #------------------------------------------------------------------------------
 def part1_em( dataset ):
-    print("k-means - "+dataset['name'])
+    print("Part 1 EM - "+dataset['name'])
     X = scale(dataset['X'])
     n_samples, n_features = X.shape
     labels = dataset['y']

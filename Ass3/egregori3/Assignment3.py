@@ -14,6 +14,7 @@ from LoadPreprocessDataset import LoadPreprocessDataset
 from Visualize import Visualize
 from part1_km import part1_km
 from part1_em import part1_em
+from part2 import part2
 
 # -----------------------------------------------------------------------------
 # Load datasets from ass 1 (unscaled)
@@ -23,7 +24,7 @@ datasets = LoadPreprocessDataset()
 # -----------------------------------------------------------------------------
 # Visualize DataSet - Scatter Matrix
 # -----------------------------------------------------------------------------
-if 1: # set to 1 to enable
+if 0: # set to 1 to enable
     print(82 * '_')
     Visualize(datasets['wifi'])
     print(82 * '_')
@@ -32,7 +33,7 @@ if 1: # set to 1 to enable
 # -----------------------------------------------------------------------------
 # PART 1 - Run EM and K-means on two datasets
 # -----------------------------------------------------------------------------
-if 1: # set to 1 to enable
+if 0: # set to 1 to enable
     print(82 * '_')
     print("PART 1a - Run K-means on two datasets")
     print(82 * '_')
@@ -42,7 +43,7 @@ if 1: # set to 1 to enable
     print()
     part1km_letter = part1_km(datasets['letter'])
 
-if 1: # set to 1 to enable
+if 0: # set to 1 to enable
     print(82 * '_')
     print("PART 1b - Run EM on two datasets")
     print(82 * '_')
@@ -56,7 +57,7 @@ if 1: # set to 1 to enable
 # -----------------------------------------------------------------------------
 # PART 2 - Run PCA, ICA, RP, ?? on two datasets
 # -----------------------------------------------------------------------------
-if 0: # set to 1 to enable
+if 1: # set to 1 to enable
     print(82 * '_')
     print("PART 2 - Run PCA, ICA, RP, ?? on two datasets")
     print(82 * '_')
