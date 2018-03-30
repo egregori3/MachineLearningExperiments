@@ -38,34 +38,46 @@ if 0: # set to 1 to enable
     print("PART 1a - Run K-means on two datasets")
     print(82 * '_')
     print()
-    part1km_wifi = part1_km(datasets['wifi'])
+    part1_km(datasets['wifi'])
     print(82 * '_')
     print()
-    part1km_letter = part1_km(datasets['letter'])
+    part1_km(datasets['letter'])
 
 if 0: # set to 1 to enable
     print(82 * '_')
     print("PART 1b - Run EM on two datasets")
     print(82 * '_')
     print()
-    part1em_wifi = part1_em(datasets['wifi'])
+    part1_em(datasets['wifi'])
     print(82 * '_')
     print()
-    part1em_letter = part1_em(datasets['letter'])
-
+    part1_em(datasets['letter'])
 
 # -----------------------------------------------------------------------------
 # PART 2 - Run PCA, ICA, RP, ?? on two datasets
 # -----------------------------------------------------------------------------
-if 1: # set to 1 to enable
+if 0: # set to 1 to enable
     print(82 * '_')
     print("PART 2 - Run PCA, ICA, RP, ?? on two datasets")
     print(82 * '_')
     print()
-    part2_wifi = part2(datasets['wifi'])
+    part2(datasets['wifi'])
     print(82 * '_')
     print()
-    part2_letter = part2(datasets['letter'])
+    part2(datasets['letter'])
+
+# -----------------------------------------------------------------------------
+# PART 3 - Run EM and K-means on part 2 results
+# -----------------------------------------------------------------------------
+if 1: # set to 1 to enable
+    print(82 * '_')
+    print("PART 3 - Run EM and K-means on part 2 results")
+    print(82 * '_')
+    print()
+    part3(datasets['wifi'])
+    print(82 * '_')
+    print()
+    part3(datasets['letter'])
 
 
 print("Done")

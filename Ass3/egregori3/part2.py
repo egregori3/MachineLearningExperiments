@@ -2,6 +2,8 @@
 # https://etav.github.io/python/scikit_pca.html
 # http://scikit-learn.org/stable/modules/generated/sklearn.decomposition.FastICA.html
 # https://piazza.com/class/jc2dhebfn0n2qo?cid=952
+# http://scikit-learn.org/stable/modules/decomposition.html
+
 
 from time import time
 import numpy as np
@@ -12,6 +14,20 @@ from sklearn.preprocessing import scale
 from sklearn.decomposition import PCA, FastICA
 from sklearn import random_projection
 from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
+
+
+def Plot2d(projected, chart_title, labels):
+    plt.scatter(projected[:, 0], projected[:, 1],
+                c=labels, edgecolor='none', alpha=0.5,
+                cmap=plt.cm.get_cmap('rainbow', 10))
+    plt.xlabel('component 1')
+    plt.ylabel('component 2')
+    plt.colorbar();
+
+    import uuid
+    plt.suptitle(chart_title)
+    plt.savefig("./Plots/"+uuid.uuid4().hex)
+    plt.close()
 
 
 #------------------------------------------------------------------------------
@@ -34,18 +50,7 @@ def part2( dataset ):
     print("PCA Visualization")
     pca = PCA(n_components=2)
     projected = pca.fit_transform(X)
-
-    plt.scatter(projected[:, 0], projected[:, 1],
-                c=labels, edgecolor='none', alpha=0.5,
-                cmap=plt.cm.get_cmap('rainbow', 10))
-    plt.xlabel('component 1')
-    plt.ylabel('component 2')
-    plt.colorbar();
-
-    import uuid
-    plt.suptitle("PCA:"+dataset['name'])
-    plt.savefig("./Plots/"+uuid.uuid4().hex)
-    plt.close()
+    Plot2d(projected, "PCA:"+dataset['name'], labels)
 
 #------------------------------------------------------------------------------
 #  PCA - Determeine best number of components
@@ -67,18 +72,7 @@ def part2( dataset ):
     print("ICA Visualization")
     ica = FastICA(n_components=2)
     projected = ica.fit_transform(X)
-
-    plt.scatter(projected[:, 0], projected[:, 1],
-                c=labels, edgecolor='none', alpha=0.5,
-                cmap=plt.cm.get_cmap('rainbow', 10))
-    plt.xlabel('component 1')
-    plt.ylabel('component 2')
-    plt.colorbar();
-
-    import uuid
-    plt.suptitle("ICA:"+dataset['name'])
-    plt.savefig("./Plots/"+uuid.uuid4().hex)
-    plt.close()
+    Plot2d(projected, "ICA:"+dataset['name'], labels)
 
 #------------------------------------------------------------------------------
 #  Random Projection - Visualize data
@@ -86,18 +80,7 @@ def part2( dataset ):
     print("Random Projection Visualization")
     transformer = random_projection.GaussianRandomProjection(2)
     projected = transformer.fit_transform(X)
-
-    plt.scatter(projected[:, 0], projected[:, 1],
-                c=labels, edgecolor='none', alpha=0.5,
-                cmap=plt.cm.get_cmap('rainbow', 10))
-    plt.xlabel('component 1')
-    plt.ylabel('component 2')
-    plt.colorbar();
-
-    import uuid
-    plt.suptitle("RP:"+dataset['name'])
-    plt.savefig("./Plots/"+uuid.uuid4().hex)
-    plt.close()
+    Plot2d(projected, "RP:"+dataset['name'], labels)
 
 #------------------------------------------------------------------------------
 #  Linear Discriminant Analysis- Visualize data
@@ -105,15 +88,4 @@ def part2( dataset ):
     print("Linear Discriminant Analysis Visualization")
     transformer = LinearDiscriminantAnalysis(n_components=2)
     projected = transformer.fit_transform(X,labels)
-
-    plt.scatter(projected[:, 0], projected[:, 1],
-                c=labels, edgecolor='none', alpha=0.5,
-                cmap=plt.cm.get_cmap('rainbow', 10))
-    plt.xlabel('component 1')
-    plt.ylabel('component 2')
-    plt.colorbar();
-
-    import uuid
-    plt.suptitle("LDA:"+dataset['name'])
-    plt.savefig("./Plots/"+uuid.uuid4().hex)
-    plt.close()
+    Plot2d(projected, "LDA:"+dataset['name'], labels)
