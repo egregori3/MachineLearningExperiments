@@ -175,6 +175,12 @@ def part2( dataset ):
     projected = transformer.fit_transform(X)
     Plot2d(projected, "RP:"+dataset['name'], labels)
 
+    plotthis = list()
+    for n_components in range(2,n_features):
+        transformer = random_projection.GaussianRandomProjection(n_components=n_components)
+        projected = transformer.fit_transform(X)
+
+
 #------------------------------------------------------------------------------
 #  Linear Discriminant Analysis- Visualize data
 #------------------------------------------------------------------------------
@@ -182,3 +188,8 @@ def part2( dataset ):
     transformer = LinearDiscriminantAnalysis(n_components=2)
     projected = transformer.fit_transform(X,labels)
     Plot2d(projected, "LDA:"+dataset['name'], labels)
+
+    plotthis = list()
+    for n_components in range(2,n_features):
+        transformer = LinearDiscriminantAnalysis(n_components=n_components)
+        projected = transformer.fit_transform(X,labels)

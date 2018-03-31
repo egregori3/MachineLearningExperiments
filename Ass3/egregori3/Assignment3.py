@@ -15,6 +15,7 @@ from Visualize import Visualize
 from part1_km import part1_km
 from part1_em import part1_em
 from part2 import part2
+from part3 import part3
 
 # -----------------------------------------------------------------------------
 # Load datasets from ass 1 (unscaled)
@@ -56,7 +57,7 @@ if 0: # set to 1 to enable
 # -----------------------------------------------------------------------------
 # PART 2 - Run PCA, ICA, RP, ?? on two datasets
 # -----------------------------------------------------------------------------
-if 1: # set to 1 to enable
+if 0: # set to 1 to enable
     print(82 * '_')
     print("PART 2 - Run PCA, ICA, RP, ?? on two datasets")
     print(82 * '_')
@@ -69,7 +70,7 @@ if 1: # set to 1 to enable
 # -----------------------------------------------------------------------------
 # PART 3 - Run EM and K-means on part 2 results
 # -----------------------------------------------------------------------------
-if 0: # set to 1 to enable
+if 1: # set to 1 to enable
     print(82 * '_')
     print("PART 3 - Run EM and K-means on part 2 results")
     print(82 * '_')
