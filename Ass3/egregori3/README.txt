@@ -6,19 +6,23 @@ https://github.com/rasbt/python-machine-learning-book/tree/master/code
 Please review each code module for additional code sources
 
 ### pip freeze
+attrs==17.4.0
 certifi==2018.1.18
+colorama==0.3.9
 cycler==0.10.0
-kiwisolver==1.0.1
-matplotlib==2.2.0
-numpy==1.14.1
+matplotlib==2.1.2
+numpy==1.14.0
 pandas==0.22.0
+pluggy==0.6.0
+py==1.5.2
 pyparsing==2.2.0
-python-dateutil==2.7.0
-pytz==2018.3
+pytest==3.3.2
+python-dateutil==2.6.1
+pytz==2017.3
 scikit-learn==0.19.1
 scipy==1.0.0
 six==1.11.0
-tornado==5.0
+tornado==4.5.3
 wincertstore==0.2
 
 ### Running the code

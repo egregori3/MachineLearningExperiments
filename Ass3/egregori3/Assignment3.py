@@ -56,7 +56,7 @@ if 0: # set to 1 to enable
 # -----------------------------------------------------------------------------
 # PART 2 - Run PCA, ICA, RP, ?? on two datasets
 # -----------------------------------------------------------------------------
-if 0: # set to 1 to enable
+if 1: # set to 1 to enable
     print(82 * '_')
     print("PART 2 - Run PCA, ICA, RP, ?? on two datasets")
     print(82 * '_')
@@ -69,7 +69,7 @@ if 0: # set to 1 to enable
 # -----------------------------------------------------------------------------
 # PART 3 - Run EM and K-means on part 2 results
 # -----------------------------------------------------------------------------
-if 1: # set to 1 to enable
+if 0: # set to 1 to enable
     print(82 * '_')
     print("PART 3 - Run EM and K-means on part 2 results")
     print(82 * '_')
