@@ -3,6 +3,7 @@
 ### Code Sources
 https://github.com/rasbt/python-machine-learning-book-2nd-edition
 https://github.com/rasbt/python-machine-learning-book/tree/master/code
+https://github.com/JonathanTay/CS-7641-assignment-3
 Please review each code module for additional code sources
 
 ### pip freeze

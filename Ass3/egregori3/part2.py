@@ -4,6 +4,7 @@
 # https://piazza.com/class/jc2dhebfn0n2qo?cid=952
 # http://scikit-learn.org/stable/modules/decomposition.html
 # https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.kurtosis.html
+# https://github.com/JonathanTay/CS-7641-assignment-3
 
 
 from time import time
@@ -16,6 +17,25 @@ from sklearn.preprocessing import scale
 from sklearn.decomposition import PCA, FastICA
 from sklearn import random_projection
 from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
+from collections import Counter
+from sklearn.metrics import accuracy_score as acc
+from sklearn.mixture import GaussianMixture as GMM
+from sklearn.metrics.pairwise import pairwise_distances
+from sklearn.feature_selection import mutual_info_classif as MIC
+from sklearn.base import TransformerMixin,BaseEstimator
+import scipy.sparse as sps
+from scipy.linalg import pinv
+
+
+# https://github.com/JonathanTay/CS-7641-assignment-3
+def reconstructionError(projections,X):
+    W = projections.components_
+    if sps.issparse(W):
+        W = W.todense()
+    p = pinv(W)
+    reconstructed = ((p@W)@(X.T)).T # Unproject projected data
+    errors = np.square(X-reconstructed)
+    return np.nanmean(errors)
 
 
 def Plot2d(projected, chart_title, labels):
@@ -178,7 +198,18 @@ def part2( dataset ):
     plotthis = list()
     for n_components in range(2,n_features):
         transformer = random_projection.GaussianRandomProjection(n_components=n_components)
-        projected = transformer.fit_transform(X)
+        projected = transformer.fit(X)
+        plotthis.append(reconstructionError(projected,X))
+
+    plt.plot(range(2,n_features),plotthis)
+    plt.xlabel('components')
+    plt.ylabel('reconstruction error');
+    plt.xticks(range(2,n_features))
+
+    import uuid
+    plt.suptitle("Random Projection:"+dataset['name'])
+    plt.savefig("./Plots/"+uuid.uuid4().hex)
+    plt.close()
 
 
 #------------------------------------------------------------------------------
@@ -192,4 +223,15 @@ def part2( dataset ):
     plotthis = list()
     for n_components in range(2,n_features):
         transformer = LinearDiscriminantAnalysis(n_components=n_components)
-        projected = transformer.fit_transform(X,labels)
+        projected = transformer.fit(X,labels)
+        print(reconstructionError(projected,X))
+
+    plt.plot(range(2,n_features),plotthis)
+    plt.xlabel('components')
+    plt.ylabel('reconstruction error');
+    plt.xticks(range(2,n_features))
+
+    import uuid
+    plt.suptitle("LDA:"+dataset['name'])
+    plt.savefig("./Plots/"+uuid.uuid4().hex)
+    plt.close()

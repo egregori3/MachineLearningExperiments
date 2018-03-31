@@ -2,6 +2,7 @@ from time import time
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib import cm
+import pandas as pd
 from sklearn import metrics
 from sklearn.preprocessing import scale
 from sklearn.decomposition import PCA, FastICA
@@ -117,12 +118,12 @@ def part3( dataset ):
     VisualizeModel(KMeans(n_clusters=n_classes, init='k-means++').fit(pca2.fit_transform(X)), pca2.fit_transform(X), "PCA+K-Means")
     VisualizeModel(KMeans(n_clusters=n_classes, init='k-means++').fit(ica2.fit_transform(X)), ica2.fit_transform(X), "ICA+K-Means")
     VisualizeModel(KMeans(n_clusters=n_classes, init='k-means++').fit(ra2.fit_transform(X)), ra2.fit_transform(X), "RA+K-Means")
-    VisualizeModel(KMeans(n_clusters=n_classes, init='k-means++').fit(lda2.fit_transform(X)), lda2.fit_transform(X), "LDA+K-Means")
+#    VisualizeModel(KMeans(n_clusters=n_classes, init='k-means++').fit(lda2.fit_transform(X)), lda2.fit_transform(X), "LDA+K-Means")
 
 #------------------------------------------------------------------------------
 #  Benchmark KM on reduced dataset
 #------------------------------------------------------------------------------
-    pca = PCA(n_components=n_components)
+    pca = PCA(n_components=n_classes)
     projected = pca.fit_transform(X)
     PlotKMStats(projected, labels, n_classes, "PCA: "+dataset['name'])
 
