@@ -13,6 +13,7 @@ from sklearn.mixture import GMM
 from sklearn.mixture import GaussianMixture
 
 
+scripts = {'wifi':{'pca':}}
 
 def VisualizeModel(model, reduced_data, title):
     # Step size of the mesh. Decrease to increase the quality of the VQ.
@@ -121,18 +122,11 @@ def part3( dataset ):
 #    VisualizeModel(KMeans(n_clusters=n_classes, init='k-means++').fit(lda2.fit_transform(X)), lda2.fit_transform(X), "LDA+K-Means")
 
 #------------------------------------------------------------------------------
-#  Benchmark KM on reduced dataset
+#  Benchmark KM on reduced datasets
 #------------------------------------------------------------------------------
     pca = PCA(n_components=n_classes)
     projected = pca.fit_transform(X)
     PlotKMStats(projected, labels, n_classes, "PCA: "+dataset['name'])
 
-
-#------------------------------------------------------------------------------
-#  PCA 2 dimension, k-means dataset clusters
-#------------------------------------------------------------------------------
-    print("PCA 2 dimensions, k-means %d clusters" % (n_classes) )
-    reduced_data = pca2.fit_transform(X)
-    VisualizeModel(model, reduced_data, title)
 
 

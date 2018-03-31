@@ -37,10 +37,15 @@ Sub simulations can be enabled at the top of each module.
 ### Directory Structure
 DataSets:                                           WiFi and letter datasets
 python-machine-learning-book-2nd-edition-master:    Code examples from book
+Plots
+    Part1                                           Report part1 plots
+    Part2                                           Report part2 plots
+    Part3                                           Report part3 plots
+    Part4                                           Report part4 plots
+    Part5                                           Report part5 plots
+    NotEnoughRoomInReport                           Plots that would not fit into report
 Assignment3.py                                      Run this
-LoadPreprocessedDataset.py                          Loads datasets
-Visualize.py                                        Create scatter matrix
-part1.py                                            k-means and EM
+
 
 ### References
 https://arxiv.org/ftp/arxiv/papers/1405/1405.7471.pdf

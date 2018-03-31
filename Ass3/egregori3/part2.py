@@ -195,13 +195,15 @@ def part2( dataset ):
     projected = transformer.fit_transform(X)
     Plot2d(projected, "RP:"+dataset['name'], labels)
 
-    plotthis = list()
-    for n_components in range(2,n_features):
-        transformer = random_projection.GaussianRandomProjection(n_components=n_components)
-        projected = transformer.fit(X)
-        plotthis.append(reconstructionError(projected,X))
+    for _ in range(10):
+        plotthis = list()
+        for n_components in range(2,n_features):
+            transformer = random_projection.GaussianRandomProjection(n_components=n_components)
+            projected = transformer.fit(X)
+            plotthis.append(reconstructionError(projected,X))
 
-    plt.plot(range(2,n_features),plotthis)
+        plt.plot(range(2,n_features),plotthis)
+
     plt.xlabel('components')
     plt.ylabel('reconstruction error');
     plt.xticks(range(2,n_features))
@@ -217,21 +219,17 @@ def part2( dataset ):
 #------------------------------------------------------------------------------
     print("Linear Discriminant Analysis Visualization")
     transformer = LinearDiscriminantAnalysis(n_components=2)
-    projected = transformer.fit_transform(X,labels)
+    projected = transformer.fit_transform(X, labels)
     Plot2d(projected, "LDA:"+dataset['name'], labels)
 
-    plotthis = list()
-    for n_components in range(2,n_features):
-        transformer = LinearDiscriminantAnalysis(n_components=n_components)
-        projected = transformer.fit(X,labels)
-        print(reconstructionError(projected,X))
-
-    plt.plot(range(2,n_features),plotthis)
-    plt.xlabel('components')
-    plt.ylabel('reconstruction error');
-    plt.xticks(range(2,n_features))
+    print("LDA Plot components versus variance")
+    lda = LinearDiscriminantAnalysis().fit(X, labels)
+    plt.plot(np.cumsum(lda.explained_variance_ratio_))
+    plt.xlabel('number of components')
+    plt.ylabel('cumulative explained variance');
 
     import uuid
     plt.suptitle("LDA:"+dataset['name'])
     plt.savefig("./Plots/"+uuid.uuid4().hex)
     plt.close()
+
