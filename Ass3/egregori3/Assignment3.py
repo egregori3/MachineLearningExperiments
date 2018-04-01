@@ -27,7 +27,7 @@ datasets = LoadPreprocessDataset()
 # -----------------------------------------------------------------------------
 # Visualize DataSet - Scatter Matrix
 # -----------------------------------------------------------------------------
-if 0: # set to 1 to enable
+if 1: # set to 1 to enable
     print(82 * '_')
     Visualize(datasets['wifi'])
     print(82 * '_')
@@ -36,7 +36,7 @@ if 0: # set to 1 to enable
 # -----------------------------------------------------------------------------
 # PART 1 - Run EM and K-means on two datasets
 # -----------------------------------------------------------------------------
-if 0: # set to 1 to enable
+if 1: # set to 1 to enable
     print(82 * '_')
     print("PART 1a - Run K-means on two datasets")
     print(82 * '_')
@@ -46,7 +46,7 @@ if 0: # set to 1 to enable
     print()
     part1_km(datasets['letter'])
 
-if 0: # set to 1 to enable
+if 1: # set to 1 to enable
     print(82 * '_')
     print("PART 1b - Run EM on two datasets")
     print(82 * '_')
@@ -59,7 +59,7 @@ if 0: # set to 1 to enable
 # -----------------------------------------------------------------------------
 # PART 2 - Run PCA, ICA, RP, ?? on two datasets
 # -----------------------------------------------------------------------------
-if 0: # set to 1 to enable
+if 1: # set to 1 to enable
     print(82 * '_')
     print("PART 2 - Run PCA, ICA, RP, ?? on two datasets")
     print(82 * '_')
@@ -72,7 +72,7 @@ if 0: # set to 1 to enable
 # -----------------------------------------------------------------------------
 # PART 3 - Run EM and K-means on part 2 results
 # -----------------------------------------------------------------------------
-if 0: # set to 1 to enable
+if 1: # set to 1 to enable
     print(82 * '_')
     print("PART 3 - Run EM and K-means on part 2 results")
     print(82 * '_')
@@ -85,7 +85,7 @@ if 0: # set to 1 to enable
 # -----------------------------------------------------------------------------
 # PART 4 - Take part 2 results (one dataset) and run on ass1 NN
 # -----------------------------------------------------------------------------
-if 0: # set to 1 to enable
+if 1: # set to 1 to enable
     print(82 * '_')
     print("PART 4 - Take part 2 results (one dataset) and run on ass1 NN")
     print(82 * '_')

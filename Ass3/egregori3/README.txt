@@ -37,6 +37,7 @@ Sub simulations can be enabled at the top of each module.
 ### Directory Structure
 DataSets:                                           WiFi and letter datasets
 python-machine-learning-book-2nd-edition-master:    Code examples from book
+ass1                                                Assignment 1 neural net analysis
 Plots
     Part1                                           Report part1 plots
     Part2                                           Report part2 plots

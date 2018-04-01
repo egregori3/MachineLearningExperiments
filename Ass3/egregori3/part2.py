@@ -28,8 +28,8 @@ import scipy.sparse as sps
 from scipy.linalg import pinv
 
 
-_twoDVisualize  = 0
-_calcComponents = 0
+_twoDVisualize  = 1
+_calcComponents = 1
 _ScatterMatrix  = 1
 
 # components       PCA (95% variance) ICA (kurtosis) RP(10% error) LDA(95% variance)
