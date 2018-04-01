@@ -13,7 +13,15 @@ from sklearn.mixture import GMM
 from sklearn.mixture import GaussianMixture
 
 
-scripts = {'wifi':{'pca':}}
+_twoDplots = 1
+_runKM     = 1
+_runEM     = 1
+
+# components       PCA (95% variance) ICA (kurtosis) RP(10% error) LDA(95% variance)
+scripts = {'wifi':       {'pca':4,        'ica':4,      'rp':6,        'lda':2 },
+           'letter':     {'pca':10,       'ica':13,     'rp':14,       'lda':8 }}
+
+
 
 def VisualizeModel(model, reduced_data, title):
     # Step size of the mesh. Decrease to increase the quality of the VQ.
@@ -53,6 +61,31 @@ def VisualizeModel(model, reduced_data, title):
     plt.close()
 
 
+def PlotDataFrame(df, title, subtitle, xlabel, ylabel):
+    # style
+    plt.style.use('seaborn-darkgrid')
+    # create a color palette
+    palette = plt.get_cmap('Set1')
+    # multiple line plot
+    num=0
+    for column in df.drop('x', axis=1):
+        num+=1
+        plt.plot(df['x'], df[column], marker='', color=palette(num), linewidth=1, alpha=0.9, label=column)
+
+    # Add legend
+    plt.legend(loc=2, ncol=2)
+
+    # Add titles
+    plt.title(title, loc='left', fontsize=12, fontweight=0, color='orange')
+    plt.xlabel(xlabel)
+    plt.ylabel(ylabel)
+
+    import uuid
+    plt.suptitle(subtitle)
+    plt.savefig("./Plots/"+uuid.uuid4().hex)
+    plt.close()
+
+
 def PlotKMStats(X, groundtruth, n_classes, name):
         homo  = list()
         comp  = list()
@@ -73,29 +106,24 @@ def PlotKMStats(X, groundtruth, n_classes, name):
         # Make a data frame
         df=pd.DataFrame({'x': range(1, (n_classes*2)+1), 
                         'homo': homo, 'comp': comp, 'vmeas': vmeas, 'ars': ars, 'ami': ami, 'sil': sil})
+        PlotDataFrame(df, "k-means statistics", name, "clusters", "stat")
 
-        # style
-        plt.style.use('seaborn-darkgrid')
-        # create a color palette
-        palette = plt.get_cmap('Set1')
-        # multiple line plot
-        num=0
-        for column in df.drop('x', axis=1):
-            num+=1
-            plt.plot(df['x'], df[column], marker='', color=palette(num), linewidth=1, alpha=0.9, label=column)
 
-        # Add legend
-        plt.legend(loc=2, ncol=2)
+def PlotEMStats(X, groundtruth, n_classes, name):
+        aic  = list()
+        bic  = list()
+        for i in range(2, (n_classes*2)+2):
+                gm_spherical = GaussianMixture(n_components=i, covariance_type='spherical', max_iter=200, random_state=0)
+                gm_spherical.fit(X)
+                aic.append(gm_spherical.aic(X))
+                bic.append(gm_spherical.bic(X))
 
-        # Add titles
-        plt.title("k-means statistics", loc='left', fontsize=12, fontweight=0, color='orange')
-        plt.xlabel("clusters")
-        plt.ylabel("stat")
-
-        import uuid
-        plt.suptitle(name)
-        plt.savefig("./Plots/"+uuid.uuid4().hex)
-        plt.close()
+        # Make a data frame
+        df=pd.DataFrame({'x': range(1, (n_classes*2)+1), 'aic': aic})
+        PlotDataFrame(df, "EM statistics", name, "clusters", "stat")
+        # Make a data frame
+        df=pd.DataFrame({'x': range(1, (n_classes*2)+1), 'bic': bic})
+        PlotDataFrame(df, "EM statistics", name, "clusters", "stat")
 
 
 #------------------------------------------------------------------------------
@@ -107,26 +135,63 @@ def PlotKMStats(X, groundtruth, n_classes, name):
 #------------------------------------------------------------------------------
 def part3( dataset ):
     print("PART 3 - "+dataset['name'])
+    script = scripts[dataset['name']]
     X = scale(dataset['X'])
     n_samples, n_features = X.shape
     labels = dataset['y']
     n_classes = len(np.unique(labels))
-    pca2 = PCA(n_components=2)
-    ica2 = FastICA(n_components=2)
-    ra2  = random_projection.GaussianRandomProjection(2)
-    lda2 = LinearDiscriminantAnalysis(n_components=2)
+    pca2 = PCA(n_components=2).fit_transform(X)
+    ica2 = FastICA(n_components=2).fit_transform(X)
+    ra2  = random_projection.GaussianRandomProjection(2).fit_transform(X)
+    lda2 = LinearDiscriminantAnalysis(n_components=2).fit_transform(X,labels)
 
-    VisualizeModel(KMeans(n_clusters=n_classes, init='k-means++').fit(pca2.fit_transform(X)), pca2.fit_transform(X), "PCA+K-Means")
-    VisualizeModel(KMeans(n_clusters=n_classes, init='k-means++').fit(ica2.fit_transform(X)), ica2.fit_transform(X), "ICA+K-Means")
-    VisualizeModel(KMeans(n_clusters=n_classes, init='k-means++').fit(ra2.fit_transform(X)), ra2.fit_transform(X), "RA+K-Means")
-#    VisualizeModel(KMeans(n_clusters=n_classes, init='k-means++').fit(lda2.fit_transform(X)), lda2.fit_transform(X), "LDA+K-Means")
+    if _twoDplots:
+        print("2D Plots")
+        for clusters in range(int(n_classes/4),n_classes+1):
+            VisualizeModel(KMeans(n_clusters=clusters, init='k-means++').fit(pca2), pca2, dataset['name']+": PCA(2)+K-Means("+str(clusters)+")")
+            VisualizeModel(KMeans(n_clusters=clusters, init='k-means++').fit(ica2), ica2, dataset['name']+": ICA(2)+K-Means("+str(clusters)+")")
+            VisualizeModel(KMeans(n_clusters=clusters, init='k-means++').fit(ra2),  ra2,  dataset['name']+": RA(2)+K-Means("+str(clusters)+")")
+            VisualizeModel(KMeans(n_clusters=clusters, init='k-means++').fit(lda2), lda2, dataset['name']+": LDA(2)+K-Means("+str(clusters)+")")
 
 #------------------------------------------------------------------------------
-#  Benchmark KM on reduced datasets
+#  Benchmark KM on reduced datasets from part 2
 #------------------------------------------------------------------------------
-    pca = PCA(n_components=n_classes)
-    projected = pca.fit_transform(X)
-    PlotKMStats(projected, labels, n_classes, "PCA: "+dataset['name'])
+    if _runKM:
+        print("Plot KM stats")
+        pca = PCA(n_components=script['pca'])
+        projected = pca.fit_transform(X)
+        PlotKMStats(projected, labels, n_classes, "PCA("+str(script['pca'])+"):"+dataset['name'])
+
+        ica = FastICA(n_components=script['ica'])
+        projected = ica.fit_transform(X)
+        PlotKMStats(projected, labels, n_classes, "ICA("+str(script['ica'])+"):"+dataset['name'])
+
+        transformer = random_projection.GaussianRandomProjection(script['rp'])
+        projected = transformer.fit_transform(X)
+        PlotKMStats(projected, labels, n_classes, "RP("+str(script['rp'])+"):"+dataset['name'])
+
+        transformer = LinearDiscriminantAnalysis(n_components=script['lda'])
+        projected = transformer.fit_transform(X, labels)
+        PlotKMStats(projected, labels, n_classes, "LDA("+str(script['lda'])+"):"+dataset['name'])
 
 
+#------------------------------------------------------------------------------
+#  Benchmark EM on reduced datasets from part 2
+#------------------------------------------------------------------------------
+    if _runEM:
+        print("Plot EM stats")
+        pca = PCA(n_components=script['pca'])
+        projected = pca.fit_transform(X)
+        PlotEMStats(projected, labels, n_classes, "PCA("+str(script['pca'])+"):"+dataset['name'])
 
+        ica = FastICA(n_components=script['ica'])
+        projected = ica.fit_transform(X)
+        PlotEMStats(projected, labels, n_classes, "ICA("+str(script['ica'])+"):"+dataset['name'])
+
+        transformer = random_projection.GaussianRandomProjection(script['rp'])
+        projected = transformer.fit_transform(X)
+        PlotEMStats(projected, labels, n_classes, "RP("+str(script['rp'])+"):"+dataset['name'])
+
+        transformer = LinearDiscriminantAnalysis(n_components=script['lda'])
+        projected = transformer.fit_transform(X, labels)
+        PlotEMStats(projected, labels, n_classes, "LDA("+str(script['lda'])+"):"+dataset['name'])

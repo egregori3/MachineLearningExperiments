@@ -1,5 +1,5 @@
-
-
+from sklearn.preprocessing import scale
+from ass1.PlotClassifiers import PlotClassifiers
 
 
 #------------------------------------------------------------------------------
@@ -16,6 +16,6 @@
 def part5( dataset ):
     print("PART 5 - "+dataset['name'])
     X = scale(dataset['X'])
-    n_samples, n_features = X.shape
     labels = dataset['y']
-    n_classes = len(np.unique(labels))
+
+    PlotClassifiers(X, labels, parms, dataset['name'])

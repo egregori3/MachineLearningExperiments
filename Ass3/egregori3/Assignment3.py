@@ -59,7 +59,7 @@ if 0: # set to 1 to enable
 # -----------------------------------------------------------------------------
 # PART 2 - Run PCA, ICA, RP, ?? on two datasets
 # -----------------------------------------------------------------------------
-if 1: # set to 1 to enable
+if 0: # set to 1 to enable
     print(82 * '_')
     print("PART 2 - Run PCA, ICA, RP, ?? on two datasets")
     print(82 * '_')
@@ -85,7 +85,7 @@ if 0: # set to 1 to enable
 # -----------------------------------------------------------------------------
 # PART 4 - Take part 2 results (one dataset) and run on ass1 NN
 # -----------------------------------------------------------------------------
-if 0: # set to 1 to enable
+if 1: # set to 1 to enable
     print(82 * '_')
     print("PART 4 - Take part 2 results (one dataset) and run on ass1 NN")
     print(82 * '_')
