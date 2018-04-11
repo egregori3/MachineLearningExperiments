@@ -77,6 +77,7 @@ class GridMDP(MDP):
                 self.reward[x, y] = grid[y][x]
                 if grid[y][x] is not None:
                     self.states.add((x, y))
+        print("Number of states: "+str(len(self.states)))
 
     def T(self, state, action):
         if action is None:
@@ -102,6 +103,10 @@ class GridMDP(MDP):
             (1, 0): '>', (0, 1): '^', (-1, 0): '<', (0, -1): 'v', None: '.'}
         return self.to_grid({s: chars[a] for (s, a) in policy.items()})
 
+    def display_grid(self):
+        for row in self.grid:
+            print(row)
+
 # ______________________________________________________________________________
 
 
@@ -109,10 +114,10 @@ class GridMDP(MDP):
 A 4x3 grid environment that presents the agent with a sequential decision problem.
 """
 
-sequential_decision_environment = GridMDP([[-0.04, -0.04, -0.04, +1],
-                                           [-0.04, None, -0.04, -1],
-                                           [-0.04, -0.04, -0.04, -0.04]],
-                                          terminals=[(3, 2), (3, 1)])
+#sequential_decision_environment = GridMDP([[-0.04, -0.04, -0.04, +1],
+#                                           [-0.04, None, -0.04, -1],
+#                                           [-0.04, -0.04, -0.04, -0.04]],
+#                                          terminals=[(3, 2), (3, 1)])
 
 # ______________________________________________________________________________
 

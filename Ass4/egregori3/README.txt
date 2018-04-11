@@ -3,6 +3,7 @@ CS7641 Assignment 4 - Eric Gregori
 ### Code Source
 https://github.com/aimacode/aima-python/blob/master/mdp.py
 https://github.com/aimacode/aima-python/blob/master/rl.py
+http://ai.berkeley.edu/reinforcement.html
 
 
 
@@ -33,3 +34,12 @@ python assignment3.py
 
 Each simulation is enabled or disabled by a if 0: or if 1:
 Sub simulations can be enabled at the top of each module.
+
+
+Eric    - 100
+Sam     - 93
+Rocko   - 89
+Heather - 88
+Heidi   - 77
+Eric    - 70
+Yan     - 67
