@@ -107,6 +107,15 @@ class GridMDP(MDP):
         for row in self.grid:
             print(row)
 
+    def display_grid_values(self, mapping):
+        for row in self.to_grid(mapping):
+            for col in row:
+                if col:
+                    print("{:02.2f}".format(col), end=",")
+                else:
+                    print("None", end=",")
+            print()
+
 # ______________________________________________________________________________
 
 
@@ -125,16 +134,22 @@ A 4x3 grid environment that presents the agent with a sequential decision proble
 def value_iteration(mdp, epsilon=0.001):
     """Solving an MDP by value iteration. [Figure 17.4]"""
     U1 = {s: 0 for s in mdp.states}
+    Ut = {s: [0] for s in mdp.states}
     R, T, gamma = mdp.R, mdp.T, mdp.gamma
+    iteration = 0
     while True:
+        iteration += 1
+        print("iteration: "+str(iteration))
         U = U1.copy()
         delta = 0
         for s in mdp.states:
             U1[s] = R(s) + gamma * max([sum([p * U[s1] for (p, s1) in T(s, a)])
                                         for a in mdp.actions(s)])
             delta = max(delta, abs(U1[s] - U[s]))
+            Ut[s].append(U1[s])
+        mdp.display_grid_values(U1)
         if delta < epsilon * (1 - gamma) / gamma:
-            return U
+            return U, Ut
 
 
 def best_policy(mdp, U):
