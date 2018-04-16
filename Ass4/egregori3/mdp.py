@@ -7,7 +7,6 @@ dictionary of {state:number} pairs. We then define the value_iteration
 and policy_iteration algorithms."""
 
 from utils import argmax, vector_add, orientations, turn_right, turn_left
-
 import random
 
 
@@ -139,15 +138,15 @@ def value_iteration(mdp, epsilon=0.001):
     iteration = 0
     while True:
         iteration += 1
-        print("iteration: "+str(iteration))
+#        print("iteration: "+str(iteration))
         U = U1.copy()
         delta = 0
         for s in mdp.states:
             U1[s] = R(s) + gamma * max([sum([p * U[s1] for (p, s1) in T(s, a)])
                                         for a in mdp.actions(s)])
             delta = max(delta, abs(U1[s] - U[s]))
-            Ut[s].append(U1[s])
-        mdp.display_grid_values(U1)
+#            Ut[s].append(U1[s])
+#        mdp.display_grid_values(U1)
         if delta < epsilon * (1 - gamma) / gamma:
             return U, Ut
 
@@ -168,12 +167,15 @@ def expected_utility(a, s, U, mdp):
 # ______________________________________________________________________________
 
 
-def policy_iteration(mdp):
+def policy_iteration(mdp, k=20):
     """Solve an MDP by policy iteration [Figure 17.7]"""
     U = {s: 0 for s in mdp.states}
     pi = {s: random.choice(mdp.actions(s)) for s in mdp.states}
+    iteration = 0
     while True:
-        U = policy_evaluation(pi, U, mdp)
+        iteration += 1
+#        print("iteration: "+str(iteration))
+        U = policy_evaluation(pi, U, mdp, k=k)
         unchanged = True
         for s in mdp.states:
             a = argmax(mdp.actions(s), key=lambda a: expected_utility(a, s, U, mdp))

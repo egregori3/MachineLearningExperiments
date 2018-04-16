@@ -1,13 +1,18 @@
-CS7641 Assignment 4 - Eric Gregori
+# CS7641 Assignment 4 - Eric Gregori
 
-### Code Source
+## Running the code
+```
+python assignment4.py
+```
+Each simulation is enabled or disabled by a if 0: or if 1:
+Sub simulations can be enabled at the top of each module.
+
+## Code Source
 https://github.com/aimacode/aima-python/blob/master/mdp.py
 https://github.com/aimacode/aima-python/blob/master/rl.py
 http://ai.berkeley.edu/reinforcement.html
 
-
-
-### pip freeze
+## pip freeze
 attrs==17.4.0
 certifi==2018.1.18
 colorama==0.3.9
@@ -27,19 +32,17 @@ six==1.11.0
 tornado==4.5.3
 wincertstore==0.2
 
-### Running the code
-```
-python assignment3.py
-```
+## Files
+assignment4.py - main file
+mdp.py         - modified AIMA file for value/policy iterations
+rl.py          - modified AIMA file for Qlearning
+utils.py       - utility functions from AIMA
+test_mdp.py    - reference file from AIMA
+test_rl.py     - reference file from AIMA
 
-Each simulation is enabled or disabled by a if 0: or if 1:
-Sub simulations can be enabled at the top of each module.
 
-
-Eric    - 100
-Sam     - 93
-Rocko   - 89
-Heather - 88
-Heidi   - 77
-Eric    - 70
-Yan     - 67
+You must submit a tar or zip file named yourgtaccount.{zip,tar,tar.gz} that contains a single folder or directory named yourgtaccount that in turn contains:
+a file named README.txt that contains instructions for running your code
+your code
+a file named yourgtaccount-analysis.pdf that contains your writeup.
+any supporting files you need

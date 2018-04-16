@@ -173,6 +173,23 @@ class QLearningAgent:
         assumes the percept to be of type (state, reward)'''
         return percept
 
+    def display(self,mdp):
+        for s in mdp.states:
+            print(s, end=",")
+        print()
+
+        for a in mdp.actlist:
+            print(a, end=",")
+            for s in mdp.states:
+                print("{:02.2f}".format(self.Q[s,a]), end=",")
+            print()
+
+    def qtopolicy(self,mdp):
+        ''' 
+            Find the highest Q(s,a) for each state 
+        '''
+        pass
+
 
 def run_single_trial(agent_program, mdp):
     ''' Execute trial for given agent_program
