@@ -86,18 +86,18 @@ if 0: # Small MDP
     t0 = time()
     small_MDP_policy = policy_iteration(small_MDP, k=20)
     print("small_MDP policy iteration time = "+str(time()-t0))
-    print(small_MDP.to_arrows(small_MDP_policy))
+    small_MDP.display_policy(small_MDP_policy)
 
 if 0: # Large MDP
     t0 = time()
     large_MDP_policy = policy_iteration(large_MDP, k=20)
     print("large_MDP policy iteration time = "+str(time()-t0))
-    print(large_MDP.to_arrows(large_MDP_policy))
+    large_MDP.display_policy(large_MDP_policy)
 
 #------------------------------------------------------------------------------
 # Reinforcement Learning
 #------------------------------------------------------------------------------
-if 1:
+if 0:
     q_agent = QLearningAgent(small_MDP, Ne=5, Rplus=2, alpha=lambda n: 60./(59+n))
     for i in range(200):
         run_single_trial(q_agent,small_MDP)
@@ -106,3 +106,19 @@ if 1:
     q_agent.qtopolicy(small_MDP)
     print("Q-Matrix")
     q_agent.display(small_MDP)
+    print("Policy")
+    policy = q_agent.qtopolicy(small_MDP)
+    small_MDP.display_policy(policy)
+
+if 1:
+    q_agent = QLearningAgent(large_MDP, Ne=5, Rplus=2, alpha=lambda n: 60./(59+n))
+    for i in range(200):
+        run_single_trial(q_agent,large_MDP)
+    for q in q_agent.Q:
+        print(q, q_agent.Q[q])
+    q_agent.qtopolicy(large_MDP)
+    print("Q-Matrix")
+    q_agent.display(large_MDP)
+    print("Policy")
+    policy = q_agent.qtopolicy(large_MDP)
+    large_MDP.display_policy(policy)

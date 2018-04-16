@@ -175,21 +175,29 @@ class QLearningAgent:
 
     def display(self,mdp):
         for s in mdp.states:
-            print(s, end=",")
+            print(s, end="|")
         print()
 
         for a in mdp.actlist:
-            print(a, end=",")
+            print(a, end="|")
             for s in mdp.states:
-                print("{:02.2f}".format(self.Q[s,a]), end=",")
+                print("{:02.2f}".format(self.Q[s,a]), end="|")
             print()
 
     def qtopolicy(self,mdp):
         ''' 
             Find the highest Q(s,a) for each state 
         '''
-        pass
-
+        policy = {}
+        for s in mdp.states:
+            max = float("-inf")
+            best_a = None
+            for a in mdp.actlist:
+                if self.Q[s,a] > max:
+                    max = self.Q[s,a]
+                    best_a = a
+            policy.update({s:best_a})
+        return policy
 
 def run_single_trial(agent_program, mdp):
     ''' Execute trial for given agent_program

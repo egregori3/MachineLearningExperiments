@@ -115,6 +115,12 @@ class GridMDP(MDP):
                     print("None", end=",")
             print()
 
+    def display_policy(self,policy):
+        out = self.to_arrows(policy)
+        for row in out:
+            print(row)
+
+
 # ______________________________________________________________________________
 
 
