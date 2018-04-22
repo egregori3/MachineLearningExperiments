@@ -23,7 +23,7 @@ small_MDP = GridMDP([[sr1,  sr1,  sr1,  sr1],
                      init=(0,0), gamma = 0.9)
 small_MDP.display_grid()
 
-lr1 = -0.04
+lr1 = 0
 lrg = +1
 lrp = -1
 lro = None
@@ -46,7 +46,7 @@ large_MDP.display_grid()
 #------------------------------------------------------------------------------
 # Value Iterations
 #------------------------------------------------------------------------------
-if 1: # Small MDP
+if 0: # Small MDP
     t0 = time()
     small_MDP_value_iteration, small_MDP_value_iteration_data = value_iteration(small_MDP, .01)
     print("small_MDP value iteration time = "+str(time()-t0))
@@ -83,13 +83,13 @@ if 0: # Large MDP
 #------------------------------------------------------------------------------
 # Policy Iterations
 #------------------------------------------------------------------------------
-if 0: # Small MDP
+if 1: # Small MDP
     t0 = time()
     small_MDP_policy = policy_iteration(small_MDP, k=20)
     print("small_MDP policy iteration time = "+str(time()-t0))
     small_MDP.display_policy(small_MDP_policy)
 
-if 0: # Large MDP
+if 1: # Large MDP
     t0 = time()
     large_MDP_policy = policy_iteration(large_MDP, k=20)
     print("large_MDP policy iteration time = "+str(time()-t0))
