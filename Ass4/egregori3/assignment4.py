@@ -11,7 +11,7 @@ from mdp import *
 from rl import *
 
 
-sr1 = -0.04
+sr1 = 0
 srg = +1
 srp = -1
 sro = None
@@ -46,14 +46,15 @@ large_MDP.display_grid()
 #------------------------------------------------------------------------------
 # Value Iterations
 #------------------------------------------------------------------------------
-if 0: # Small MDP
+if 1: # Small MDP
     t0 = time()
     small_MDP_value_iteration, small_MDP_value_iteration_data = value_iteration(small_MDP, .01)
     print("small_MDP value iteration time = "+str(time()-t0))
     print(small_MDP.to_arrows(best_policy(small_MDP, small_MDP_value_iteration)))
-    if 0:
+    if 1:
         print("Plot iterations")
         keys = [key for key in small_MDP_value_iteration_data]
+        keys = [(0,1),(1,0)]
         for key in keys:
             print(key, end="|")
         print()
@@ -67,10 +68,10 @@ if 0: # Large MDP
     large_MDP_value_iteration, large_MDP_value_iteration_data = value_iteration(large_MDP, .01)
     print("large_MDP value iteration time = "+str(time()-t0))
     print(large_MDP.to_arrows(best_policy(large_MDP, large_MDP_value_iteration)))
-    if 0:
+    if 1:
         print("Plot iterations")
 #       keys = [key for key in large_MDP_value_iteration_data]
-        keys = [(0,10),(10,10),(2,9),(8,9),(5,7),(2,2),(5,2),(8,2),(5,0)]
+        keys = [(0,10),(10,10),(4,2),(6,2),(4,7),(6,7)]
         for key in keys:
             print(key, end="|")
         print()
@@ -110,7 +111,7 @@ if 0:
     policy = q_agent.qtopolicy(small_MDP)
     small_MDP.display_policy(policy)
 
-if 1:
+if 0:
     q_agent = QLearningAgent(large_MDP, Ne=5, Rplus=2, alpha=lambda n: 60./(59+n))
     for i in range(200):
         run_single_trial(q_agent,large_MDP)

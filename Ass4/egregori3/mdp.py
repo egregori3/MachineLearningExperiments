@@ -144,15 +144,18 @@ def value_iteration(mdp, epsilon=0.001):
     iteration = 0
     while True:
         iteration += 1
-#        print("iteration: "+str(iteration))
+        print("iteration: "+str(iteration))
         U = U1.copy()
         delta = 0
+#        print("s|a|p|s1|U[s1]|p*u[S1]")
         for s in mdp.states:
-            U1[s] = R(s) + gamma * max([sum([p * U[s1] for (p, s1) in T(s, a)])
-                                        for a in mdp.actions(s)])
+            for a in mdp.actions(s):
+                for (p, s1) in T(s, a):
+                    print(s,a,p,s1,U[s1],(p * U[s1]), sep="|")
+            U1[s] = R(s) + gamma * max([sum([p * U[s1] for (p, s1) in T(s, a)]) for a in mdp.actions(s)])
             delta = max(delta, abs(U1[s] - U[s]))
-#            Ut[s].append(U1[s])
-#        mdp.display_grid_values(U1)
+            Ut[s].append(U1[s])
+        mdp.display_grid_values(U1)
         if delta < epsilon * (1 - gamma) / gamma:
             return U, Ut
 
