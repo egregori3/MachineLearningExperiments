@@ -23,9 +23,9 @@ small_MDP = GridMDP([[sr1,  sr1,  sr1,  sr1],
                      init=(0,0), gamma = 0.9)
 small_MDP.display_grid()
 
-lr1 = 0
+lr1 = -0.04
 lrg = +1
-lrp = -1
+lrp = 0
 lro = None
 large_MDP = GridMDP([[lr1,  lro,  lro,  lro,  lro,  lro,  lro,  lro,  lro,  lro,  lr1],
                      [lr1,  lro,  lr1,  lr1,  lr1,  lr1,  lr1,  lr1,  lr1,  lro,  lr1],
@@ -46,7 +46,7 @@ large_MDP.display_grid()
 #------------------------------------------------------------------------------
 # Value Iterations
 #------------------------------------------------------------------------------
-if 0: # Small MDP
+if 1: # Small MDP
     t0 = time()
     small_MDP_value_iteration, small_MDP_value_iteration_data = value_iteration(small_MDP, .01)
     print("small_MDP value iteration time = "+str(time()-t0))
@@ -63,7 +63,7 @@ if 0: # Small MDP
                 print(small_MDP_value_iteration_data[key][i], end="|")
             print()
 
-if 0: # Large MDP
+if 1: # Large MDP
     t0 = time()
     large_MDP_value_iteration, large_MDP_value_iteration_data = value_iteration(large_MDP, .01)
     print("large_MDP value iteration time = "+str(time()-t0))
@@ -98,10 +98,12 @@ if 1: # Large MDP
 #------------------------------------------------------------------------------
 # Reinforcement Learning
 #------------------------------------------------------------------------------
-if 0:
+if 1:
+    t0 = time()
     q_agent = QLearningAgent(small_MDP, Ne=5, Rplus=2, alpha=lambda n: 60./(59+n))
     for i in range(200):
         run_single_trial(q_agent,small_MDP)
+    print("small_MDP q-learning time = "+str(time()-t0))
     for q in q_agent.Q:
         print(q, q_agent.Q[q])
     q_agent.qtopolicy(small_MDP)
@@ -111,10 +113,12 @@ if 0:
     policy = q_agent.qtopolicy(small_MDP)
     small_MDP.display_policy(policy)
 
-if 0:
+if 1:
+    t0 = time()
     q_agent = QLearningAgent(large_MDP, Ne=5, Rplus=2, alpha=lambda n: 60./(59+n))
     for i in range(200):
         run_single_trial(q_agent,large_MDP)
+    print("large_MDP q-learning time = "+str(time()-t0))
     for q in q_agent.Q:
         print(q, q_agent.Q[q])
     q_agent.qtopolicy(large_MDP)
