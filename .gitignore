@@ -1,0 +1,12 @@
+*.zip
+__pycache__
+*.class
+*.jar
+*.mf
+*.png
+*.jpg
+*.gz
+
+
+
+

@@ -1,0 +1,60 @@
+Loading WIFI dataset
+[ 1.  1.  1. ...,  4.  4.  4.]
+Classification report
+Parameters:
+{'n_estimators': 35, 'base_estimator__criterion': 'entropy', 'base_estimator__splitter': 'best', 'base_estimator__max_features': 'sqrt', 'base_estimator__max_depth': 2, 'base_estimator__min_samples_split': 2, 'base_estimator__min_samples_leaf': 1}
+             precision    recall  f1-score   support
+
+        1.0       0.99      0.99      0.99       157
+        2.0       0.97      0.91      0.94       151
+        3.0       0.88      0.95      0.91       153
+        4.0       0.99      0.96      0.97       139
+
+avg / total       0.95      0.95      0.95       600
+
+
+Confusion matrix, without normalization
+[[155   0   2   0]
+ [  0 135  16   0]
+ [  0   5 147   1]
+ [  1   0   3 135]]
+Loading WIFI dataset
+[ 1.  1.  1. ...,  4.  4.  4.]
+Classification report
+Parameters:
+{'n_estimators': 35, 'base_estimator__criterion': 'entropy', 'base_estimator__splitter': 'best', 'base_estimator__max_features': 'sqrt', 'base_estimator__max_depth': 2, 'base_estimator__min_samples_split': 2, 'base_estimator__min_samples_leaf': 1}
+             precision    recall  f1-score   support
+
+        1.0       0.99      1.00      0.99       157
+        2.0       0.92      0.92      0.92       151
+        3.0       0.90      0.91      0.91       153
+        4.0       0.99      0.97      0.98       139
+
+avg / total       0.95      0.95      0.95       600
+
+
+Confusion matrix, without normalization
+[[157   0   0   0]
+ [  0 139  12   0]
+ [  1  13 138   1]
+ [  2   0   3 134]]
+Loading WIFI dataset
+[ 1.  1.  1. ...,  4.  4.  4.]
+Classification report
+Parameters:
+{'n_estimators': 35, 'base_estimator__criterion': 'entropy', 'base_estimator__splitter': 'best', 'base_estimator__max_features': 'sqrt', 'base_estimator__max_depth': 2, 'base_estimator__min_samples_split': 2, 'base_estimator__min_samples_leaf': 1}
+             precision    recall  f1-score   support
+
+        1.0       0.99      1.00      1.00       157
+        2.0       0.96      0.89      0.92       151
+        3.0       0.88      0.96      0.92       153
+        4.0       0.99      0.96      0.98       139
+
+avg / total       0.96      0.95      0.95       600
+
+
+Confusion matrix, without normalization
+[[156   0   1   0]
+ [  0 134  17   0]
+ [  0   7 145   1]
+ [  2   0   2 135]]
